@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import SocialMedia from "../ui/social-media";
+import { Button } from "../ui/button";
 
 const HeroSection = () => {
   return (
@@ -21,9 +22,18 @@ const HeroSection = () => {
       <div className="relative w-full h-full z-20 flex justify-center items-center translate-y-10 md:translate-y-32">
         <div className="flex flex-col md:flex-row justify-center items-center gap-x-20 gap-y-5">
           <div>
-            <h1 className="text-white font-bebasNeue text-center">
-              Download CV
-            </h1>
+            <Button
+              variant={"link"}
+              className="text-white font-bebasNeue text-center"
+              asChild
+            >
+              <a
+                href="https://docs.google.com/document/d/1peoHs2uNtDp4bT8fS7wZnrPKTzGBYnTQbRC7RwZrg1k/export?format=pdf"
+                download
+              >
+                Download CV
+              </a>
+            </Button>
           </div>
           <div className="flex flex-col">
             <h1
