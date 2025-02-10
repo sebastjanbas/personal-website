@@ -11,7 +11,13 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "green-900": "#273533",
+        "green-500": "#739B95",
+        "green-200": "#96ACAA",
       },
+      fontFamily: {
+        bebasNeue: ["Bebas Neue", "sans-serif"]
+      }
     },
   },
   plugins: [],
