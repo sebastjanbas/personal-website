@@ -2,8 +2,9 @@ import HeroSection from "@/components/content/herro-section";
 
 export default function Home() {
   return (
-    <div className="font-bebasNeue text-7xl">
+    <div className="bg-white">
       <HeroSection />
+      <div className="h-screen"></div>
     </div>
   );
 }
