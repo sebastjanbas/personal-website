@@ -9,8 +9,46 @@ const bebasNeue = Bebas_Neue({
 });
 
 export const metadata: Metadata = {
-  title: "Sebastjan Bas",
-  description: "Sebastjan Bas - personal portfolio",
+  title: {
+    default: "Sebastjan Bas | Full Stack Developer",
+    template: "%s | Sebastjan Bas",
+  },
+  description:
+    "Full-stack developer specializing in Next.js, React, and Supabase. Passionate about building scalable web applications with modern technologies. Explore my portfolio to see my work!",
+  metadataBase: new URL("https://www.sebastjanbas.com"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://www.sebastjanbas.com",
+    siteName: "Sebastjan Bas | Full Stack Developer",
+    images: [
+      {
+        url: "/open-graph-photo.png",
+        width: 4096,
+        height: 2304,
+        alt: "Sebastjan Bas Open Graph Image",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@sebastjanbas",
+    creator: "@sebastjanbas",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
