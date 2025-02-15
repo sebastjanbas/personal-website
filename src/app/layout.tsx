@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bebas_Neue } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/content/navbar";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const bebasNeue = Bebas_Neue({
@@ -58,7 +59,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

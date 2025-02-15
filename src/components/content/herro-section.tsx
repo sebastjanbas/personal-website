@@ -40,8 +40,6 @@ const HeroSection = () => {
               text-2xl tracking-wide
               sm:text-2xl sm:tracking-[5px]
               lg:tracking-[12.5px]
-              
-              
               "
               >
                 Full stack developer and web designer
@@ -53,7 +51,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      <div className="hidden md:block h-[120px] bg-teal-600"></div>
+      <div className="hidden md:block h-[50px] bg-teal-600"></div>
       <div className="relative bg-white h-[200px]"></div>
     </>
   );
