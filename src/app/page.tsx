@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="bg-white">
       <HeroSection />
-      <div className="h-screen"></div>
+      <div className="h-screen w-screen"></div>
     </div>
   );
 }

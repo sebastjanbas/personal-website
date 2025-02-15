@@ -3,8 +3,12 @@ import React from "react";
 
 const SocialMedia = () => {
   return (
-    <div className="flex flex-row md:flex-col items-center justify-center gap-y-8 gap-x-10 md:gap-x-20">
-      <a href="https://github.com/sebastjanbas">
+    <div className="flex flex-row items-center justify-center gap-y-8 gap-x-10">
+      <a
+        href="https://github.com/sebastjanbas"
+        target="_blank"
+        className="transition-transform duration-200 hover:scale-125"
+      >
         <Image
           className="h-[24px] w-[24px]"
           height={32}
@@ -13,7 +17,11 @@ const SocialMedia = () => {
           alt="Git Hub logo"
         />
       </a>
-      <a href="https://x.com/SebastjanBas">
+      <a
+        href="https://x.com/SebastjanBas"
+        target="_blank"
+        className="transition-transform duration-200 hover:scale-125"
+      >
         <Image
           className="h-[24px] w-[24px]"
           height={32}
@@ -22,7 +30,11 @@ const SocialMedia = () => {
           alt="X logo"
         />
       </a>
-      <a href="https://www.instagram.com/sebastjan.bas/">
+      <a
+        href="https://www.instagram.com/sebastjan.bas/"
+        target="_blank"
+        className="transition-transform duration-200 hover:scale-125"
+      >
         <Image
           className="h-[24px] w-[24px]"
           height={32}
@@ -31,7 +43,11 @@ const SocialMedia = () => {
           alt="Instagram logo"
         />
       </a>
-      <a href="https://www.linkedin.com/in/sebastjan-bas-604b5b271/">
+      <a
+        href="https://www.linkedin.com/in/sebastjan-bas-604b5b271/"
+        target="_blank"
+        className="transition-transform duration-200 hover:scale-125"
+      >
         <Image
           className="h-[24px] w-[24px]"
           height={32}
