@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { Bebas_Neue } from "next/font/google";
+import { Bebas_Neue, Big_Shoulders_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/content/navbar";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const bebasNeue = Bebas_Neue({
   weight: "400",
+  subsets: ["latin"],
+});
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const bigShoulders = Big_Shoulders_Display({
+  weight: ["400", "100", "200", "300", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
 });
 

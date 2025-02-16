@@ -29,7 +29,6 @@ const HeroSection = () => {
               text-7xl leading-[40px]
               sm:text-[115px] sm:leading-[70px] sm:tracking-[-4px]
               lg:text-[180px] lg:leading-[105px] lg:tracking-[-5px]
-              
               "
               >
                 Sebastjan Bas
@@ -51,8 +50,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      <div className="hidden md:block h-[50px] bg-teal-600"></div>
-      <div className="relative bg-white h-[200px]"></div>
+      <div className="hidden md:block h-[52px] bg-teal-600"></div>
     </>
   );
 };

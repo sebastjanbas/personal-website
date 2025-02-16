@@ -18,7 +18,7 @@ export const ImageBackground = () => {
 
   return (
     <motion.div
-      className="absolute z-0 flex justify-center items-center top-0 h-screen md:h-[calc(100vh+300px)] w-screen bg-gradient-to-t bg-blue-500 overflow-hidden"
+      className="absolute z-0 flex justify-center items-center top-0 h-[calc(100vh+65px)] md:h-[calc(100vh+300px)] w-screen bg-gradient-to-t bg-blue-500 overflow-hidden"
       style={{ clipPath }}
     >
       <Image
@@ -27,6 +27,7 @@ export const ImageBackground = () => {
         alt="Photo of Sebastjan Bas"
         className="object-cover scale-[1.3] translate-y-32 opacity-[60%] md:opacity-[80%] md:scale-[0.85] md:-translate-y-20 md:object-[50%_20%]"
       />
+      <div className="absolute hidden md:block z-10 bottom-0 bg-white h-[180px] w-full"></div>
     </motion.div>
   );
 };

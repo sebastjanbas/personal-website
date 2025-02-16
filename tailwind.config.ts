@@ -59,7 +59,11 @@ export default {
   			bebasNeue: [
   				'Bebas Neue',
   				'sans-serif'
-  			]
+  			],
+			bigShoulders: [
+				"Big Shoulders Display",
+				"sans-serif"
+			]
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
