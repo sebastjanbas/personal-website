@@ -14,7 +14,7 @@ const NavigationDialog = ({
 }: DialogProps) => {
   return (
     <div>
-      <AnimatePresence>
+      <AnimatePresence mode="wait" initial={false}>
         {mobileMenuOpen && (
           <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} static>
             <DialogPanel>
@@ -31,8 +31,17 @@ const NavigationDialog = ({
                       <li key={link.name}>
                         <Link
                           href={link.href}
-                          onClick={() => setMobileMenuOpen(false)}
-                          className="after:block after:h-[2px] lg:after:h-[3px] after:w-0 after:bg-gray-400 after:transition-all after:duration-500 hover:after:w-full text-7xl md:text-8xl lg:text-9xl hover:tracking-wider transition-all hover:text-gray-400"
+                          onClick={() => setMobileMenuOpen(link.stayOpen)}
+                          className="relative text-7xl md:text-8xl lg:text-9xl text-black 
+       duration-200 ease-out hover:text-gray-400 
+      after:block after:h-[2px] lg:after:h-[3px] after:origin-left after:scale-x-0 after:bg-gray-400 
+      after:transition-transform after:duration-500 after:ease-out hover:after:scale-x-100 safari:transition-none"
+                          style={{
+                            transform: "translate3d(0,0,0)", // Forces GPU acceleration
+                            willChange: "transform, opacity", // Prepares browser for smooth animations
+                            backfaceVisibility: "hidden", // Prevents flickering on Safari
+                            WebkitFontSmoothing: "antialiased", // Improves text rendering
+                          }}
                         >
                           {link.name}
                         </Link>

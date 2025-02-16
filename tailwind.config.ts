@@ -72,5 +72,10 @@ export default {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"),
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	function ({ addVariant }:any) {
+		addVariant("safari", "@supports (-webkit-hyphens: none) and (not (overflow: -webkit-marquee))");
+	  },
+  ],
 } satisfies Config;

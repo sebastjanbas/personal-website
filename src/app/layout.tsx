@@ -3,6 +3,7 @@ import { Bebas_Neue, Big_Shoulders_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/content/navbar";
 import { Analytics } from "@vercel/analytics/react";
+import BackgroundUpdater from "@/components/ui/bacground-updater";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const bebasNeue = Bebas_Neue({
@@ -67,6 +68,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <BackgroundUpdater />
         <Navbar />
         {children}
         <Analytics />

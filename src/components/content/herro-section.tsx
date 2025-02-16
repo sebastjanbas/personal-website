@@ -1,19 +1,19 @@
 import React from "react";
 import SocialMedia from "../ui/social-media";
-import { Button } from "../ui/button";
-import { ImageBackground } from "../ui/image-bacground";
+import { ImageBackground } from "../ui/image-background";
 
 const HeroSection = () => {
   return (
     <>
-      <div className="h-screen w-screen bg-gradient-to-t from-teal-600 to-sky-900">
+      <section className="h-screen w-screen bg-gradient-to-t from-teal-600 to-sky-900">
         <ImageBackground />
         <div className="relative w-full h-full z-20 flex justify-center items-center translate-y-10">
           <div className="flex flex-col justify-center items-center gap-y-5">
-            <Button
-              variant={"link"}
-              className="text-white font-bebasNeue text-md text-center -translate-y-1 hover:scale-110 hover:tracking-widest transition-all duration-200"
-              asChild
+            <div
+              className="text-white font-bebasNeue text-lg text-center leading-none -translate-y-1 
+  after:block after:h-[1px] after:origin-left after:scale-x-0 after:bg-white 
+  after:transition-transform after:duration-500 
+  hover:after:scale-x-100 hover:tracking-wider transition-all will-change-transform"
             >
               <a
                 href="https://docs.google.com/document/d/1peoHs2uNtDp4bT8fS7wZnrPKTzGBYnTQbRC7RwZrg1k/export?format=pdf"
@@ -21,7 +21,8 @@ const HeroSection = () => {
               >
                 Download CV
               </a>
-            </Button>
+            </div>
+
             <div className="flex flex-col">
               <h1
                 className="
@@ -49,8 +50,8 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="hidden md:block h-[52px] bg-teal-600"></div>
+      </section>
+      <div className="hidden md:block h-[120px] bg-teal-600"></div>
     </>
   );
 };
