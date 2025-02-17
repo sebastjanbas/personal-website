@@ -6,14 +6,16 @@ export default function BackgroundUpdater() {
 
   useEffect(() => {
     const updateBackground = (y: number) => {
-      let color = "#0c4a6e"; // Default background color
+      let color = "#2F2F2F"; // Default background color
+      let fontColor = "#ffffff";
       const vh = window.innerHeight;
 
-      if (y <= 1 * vh) {
-        color = "#0c4a6e";
+      if (y <= 1.2 * vh) {
+        color = "#2F2F2F";
       }
-      if (y > 1 * vh && y < 2 * vh) {
-        color = "#3b82f6";
+      if (y > 1.2 * vh && y < 2 * vh) {
+        color = "#ffff";
+        fontColor = "#000000";
       }
       if (y > 2 * vh && y < 3 * vh) {
         color = "#098984";
@@ -26,6 +28,7 @@ export default function BackgroundUpdater() {
       }
 
       document.documentElement.style.setProperty("--background", color);
+      document.documentElement.style.setProperty("--foreground", fontColor);
     };
 
     // Set background immediately on mount

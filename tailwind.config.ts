@@ -13,9 +13,6 @@ export default {
   		colors: {
   			background: 'var(--background)',
   			foreground: 'var(--foreground)',
-  			'green-900': '#273533',
-  			'green-500': '#739B95',
-  			'green-200': '#96ACAA',
   			card: {
   				DEFAULT: 'var(--card)',
   				foreground: 'var(--card-foreground)'

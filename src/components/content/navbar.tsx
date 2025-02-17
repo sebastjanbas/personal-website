@@ -12,9 +12,14 @@ const Navbar = () => {
       <header className="sticky top-0 z-[60] flex justify-center items-center">
         <nav className="relative flex w-full max-w-5xl px-8 py-5 justify-between items-center">
           <Link
-            className={`font-bebasNeue transition-colors safari:transition-none duration-500 text-lg text-center ${
-              mobileMenuOpen ? "text-black" : "text-white"
-            }`}
+            className={`translate-y-1 font-bebasNeue text-lg text-center leading-none
+  after:block after:h-[1px] after:origin-left after:scale-x-0
+  after:transition-transform after:duration-300 
+  hover:after:scale-x-100 hover:tracking-wider transition-all will-change-transform ${
+    mobileMenuOpen
+      ? "text-black after:bg-black "
+      : "text-foreground after:bg-foreground "
+  }`}
             href={"/"}
             onClick={() => setMobileMenuOpen(false)}
           >
@@ -24,8 +29,8 @@ const Navbar = () => {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className={`bg-transparent transition-all safari:transition-none duration-500 inline-flex items-center justify-center rounded-md ${
-                mobileMenuOpen ? "text-black" : "text-white"
+              className={`bg-transparent inline-flex items-center justify-center rounded-md ${
+                mobileMenuOpen ? "text-black" : "text-foreground"
               }`}
               aria-expanded="false"
             >
