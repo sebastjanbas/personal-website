@@ -1,6 +1,7 @@
 import React from "react";
 import SocialMedia from "../ui/social-media";
 import { ImageBackground } from "../ui/image-background";
+import Image from "next/image";
 
 const HeroSection = () => {
   return (
@@ -52,6 +53,15 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
+      <div className="flex justify-center items-center">
+        <Image
+          width={150}
+          height={150}
+          className="absolute -z-10 bottom-5 rotate-[15deg]"
+          src="/arrow.svg"
+          alt="arrow symbol"
+        />
+      </div>
     </>
   );
 };

@@ -10,10 +10,10 @@ export default function BackgroundUpdater() {
       let fontColor = "#ffffff";
       const vh = window.innerHeight;
 
-      if (y <= 1.2 * vh) {
+      if (y <= 0.75 * vh) {
         color = "#2F2F2F";
       }
-      if (y > 1.2 * vh && y < 2 * vh) {
+      if (y > 0.75 * vh && y < 2 * vh) {
         color = "#ffff";
         fontColor = "#000000";
       }
