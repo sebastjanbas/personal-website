@@ -30,7 +30,7 @@ export const ImageBackground = () => {
   ]);
 
   // Animate arrow opacity so it fades in as you scroll
-  const arrowOpacity = useTransform(scrollYProgress, [0, 1], [0, 9]);
+  const arrowOpacity = useTransform(scrollYProgress, [0.1, 1], [0, 10]);
 
   return (
     <div className="absolute overflow-hidden w-screen max-h-[calc(100vh+120px)]">
@@ -39,6 +39,7 @@ export const ImageBackground = () => {
         style={{
           maskImage: maskImage,
           WebkitMaskImage: maskImage, // Ensure Safari support
+          backfaceVisibility: "hidden", // Prevents flickering on Safari
         }}
       >
         {/* Background Image */}
@@ -54,6 +55,10 @@ export const ImageBackground = () => {
         className="absolute flex justify-center items-center w-full bottom-10"
         style={{
           opacity: arrowOpacity, // Controls fade-in effect
+          transform: "translate3d(0,0,0)", // Forces GPU acceleration
+          willChange: "transform, opacity", // Prepares browser for smooth animations
+          backfaceVisibility: "hidden", // Prevents flickering on Safari
+          WebkitFontSmoothing: "antialiased", // Improves text rendering
         }}
       >
         <h1 className="absolute font-bigShoulders font-bold text-3xl md:text-8xl uppercase tracking-[20px]">

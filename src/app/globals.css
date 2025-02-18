@@ -78,8 +78,8 @@
   }
   html,
   body {
-    color: var(--foreground, #fff);
-    background-color: var(--background, #fff); /* Default to white */
+    color: var(--foreground);
+    background-color: var(--background); /* Default to white */
     transition: background-color 0.3s ease-in-out;
   }
 }
