@@ -60,6 +60,10 @@ export default {
 			bigShoulders: [
 				"Big Shoulders Display",
 				"sans-serif"
+			],
+			sigmarFont: [
+				"Sigmar",
+				"sans-serif"
 			]
   		},
   		borderRadius: {

@@ -1,17 +1,21 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import type { Metadata } from "next";
-import { Bebas_Neue, Big_Shoulders_Display } from "next/font/google";
+import { Bebas_Neue, Big_Shoulders_Display, Sigmar } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/content/navbar";
 import { Analytics } from "@vercel/analytics/react";
 import BackgroundUpdater from "@/components/ui/bacground-updater";
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const bebasNeue = Bebas_Neue({
   weight: "400",
   subsets: ["latin"],
 });
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const sigmarFont = Sigmar({
+  weight: "400",
+  subsets: ["latin"],
+});
+
 const bigShoulders = Big_Shoulders_Display({
   weight: ["400", "100", "200", "300", "500", "600", "700", "800", "900"],
   subsets: ["latin"],

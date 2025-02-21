@@ -64,13 +64,19 @@ export const ImageBackground = () => {
         <h1 className="absolute font-bigShoulders font-bold text-3xl md:text-8xl uppercase tracking-[20px]">
           Tech Stack
         </h1>
-        <Image
-          width={200}
-          height={200}
-          className="rotate-[25deg] h-40 w-auto md:h-auto"
-          src="/arrow.svg"
-          alt="arrow symbol"
-        />
+        <svg
+          width="170"
+          height="441"
+          viewBox="0 0 170 441"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1 1C183.646 278.841 74.9487 369.962 43.359 313.643C-45.7403 154.794 131.308 116.526 147.462 278.263C163.615 440 152.846 440 152.846 440M152.846 440C149.061 427.593 149.974 414.729 147.462 401.01M152.846 440L169 406.786"
+            stroke="var(--foreground)"
+            strokeWidth="3"
+          />
+        </svg>
       </motion.div>
     </div>
   );

@@ -6,7 +6,7 @@ import Image from "next/image";
 const HeroSection = () => {
   return (
     <>
-      <section className="h-screen w-screen">
+      <section className="h-[calc(100vh+120px)] w-screen">
         <ImageBackground />
         <div className="relative w-full h-full z-20 flex justify-center items-center translate-y-10">
           <div className="flex flex-col justify-center items-center gap-y-5">
