@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "@/components/content/navbar";
 import { Analytics } from "@vercel/analytics/react";
 import BackgroundUpdater from "@/components/ui/bacground-updater";
+import { Footer } from "@/components/content/footer";
 
 const bebasNeue = Bebas_Neue({
   weight: "400",
@@ -75,11 +76,12 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </head>
-      <body>
+      <body className="overflow-x-hidden">
         <BackgroundUpdater />
         <Navbar />
         {children}
         <Analytics />
+        <Footer />
       </body>
     </html>
   );
