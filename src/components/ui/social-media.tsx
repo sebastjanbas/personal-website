@@ -2,13 +2,13 @@ import Image from "next/image";
 import React from "react";
 
 type SocialMediaProps = {
-  size: string;
+  size?: string;
   spacing?: string;
   direction?: string;
 };
 
 const SocialMedia = ({
-  size,
+  size = "size-[24px]",
   spacing = "10",
   direction = "row",
 }: SocialMediaProps) => {
