@@ -44,9 +44,8 @@ export default function BackgroundUpdater() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return (
-    <div className="fixed z-[100] bottom-4 right-4 bg-gray-900 text-white p-2 rounded-lg shadow-lg">
+  return null; 
+    { /* <div className="fixed z-[100] bottom-4 right-4 bg-gray-900 text-white p-2 rounded-lg shadow-lg">
       ScrollY: {scrollPosition}px
-    </div>
-  );
+    </div> */}
 }

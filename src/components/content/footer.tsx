@@ -5,14 +5,16 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="h-fit w-screen p-20">
-      <div className="flex flex-row justify-start items-center">
-        <h1 className="text-[150px] font-bebasNeue font-bold leading-[180px] uppercase">
+    <footer className="h-fit w-screen p-5 sm:p-20">
+      <div className="flex flex-col sm:flex-row justify-start items-start w-full h-fit">
+        <h1 className="text-4xl lg:text-[150px] font-bebasNeue font-bold leading-[15px] lg:leading-[180px] uppercase">
           Les&apos;s work <br />
-          <strong className="text-[300px] tracking-normal">together</strong>
+          <strong className="text-8xl lg:text-[300px] tracking-normal">
+            together
+          </strong>
         </h1>
         <div className="w-full h-full flex flex-col gap-5 justify-center items-center">
-          <span className="-translate-x-24">
+          <span className="hidden sm:block -translate-x-24">
             <svg
               width="231"
               height="204"
@@ -26,7 +28,7 @@ export const Footer = () => {
               />
             </svg>
           </span>
-          <h2 className="text-6xl font-bebasNeue text-foreground ">
+          <h2 className="hidden sm:block text-6xl font-bebasNeue text-foreground ">
             <span
               className="
        duration-200 ease-out 
@@ -37,9 +39,7 @@ export const Footer = () => {
                 WebkitFontSmoothing: "antialiased", // Improves text rendering
               }}
             >
-              <a href={navigation[1].href}>
-            Contact me
-              </a>
+              <a href={navigation[1].href}>Contact me</a>
             </span>
           </h2>
         </div>
@@ -47,17 +47,18 @@ export const Footer = () => {
       <div className="flex justify-center items-center w-full h-[1px]">
         <div className="w-full h-full bg-foreground"></div>
       </div>
-      <div className="flex flex-row justify-between pt-20 items-start w-full h-full">
+      {/* DESKTOP */}
+      <div className="hidden md:flex flex-row justify-between pt-20 items-center w-full h-full">
         <div className="flex flex-col justify-start items-start">
           <h3 className="font-bebasNeue text-4xl leading-[20px] text-foreground">
             Sebastjan
           </h3>
-          <span className="text-foreground text-md">
+          <span className="text-foreground text-xs">
             <a>sebastjan.bas@gmail.com</a>
           </span>
         </div>
         <div className="text-foreground font-bebasNeue text-4xl">
-          <ul className="flex flex-row justify-center items-center gap-10">
+          <ul className="flex flex-row justify-center items-center  gap-x-10">
             {navigation.map((link) => (
               <li key={link.name}>
                 <Link
@@ -77,8 +78,37 @@ export const Footer = () => {
             ))}
           </ul>
         </div>
-        <div>
-          <SocialMedia />
+        <div className="flex justify-center items-center">
+          <SocialMedia size="size-[24px]" />
+        </div>
+      </div>
+
+      {/* MOBILE */}
+      <div className="flex md:hidden flex-row justify-between pt-5 items-center w-full h-full">
+        <div className="flex flex-col justify-start items-start">
+          <h3 className="font-bebasNeue text-4xl leading-[20px] text-foreground">
+            Sebastjan
+          </h3>
+          <span className="text-foreground text-xs">
+            <a>sebastjan.bas@gmail.com</a>
+          </span>
+          <div className="flex pt-4 justify-center items-center">
+            <SocialMedia size="size-[20px]" />
+          </div>
+        </div>
+        <div className="text-foreground font-bebasNeue text-4xl">
+          <ul className="flex flex-col justify-center items-end gap-x-10">
+            {navigation.map((link) => (
+              <li key={link.name}>
+                <Link
+                  href={link.href}
+                  className="text-xl lg:text-4xl text-foreground" 
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </footer>

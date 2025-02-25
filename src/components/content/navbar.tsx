@@ -15,11 +15,10 @@ const Navbar = () => {
             className={`translate-y-1 font-bebasNeue text-lg text-center leading-none
   after:block after:h-[1px] after:origin-left after:scale-x-0
   after:transition-transform after:duration-300 
-  hover:after:scale-x-100 hover:tracking-wider transition-all will-change-transform ${
-    mobileMenuOpen
-      ? "text-black after:bg-black "
-      : "text-foreground after:bg-foreground "
-  }`}
+  hover:after:scale-x-100 hover:tracking-wider transition-all will-change-transform ${mobileMenuOpen
+                ? "text-black after:bg-black "
+                : "text-foreground after:bg-foreground "
+              }`}
             href={"/"}
             onClick={() => setMobileMenuOpen(false)}
           >
@@ -29,26 +28,23 @@ const Navbar = () => {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className={`bg-transparent inline-flex items-center justify-center rounded-md ${
-                mobileMenuOpen ? "text-black" : "text-foreground"
-              }`}
+              className={`bg-transparent inline-flex items-center justify-center rounded-md ${mobileMenuOpen ? "text-black" : "text-foreground"
+                }`}
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
               <span className="absolute">
                 <FaBars
                   aria-hidden="true"
-                  className={`size-5 ${
-                    mobileMenuOpen ? "opacity-0" : "opacity-1"
-                  }`}
+                  className={`size-5 ${mobileMenuOpen ? "opacity-0" : "opacity-1"
+                    }`}
                 />
               </span>
               <span className="absolute">
                 <X
                   aria-hidden="true"
-                  className={`size-6 ${
-                    mobileMenuOpen ? "opacity-1" : "opacity-0"
-                  }`}
+                  className={`size-6 ${mobileMenuOpen ? "opacity-1" : "opacity-0"
+                    }`}
                 />
               </span>
             </button>
