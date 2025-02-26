@@ -5,16 +5,16 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="h-fit w-screen p-5 sm:p-20">
-      <div className="flex flex-col sm:flex-row justify-start items-start w-full h-fit">
-        <h1 className="text-4xl lg:text-[150px] font-bebasNeue font-bold leading-[15px] lg:leading-[180px] uppercase">
-          Les&apos;s work <br />
-          <strong className="text-8xl lg:text-[300px] tracking-normal">
+    <footer className="h-fit w-screen p-5 sm:p-10 xl:p-20">
+      <div className="flex flex-row justify-start gap-32 items-start w-fit h-fit">
+        <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-[150px] font-bebasNeue font-bold leading-[15px] sm:leading-[20px] md:leading-[40px] lg:leading-[60px] uppercase">
+          Lets&apos;s work <br />
+          <strong className="text-8xl sm:text-[150px] md:text-[200px] lg:text-[300px] tracking-normal">
             together
           </strong>
         </h1>
-        <div className="w-full h-full flex flex-col gap-5 justify-center items-center">
-          <span className="hidden sm:block -translate-x-24">
+        <div className="hidden 2xl:flex w-full h-full flex-col gap-5 translate-y-8 justify-center items-center">
+          <span className="-translate-x-24">
             <svg
               width="231"
               height="204"
@@ -28,7 +28,7 @@ export const Footer = () => {
               />
             </svg>
           </span>
-          <h2 className="hidden sm:block text-6xl font-bebasNeue text-foreground ">
+          <h2 className="text-6xl font-bebasNeue text-foreground ">
             <span
               className="
        duration-200 ease-out 
@@ -47,23 +47,24 @@ export const Footer = () => {
       <div className="flex justify-center items-center w-full h-[1px]">
         <div className="w-full h-full bg-foreground"></div>
       </div>
+
       {/* DESKTOP */}
       <div className="hidden md:flex flex-row justify-between pt-20 items-center w-full h-full">
         <div className="flex flex-col justify-start items-start">
-          <h3 className="font-bebasNeue text-4xl leading-[20px] text-foreground">
+          <h3 className="font-bebasNeue text-2xl lg:text-4xl leading-[10px] lg:leading-[20px] text-foreground">
             Sebastjan
           </h3>
           <span className="text-foreground text-xs">
-            <a>sebastjan.bas@gmail.com</a>
+            <a href={navigation[1].href}>sebastjan.bas@gmail.com</a>
           </span>
         </div>
-        <div className="text-foreground font-bebasNeue text-4xl">
+        <div className="text-foreground font-bebasNeue text-2xl lg:text-4xl">
           <ul className="flex flex-row justify-center items-center  gap-x-10">
             {navigation.map((link) => (
               <li key={link.name}>
                 <Link
                   href={link.href}
-                  className="text-4xl text-foreground 
+                  className="text-foreground 
        duration-200 ease-out 
       after:block after:h-[1px] after:origin-left after:scale-x-0 after:bg-foreground 
       after:transition-transform after:duration-500 after:ease-out hover:after:scale-x-100"
@@ -79,7 +80,7 @@ export const Footer = () => {
           </ul>
         </div>
         <div className="flex justify-center items-center">
-          <SocialMedia size="size-[24px]" />
+          <SocialMedia size="size-[16px] lg:size-[24px]" spacing="gap-8 lg:gap-10" />
         </div>
       </div>
 
@@ -93,7 +94,7 @@ export const Footer = () => {
             <a>sebastjan.bas@gmail.com</a>
           </span>
           <div className="flex pt-4 justify-center items-center">
-            <SocialMedia size="size-[20px]" />
+            <SocialMedia size="size-[20px]" spacing="gap-5" />
           </div>
         </div>
         <div className="text-foreground font-bebasNeue text-4xl">
