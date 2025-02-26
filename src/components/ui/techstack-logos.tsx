@@ -23,7 +23,7 @@ const TechStackLogos = () => {
   }, []);
 
   return (
-    <div className="grid grid-flow-col gap-5 md:gap-10">
+    <div className="grid grid-flow-col gap-10">
       {shuffledArray.map((logo) => (
         <div key={logo.name}>
           <logo.Component />

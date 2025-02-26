@@ -4,17 +4,20 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <section className="h-screen w-screen">
-        <h1 className="text-7xl text-blue-500 font-bebasNeue">Section1</h1>
+      <section className="h-screen w-screen p-5 md:p-10 xl:p-20">
+        <h1 className="text-7xl md:text-[150px] lg:text-[200px] text-start text-foreground font-bold font-bebasNeue">
+          Tech stack
+        </h1>
       </section>
-      <section className="h-screen w-screen">
-        <h1 className="text-7xl text-black font-bebasNeue">Section2</h1>
+      <section className="h-screen w-screen p-5 md:p-10 xl:p-20">
+        <h1 className="text-7xl md:text-[150px] lg:text-[200px] text-end text-foreground font-bold font-bebasNeue">
+          Portfolio
+        </h1>
       </section>
-      <section className="h-screen w-screen">
-        <h1 className="text-7xl text-white font-bebasNeue">Section3</h1>
-      </section>
-      <section className="h-screen w-screen">
-        <h1 className="text-7xl text-white font-bebasNeue">Section4</h1>
+      <section className="h-screen w-screen p-5 md:p-10 xl:p-20">
+        <h1 className="text-7xl md:text-[150px] lg:text-[200px] text-center text-foreground font-bold font-bebasNeue">
+          Areas I wish to explore
+        </h1>
       </section>
     </>
   );

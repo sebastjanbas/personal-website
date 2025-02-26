@@ -3,7 +3,7 @@ import TechStackLogos from "./techstack-logos";
 
 const TechStackBackground = () => {
   return (
-  <div className="flex flex-col gap-5 md:gap-10 xl:gap-20">
+  <div className="flex flex-col gap-10 xl:gap-20">
       <TechStackLogos/>
       <TechStackLogos/>
       <TechStackLogos/>

@@ -24,11 +24,11 @@ const bigShoulders = Big_Shoulders_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "Sebastjan Bas | Full Stack Developer",
+    default: "Sebastjan Bas | Software Engineer",
     template: "%s | Sebastjan Bas",
   },
   description:
-    "Full-stack developer specializing in Next.js, React, and Supabase. Passionate about building scalable web applications with modern technologies. Explore my portfolio to see my work!",
+    "I am a software engineer and full-stack developer passionate about creating fun and engaging applications that impact the world. Explore my portfolio to see my work!",
   metadataBase: new URL("https://www.sebastjanbas.com"),
   alternates: {
     canonical: "/",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.sebastjanbas.com",
-    siteName: "Sebastjan Bas | Full Stack Developer",
+    siteName: "Sebastjan Bas | Software Engineer",
     images: [
       {
         url: "/open-graph-photo.png",
