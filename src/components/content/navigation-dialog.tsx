@@ -13,7 +13,6 @@ const NavigationDialog = ({
   setMobileMenuOpen,
 }: DialogProps) => {
   return (
-    <div>
       <AnimatePresence mode="wait" initial={false}>
         {mobileMenuOpen && (
           <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} static>
@@ -23,9 +22,9 @@ const NavigationDialog = ({
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="bg-white fixed overflow-hidden inset-0 z-50 h-screen max-h-screen w-screen"
+                className="bg-white fixed overflow-hidden inset-0 z-[990] h-screen max-h-screen w-screen"
               >
-                <div className="max-h-screen w-full z-50 flex justify-center items-center overflow-y-auto pt-20 pb-32 px-4">
+                <div className="relative max-h-screen w-full z-10 flex justify-center items-center overflow-y-auto pt-20 pb-32 px-4">
                   <ul className="flex flex-col space-y-1 w-full max-w-5xl px-4 lg:px-8 font-bigShoulders font-bold uppercase">
                     {navigation.map((link) => (
                       <li key={link.name}>
@@ -54,7 +53,6 @@ const NavigationDialog = ({
           </Dialog>
         )}
       </AnimatePresence>
-    </div>
   );
 };
 

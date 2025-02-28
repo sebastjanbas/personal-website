@@ -1,49 +1,39 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useMotionValueEvent, useScroll } from "motion/react";
+import { useState } from "react";
 
 export default function BackgroundUpdater() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [scrollPosition, setScrollPosition] = useState(0);
 
-  useEffect(() => {
-    const updateBackground = (y: number) => {
-      let color = "#2F2F2F"; // Default background color
-      let fontColor = "#ffffff";
-      const vh = window.innerHeight;
+  const { scrollY } = useScroll();
+  const updateBackground = (y: number) => {
+    let color = "#2F2F2F"; // Default background color
+    let fontColor = "#ffffff";
+    const vh = window.innerHeight;
 
-      if (y <= 0.75 * vh) {
-        color = "#2F2F2F";
-      }
-      if (y > 0.75 * vh && y < 2 * vh) {
-        color = "#ffff";
-        fontColor = "#000000";
-      }
-      if (y > 2 * vh && y < 3 * vh) {
-        color = "#098984";
-      }
-      if (y > 3 * vh && y < 4 * vh) {
-        color = "#3E495B";
-      }
-      if (y >= 4 * vh) {
-        color = "#242424";
-      }
+    if (y <= 0.75 * vh) {
+      color = "#2F2F2F";
+    }
+    if (y > 0.75 * vh && y < 4 * vh) {
+      color = "#1C6E8C";
+      fontColor = "#FCC97D";
+    }
+    if (y >= 4 * vh) {
+      color = "#2F2F2F";
+    }
+    // color = "#098984";
+    // fontColor = "#FF9C86"
+    // color = "#644695";
+    // fontColor = "#FFF7A1"
 
-      document.documentElement.style.setProperty("--background", color);
-      document.documentElement.style.setProperty("--foreground", fontColor);
-    };
+    document.documentElement.style.setProperty("--background", color);
+    document.documentElement.style.setProperty("--foreground", fontColor);
+  };
 
-    // Set background immediately on mount
-    updateBackground(window.scrollY);
-
-    const handleScroll = () => {
-      const y = window.scrollY;
-      setScrollPosition(y);
-      updateBackground(y);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  useMotionValueEvent(scrollY, "change", (y) => {
+    updateBackground(y);
+  });
 
   return null;
   {
