@@ -1,10 +1,11 @@
 "use client";
-import { backgroundLogos } from "@/lib/docs";
-import React, { ReactElement, useEffect, useState } from "react";
+import { LogoProps, LogoList } from "@/lib/docs";
+import React, { useEffect, useState } from "react";
 
 interface Logo {
   name: string;
-  Component: () => ReactElement;
+  // Component: () => ReactElement;
+  Component: ({color}: LogoProps) => React.JSX.Element;
 }
 
 const TechStackLogos = () => {
@@ -19,14 +20,14 @@ const TechStackLogos = () => {
       return shuffled;
     }
 
-    setShuffledArray(shuffleArray(backgroundLogos));
+    setShuffledArray(shuffleArray(LogoList));
   }, []);
 
   return (
     <div className="grid grid-flow-col gap-10">
       {shuffledArray.map((logo) => (
         <div key={logo.name}>
-          <logo.Component />
+          <logo.Component color={false} />
         </div>
       ))}
     </div>
