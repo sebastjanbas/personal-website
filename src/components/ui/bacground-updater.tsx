@@ -8,20 +8,17 @@ export default function BackgroundUpdater() {
 
   const { scrollY } = useScroll();
   const updateBackground = (y: number) => {
-    let color = "#2F2F2F"; // Default background color
-    let fontColor = "#ffffff";
+    let color = "#ffffff"; // Default background color
+    let fontColor = "#1D1D1F";
     const vh = window.innerHeight;
 
-    if (y <= 0.75 * vh) {
-      color = "#2F2F2F";
-    }
     if (y > 0.75 * vh && y < 2 * vh) {
       color = "#1C6E8C";
       fontColor = "#FCC97D";
     }
     if (y >= 2 * vh && y < 4 *vh) {
       color = "#ffff";
-      fontColor = "#000000"
+      fontColor = "#1D1D1F"
     }
     if (y >= 4 * vh){
       color = "#2f2f2f"

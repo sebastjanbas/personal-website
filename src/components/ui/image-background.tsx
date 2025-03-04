@@ -15,7 +15,7 @@ export const ImageBackground = () => {
       if (window.innerWidth < 768) {
         setScrollRange([0, 0.55]); // Increase range for slower effect on mobile
       } else {
-        setScrollRange([0, 0.35]); // Default for Desktop
+        setScrollRange([-0.35, 0.35]); // Default for Desktop
       }
     };
 
@@ -25,8 +25,8 @@ export const ImageBackground = () => {
   }, []);
 
   const maskImage = useTransform(scrollYProgress, scrollRange, [
-    "linear-gradient(to bottom, black 100%, black 0%)",
-    "linear-gradient(to bottom, black 0%, transparent 100%)",
+    "linear-gradient(to bottom, black 100%, black 100%)",
+    "linear-gradient(to bottom, black 0%, transparent 30%)",
   ]);
 
   // Clip-path for arrow reveal
@@ -39,9 +39,9 @@ export const ImageBackground = () => {
   );
 
   return (
-    <div className="absolute overflow-hidden w-screen max-h-[calc(100vh+120px)]">
+    <div className="absolute overflow-hidden z-20 w-screen max-h-[calc(100vh+120px)]">
       <motion.div
-        className="relative overflow-x-visible z-0 flex justify-center items-center top-0 h-[calc(100vh+100px)] md:h-[calc(100vh+400px)] -translate-y-10 md:-translate-y-20 w-full bg-[#2F2F2F]"
+        className="relative overflow-x-visible flex justify-center items-center top-0 h-[calc(100vh+100px)] md:h-[calc(100vh+890px)] -translate-y-10 md:-translate-y-20 w-full bg-transparent"
         style={{
           maskImage: maskImage,
           WebkitMaskImage: maskImage, // Ensure Safari support
@@ -49,11 +49,11 @@ export const ImageBackground = () => {
       >
         {/* Background Image */}
         <Image
-          src="/personal-photo.png"
+          src="/personal-photo-color.png"
           width={1920}
           height={1080}
           alt="Photo of Sebastjan Bas"
-          className="object-cover w-full h-full scale-[1.3] translate-y-32 opacity-[60%] md:opacity-[60%] md:scale-[0.85] md:-translate-y-20 md:object-[50%_20%]"
+          className="object-contain w-full h-full scale-[1.7] translate-y-32 opacity-100 md:scale-[1.5] md:object-contain md:-translate-y-20 lg:scale-[0.65] lg:-translate-y-20 lg:object-[50%_20%]"
         />
       </motion.div>
       {/* Arrow Reveal Effect */}
@@ -63,7 +63,7 @@ export const ImageBackground = () => {
         height="407"
         viewBox="0 0 224 407"
         fill="none"
-          className="rotate-6 translate-y-12"
+          className="rotate-6 translate-y-12 md:hidden"
         xmlns="http://www.w3.org/2000/svg"
       >
         <motion.path
