@@ -6,20 +6,25 @@ import React from "react";
 const AboutPage = () => {
   return (
     <>
-      <section className="w-screen h-screen">
-        <div className="absolute overflow-hidden z-0 opacity-20 w-screen h-screen inset-0">
-          <div className="relative rotate-[20deg] scale-[1.3] -translate-x-20 -translate-y-20">
-            <TechStackBackground />
-          </div>
-        </div>
-        <div className="relative z-50 flex flex-col w-full h-full justify-start items-start pt-20 p-5 sm:p-10">
-          <div className="flex flex-row lg:gap-x-10 justify-between items-center">
-            <h1 className="text-3xl lg:text-7xl leading-[15px] tracking-tight text-foreground font-bebasNeue">
-              Hi my name is <br />
-              <strong className="text-7xl lg:text-9xl text-foreground font-bebasNeue">
-                Sebastjan Bas
-              </strong>
-            </h1>
+      <section className="w-screen h-screen p-5 md:p-10 xl:p-20">
+        <TechStackBackground />
+        <div className="relative z-50 flex flex-col w-full h-full justify-center items-center pt-20 p-5 sm:p-10">
+          <div className="flex flex-row max-w-7xl gap-x-20 justify-between items-center">
+            <div>
+              <h1 className="text-3xl lg:text-7xl leading-[15px] tracking-tight text-foreground font-bebasNeue">
+                Hi my name is <br />
+                <strong className="text-7xl lg:text-9xl text-foreground font-bebasNeue">
+                  Sebastjan Bas
+                </strong>
+              </h1>
+              <p className="text-sm">
+                I am a <DisplayAge /> year old software engineer and full-stack
+                developer from Slovenia. I am passionate about creating fun and
+                engaging applications that improve how people interact with the
+                world. Track and Field have been a big and important part of my
+                life, shaping my discipline and determination.
+              </p>
+            </div>
             <Image
               className="hidden lg:block"
               width={600}
@@ -30,13 +35,6 @@ const AboutPage = () => {
               alt="Photo of Sebastjan Bas"
             />
           </div>
-          <p className="text-sm">
-            I am a <DisplayAge /> year old software engineer and full-stack
-            developer from Slovenia. I am passionate about creating fun and
-            engaging applications that improve how people interact with the
-            world. Track and Field have been a big and important part of my
-            life, shaping my discipline and determination.
-          </p>
         </div>
       </section>
       <section className="w-screen h-screen p-5 md:p-10 xl:p-20">

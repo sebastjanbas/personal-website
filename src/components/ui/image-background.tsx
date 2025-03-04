@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -29,53 +29,53 @@ export const ImageBackground = () => {
     "linear-gradient(to bottom, black 0%, transparent 100%)",
   ]);
 
-  // Animate arrow opacity so it fades in as you scroll
-  const arrowOpacity = useTransform(scrollYProgress, [0.1, 1], [0, 10]);
+  // Clip-path for arrow reveal
+  // SVG Stroke Animation (Reveal along path)
+  const strokeLength = 2000; // Approximate length of the arrow path
+  const strokeDashoffset = useTransform(
+    scrollYProgress,
+    [0.06, 0.25],
+    [strokeLength, 0],
+  );
 
   return (
     <div className="absolute overflow-hidden w-screen max-h-[calc(100vh+120px)]">
       <motion.div
-        className="relative overflow-x-visible z-0 flex justify-center items-center top-0 h-[calc(100vh+65px)] md:h-[calc(100vh+400px)] -translate-y-10 md:-translate-y-20 w-full bg-[#2F2F2F]"
+        className="relative overflow-x-visible z-0 flex justify-center items-center top-0 h-[calc(100vh+100px)] md:h-[calc(100vh+400px)] -translate-y-10 md:-translate-y-20 w-full bg-[#2F2F2F]"
         style={{
           maskImage: maskImage,
           WebkitMaskImage: maskImage, // Ensure Safari support
-          backfaceVisibility: "hidden", // Prevents flickering on Safari
         }}
       >
         {/* Background Image */}
         <Image
-          src="/personal-photo3.svg"
-          fill
+          src="/personal-photo.png"
+          width={1920}
+          height={1080}
           alt="Photo of Sebastjan Bas"
-          className="object-cover scale-[1.3] translate-y-32 opacity-[60%] md:opacity-[60%] md:scale-[0.85] md:-translate-y-20 md:object-[50%_20%]"
+          className="object-cover w-full h-full scale-[1.3] translate-y-32 opacity-[60%] md:opacity-[60%] md:scale-[0.85] md:-translate-y-20 md:object-[50%_20%]"
         />
       </motion.div>
       {/* Arrow Reveal Effect */}
-      <motion.div
-        className="absolute flex justify-center items-center w-full bottom-10"
-        style={{
-          opacity: arrowOpacity, // Controls fade-in effect
-          transform: "translate3d(0,0,0)", // Forces GPU acceleration
-          willChange: "transform, opacity", // Prepares browser for smooth animations
-          backfaceVisibility: "hidden", // Prevents flickering on Safari
-          WebkitFontSmoothing: "antialiased", // Improves text rendering
-        }}
+      <motion.div className="absolute flex justify-center items-center h-fit w-full bottom-10">
+      <svg
+        width="224"
+        height="407"
+        viewBox="0 0 224 407"
+        fill="none"
+          className="rotate-6 translate-y-12"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <div>
-          <svg
-            width="170"
-            height="441"
-            viewBox="0 0 170 441"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1 1C183.646 278.841 74.9487 369.962 43.359 313.643C-45.7403 154.794 131.308 116.526 147.462 278.263C163.615 440 152.846 440 152.846 440M152.846 440C149.061 427.593 149.974 414.729 147.462 401.01M152.846 440L169 406.786"
-              stroke="var(--foreground)"
-              strokeWidth="3"
-            />
-          </svg>
-        </div>
+        <motion.path
+          d="M185.5 1C153.661 372.978 -18.4504 315.721 3.9725 257.5C26.3954 199.279 331.197 260.5 181.197 102C31.197 -56.5 129.5 197.5 104 273.5C78.4999 349.5 21.4999 399 18.5 396.5C15.5 394 16.4998 363 12.9999 357C9.5 351 15.5 404.5 15.5 404.5C15.5 404.5 59.5 374 61 371.5"
+          strokeWidth="2"
+          className="stroke-foreground"
+          strokeDasharray={strokeLength}
+          style={{ strokeDashoffset }} // Controls the reveal
+            strokeLinecap={"round"}
+            strokeLinejoin={"round"}
+        />
+      </svg>
       </motion.div>
     </div>
   );
