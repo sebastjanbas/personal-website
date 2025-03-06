@@ -126,24 +126,30 @@ export const ProjectList = [
     id: 1,
     name: "Slovene Step By Step",
     image: "/slovene-step-by-step-landing-page.png",
-    href: "#",
-    description: "Praesent suspendisse vitae, aliquam dignissim quis metus dolor, imperdiet ac. Ipsum, lacus imperdiet, nam purus nunc nulla consectetur nunc nulla.",
+    imageLink: "https://slovene-step-by-step.vercel.app",
+    href: "/slovene-step-by-step",
+    description:
+      "A language learning platform built with Next.js and Supabase, offering structured course lectures similar to Udemy. Supports multilingual learning with next-intl and features a responsive, user-friendly design. Migrated from Django to Next.js for improved performance and scalability.",
     type: "professional",
   },
   {
     id: 2,
     name: "E - Library",
     image: "#",
-    href: "#",
-    description: "In tristique tellus consectetur non tortor dui, amet consequat dapibus. Nunc dignissim amet cras duis nullam, magnis vel, in diam.",
+    imageLink: "#",
+    href: "/elibrary",
+    description:
+      "A digital bookshelf for organizing physical books in a personal database, categorized into virtual rooms for easy access. Still in development, the platform will allow users to search, manage, and share book collections with friends and family. Features include room-based organization, book metadata storage, and seamless sharing options, ensuring books are always easy to find.",
     type: "personal",
   },
   {
     id: 3,
-    name: "Turnament Meneger",
+    name: "Turnament Hub",
     image: "#",
-    href: "#",
-    description: "In maecenas consequat sem nibh, platea ac nibh maximus imperdiet. Vitae, nibh eleifend at nulla, eget praesent sapien tempor integer.",
+    imageLink: "#",
+    href: "/turnament-hub",
+    description:
+      "A social tournament app for organizing competitions with friends and family across various sports. Still in development, the app will let users create custom tournaments, choose from different tournament formats (round-robin, knockout, etc.), and track match results in real time. Additional planned features include automated bracket generation, customizable scoring systems, and live match updates, making it easy to manage and enjoy competitive play.",
     type: "personal",
   },
 ];

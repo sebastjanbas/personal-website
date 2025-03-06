@@ -4,6 +4,7 @@ import React from "react";
 import { Button } from "../ui/button";
 
 type ProjectProps = {
+  imageLink: string,
   image: string;
   name: string;
   href: string;
@@ -13,6 +14,7 @@ type ProjectProps = {
 
 const ProjectContainer = ({
   image,
+  imageLink,
   name,
   href,
   description,
@@ -28,14 +30,14 @@ const ProjectContainer = ({
         >
           {name}
         </h1>
-        <p className="text-sm font-robotoFont font-normal">{description}</p>
+        <p className="text-sm py-5 font-robotoFont font-normal">{description}</p>
         <Button className="mt-10" variant={"mine"}>
           <Link href={href}>Learn More</Link>
         </Button>
       </div>
       <div className="w-full md:w-[50%] h-full">
         {image !== "#" ? (
-          <a href="https://slovene-step-by-step.vercel.app" target="_blank">
+          <a href={imageLink} target="_blank">
           <Image
             src={image}
             width={1280}

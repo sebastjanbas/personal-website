@@ -81,7 +81,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </head>
-      <body className="overflow-x-hidden">
+      <body className="overflow-x-hidden font-robotoFont">
         <BackgroundUpdater />
         <Navbar />
         {children}
