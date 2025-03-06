@@ -18,6 +18,29 @@ export type LogoProps = {
   color: boolean;
 };
 
+export const sharedMetadata = [
+  {
+    twitter: {
+      card: "summary_large_image",
+      site: "@sebastjanbas",
+      creator: "@sebastjanbas",
+    },
+  },
+  {
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+  },
+];
+
 export const socialMedia = [
   {
     id: 1,
@@ -127,9 +150,8 @@ export const ProjectList = [
     name: "Slovene Step By Step",
     image: "/slovene-step-by-step-landing-page.png",
     imageLink: "https://slovene-step-by-step.vercel.app",
-    href: "/slovene-step-by-step",
-    description:
-      "A language learning platform built with Next.js and Supabase, offering structured course lectures similar to Udemy. Supports multilingual learning with next-intl and features a responsive, user-friendly design. Migrated from Django to Next.js for improved performance and scalability.",
+    href: "/projects/slovene-step-by-step",
+    description: "A language learning platform.",
     type: "professional",
   },
   {
@@ -137,9 +159,8 @@ export const ProjectList = [
     name: "E - Library",
     image: "#",
     imageLink: "#",
-    href: "/elibrary",
-    description:
-      "A digital bookshelf for organizing physical books in a personal database, categorized into virtual rooms for easy access. Still in development, the platform will allow users to search, manage, and share book collections with friends and family. Features include room-based organization, book metadata storage, and seamless sharing options, ensuring books are always easy to find.",
+    href: "/projects/elibrary",
+    description: "A digital bookshelf for organizing physical books.",
     type: "personal",
   },
   {
@@ -147,9 +168,9 @@ export const ProjectList = [
     name: "Turnament Hub",
     image: "#",
     imageLink: "#",
-    href: "/turnament-hub",
+    href: "/projects/turnament-hub",
     description:
-      "A social tournament app for organizing competitions with friends and family across various sports. Still in development, the app will let users create custom tournaments, choose from different tournament formats (round-robin, knockout, etc.), and track match results in real time. Additional planned features include automated bracket generation, customizable scoring systems, and live match updates, making it easy to manage and enjoy competitive play.",
+      "A social tournament app for organizing competitions with friends and family.",
     type: "personal",
   },
 ];

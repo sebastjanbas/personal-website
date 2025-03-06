@@ -1,7 +1,30 @@
 import DisplayAge from "@/components/content/get-age";
 import TechStackBackground from "@/components/ui/techstack-background";
+import { sharedMetadata } from "@/lib/docs";
+import { Metadata } from "next";
 import Image from "next/image";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "About Me",
+  description:
+    "I am a software engineer and full-stack developer from Slovenia. I am passionate about creating fun and engaging applications that improve how people interact with the world. Track and Field have been a big and important part of my life, shaping my discipline and determination.",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://www.sebastjanbas.com/about",
+    siteName: "About Me | Sebastjan Bas",
+    images: [
+      {
+        url: "/open-graph-photo.png",
+        width: 4096,
+        height: 2304,
+        alt: "Photo of Sebastjan Bas",
+      },
+    ],
+  },
+  ...sharedMetadata,
+};
 
 const AboutPage = () => {
   return (

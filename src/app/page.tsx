@@ -8,14 +8,14 @@ export default function Home() {
     <>
       <HeroSection />
       <TechStackSection />
-      <section className="h-fit w-screen p-5 md:p-10 xl:p-20 mb-[15px]">
+      <section className="h-fit w-screen p-5 flex flex-col justify-end items-end md:p-10 xl:p-20 mb-[15px]">
         <h1 className=" bg-clip-text bg-gradient-to-b from-black via-slate-500 to-white text-7xl md:text-[150px] lg:text-[180px] text-end tracking-tight text-transparent font-semibold font-bebasNeue">
           Portfolio
         </h1>
         <h2 className="font-robotoFont font-normal text-md lg:text-lg text-end pb-5">
           Building what’s missing with purpose-driven solutions.
         </h2>
-        <p className="font-robotoFont font-normal text-sm text-end md:max-w-[80%] lg:max-w-[70%] 2xl:max-w-[50%] md:justify-self-end">
+        <p className="font-robotoFont font-normal text-sm text-end md:max-w-[80%] lg:max-w-[70%] 2xl:max-w-[50%]">
           Every project I build comes from a real need—something I felt was
           missing. I create software that makes technology easier to use.
           Whether it’s a web app or a personal project, my goal is to build
