@@ -22,28 +22,28 @@ const SocialMedia = ({
         target="_blank"
         className="transition-transform duration-200 hover:scale-125"
       >
-        <Github size={size} />
+        <Github size={size} fillColor="fill-foreground" />
       </a>
       <a
         href="https://x.com/SebastjanBas"
         target="_blank"
         className="transition-transform duration-200 hover:scale-125"
       >
-        <XLogo size={size}/>
+        <XLogo size={size} fillColor="fill-foreground"/>
       </a>
       <a
         href="https://www.instagram.com/sebastjan.bas/"
         target="_blank"
         className="transition-transform duration-200 hover:scale-125"
       >
-        <Instagram size={size}/>
+        <Instagram size={size} fillColor="fill-foreground"/>
       </a>
       <a
         href="https://www.linkedin.com/in/sebastjan-bas-604b5b271/"
         target="_blank"
         className="transition-transform duration-200 hover:scale-125"
       >
-        <LinkedIn size={size}/>
+        <LinkedIn size={size} fillColor="fill-foreground"/>
       </a>
     </div>
   );

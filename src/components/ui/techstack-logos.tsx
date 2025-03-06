@@ -8,7 +8,7 @@ interface Logo {
   Component: ({color}: LogoProps) => React.JSX.Element;
 }
 
-const TechStackLogos = () => {
+const TechStackLogos = ({logoGap = "gap-10"}) => {
   const [shuffledArray, setShuffledArray] = useState<Logo[]>([]);
   useEffect(() => {
     function shuffleArray(array: Logo[]): Logo[] {
@@ -24,7 +24,7 @@ const TechStackLogos = () => {
   }, []);
 
   return (
-    <div className="grid grid-flow-col gap-10">
+    <div className={`grid grid-flow-col ${logoGap}`}>
       {shuffledArray.map((logo) => (
         <div key={logo.name}>
           <logo.Component color={false} />

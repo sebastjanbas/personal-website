@@ -37,15 +37,15 @@ const Navbar = () => {
         transition={{ duration: 0.35, ease: easeInOut }}
         className="fixed top-0 z-[100] flex w-full h-fit justify-center items-center"
       >
-        <nav className="relative flex w-full max-w-5xl px-8 py-5 justify-between items-center">
+        <nav className="relative flex w-full max-w-5xl backdrop-blur-sm px-8 py-5 justify-between items-center">
           <Link
             className={`translate-y-1 font-bebasNeue text-lg text-center leading-none
-  after:block after:h-[1px] after:origin-left after:scale-x-0
-  after:transition-transform after:duration-300 
-  hover:after:scale-x-100 hover:tracking-wider transition-all will-change-transform ${
+  md:after:block md:after:h-[1px] md:after:origin-left md:after:scale-x-0
+  md:after:transition-transform md:after:duration-300 
+  md:hover:after:scale-x-100 md:hover:tracking-wider transition-all will-change-transform ${
     mobileMenuOpen
-      ? "text-black after:bg-black "
-      : "text-foreground after:bg-foreground "
+      ? "text-slate-600 md:after:bg-slate-600 "
+      : "text-foreground md:after:bg-foreground "
   }`}
             href={"/"}
             onClick={() => setMobileMenuOpen(false)}
@@ -57,7 +57,7 @@ const Navbar = () => {
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className={`bg-transparent inline-flex items-center justify-center rounded-md ${
-                mobileMenuOpen ? "text-black" : "text-foreground"
+                mobileMenuOpen ? "text-slate-600" : "text-foreground"
               }`}
               aria-expanded="false"
             >

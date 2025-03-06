@@ -3,7 +3,6 @@ import { useMotionValueEvent, useScroll } from "motion/react";
 // import { useState } from "react";
 
 export default function BackgroundUpdater() {
-
   // const [scrollPosition, setScrollPosition] = useState(0);
 
   const { scrollY } = useScroll();
@@ -12,22 +11,20 @@ export default function BackgroundUpdater() {
     let fontColor = "#1D1D1F";
     const vh = window.innerHeight;
 
-    if (y > 0.75 * vh && y < 2 * vh) {
-      color = "#1C6E8C";
-      fontColor = "#FCC97D";
-    }
-    if (y >= 2 * vh && y < 4 *vh) {
+    if (y >= 2 * vh && y < 4 * vh) {
       color = "#ffff";
-      fontColor = "#1D1D1F"
+      fontColor = "#1D1D1F";
     }
-    if (y >= 4 * vh){
-      color = "#2f2f2f"
-      fontColor = "#ffff"
+    if (y >= 6 * vh) {
+      color = "#2f2f2f";
+      fontColor = "#ffff";
     }
     // color = "#098984";
     // fontColor = "#FF9C86"
     // color = "#644695";
     // fontColor = "#FFF7A1"
+    // color = "#1C6E8C";
+    // fontColor = "#FCC97D";
 
     document.documentElement.style.setProperty("--background", color);
     document.documentElement.style.setProperty("--foreground", fontColor);

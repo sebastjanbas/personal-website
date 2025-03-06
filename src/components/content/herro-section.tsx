@@ -11,12 +11,12 @@ import {
 const HeroSection = () => {
   return (
     <>
-      <section className="flex flex-col justify-center items-center h-[calc(100vh+120px)] w-screen p-5 md:p-10 xl:p-20">
+      <section className="flex  flex-col justify-center items-center h-[calc(100vh+120px)] w-screen p-5 md:p-10 xl:p-20">
         <ImageBackground />
-        <div className="relative w-full mt-20 md:mt-0 h-fit z-10 flex justify-center items-start translate-y-10">
+        <div className="relative w-full mt-16 md:mt-0 h-fit z-10 flex justify-center items-start translate-y-10">
           <div className="flex flex-col">
             <h3
-              className="bg-clip-text bg-gradient-to-r from-black to-gray-500
+              className="bg-clip-text bg-gradient-to-r from-slate-600 to-gray-400
               font-bebasNeue text-transparent text-center
               text-2xl tracking-wider
               sm:text-2xl sm:tracking-[7.5px]
@@ -24,12 +24,12 @@ const HeroSection = () => {
               lg:tracking-[16.5px]
               "
             >
-              Software Engineer | Full-stack developer
+              Software Engineer | Full-stack dev
             </h3>
             <h1
-              className="bg-clip-text bg-gradient-to-b from-black to-white
-              font-bebasNeue text-transparent text-center
-              text-7xl 
+              className="bg-clip-text bg-gradient-to-b from-black via-slate-500 to-white
+              font-bebasNeue font-black text-transparent text-center
+              text-7xl tracking-tighter 
               sm:text-[145px] sm:tracking-[-7px]
               lg:text-[230px] lg:tracking-[-5px]
               "
@@ -53,7 +53,7 @@ const HeroSection = () => {
                     <TooltipProvider delayDuration={300}>
                       <Tooltip>
                         <TooltipTrigger>
-                          <item.Component size="size-7" />
+                          <item.Component size="size-7" fillColor="fill-slate-600" />
                         </TooltipTrigger>
                         <TooltipContent side="right">{item.name}</TooltipContent>
                       </Tooltip>
@@ -63,8 +63,8 @@ const HeroSection = () => {
               ))}
             </div>
             <div
-              className="text-foreground font-black font-bebasNeue text-lg text-center leading-none translate-y-2 
-  after:block after:h-[1px] after:origin-left after:scale-x-0 after:bg-foreground 
+              className="text-slate-600 font-bebasNeue text-lg text-center leading-none -translate-y-40 sm:translate-y-2 
+  after:block after:h-[1px] after:origin-left after:scale-x-0 after:bg-slate-600 
   after:transition-transform after:duration-500 
   hover:after:scale-x-100 hover:tracking-wider transition-all will-change-transform"
             >

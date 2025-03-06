@@ -53,6 +53,10 @@ export default {
   			}
   		},
   		fontFamily: {
+        robotoFont: [
+          "Roboto",
+          "sans-serif"
+        ],
   			bebasNeue: [
   				'Bebas Neue',
   				'sans-serif'
