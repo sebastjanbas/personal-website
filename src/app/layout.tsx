@@ -1,6 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import type { Metadata } from "next";
-import { Bebas_Neue, Big_Shoulders_Display, Roboto, Sigmar } from "next/font/google";
+import {
+  Bebas_Neue,
+  Big_Shoulders_Display,
+  Roboto,
+  Sigmar,
+} from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import BackgroundUpdater from "@/components/ui/bacground-updater";
@@ -12,8 +17,8 @@ const bebasNeue = Bebas_Neue({
 const robotoFont = Roboto({
   weight: ["100", "300", "400", "500", "700", "900"],
   subsets: ["latin", "latin-ext"],
-  style: ["normal", "italic"]
-})
+  style: ["normal", "italic"],
+});
 
 const sigmarFont = Sigmar({
   weight: "400",

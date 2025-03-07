@@ -1,0 +1,28 @@
+<xml version="1.0" encoding="UTF-8">
+   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+     <url>
+       <loc>https://www.sebastjanbas.com</loc>
+       <lastmod>2025-03-06</lastmod>
+     </url>
+     <url>
+       <loc>https://www.sebastjanbas.com/work</loc>
+       <lastmod>2025-03-06</lastmod>
+     </url>
+     <url>
+       <loc>https://www.sebastjanbas.com/about</loc>
+       <lastmod>2025-03-06</lastmod>
+     </url>  
+     <url>
+       <loc>https://www.sebastjanbas.com/projects/slovene-step-by-step</loc>
+       <lastmod>2025-03-06</lastmod>
+     </url>
+     <url>
+       <loc>https://www.sebastjanbas.com/projects/elibrary</loc>
+       <lastmod>2025-03-06</lastmod>
+     </url>
+     <url>
+       <loc>https://www.sebastjanbas.com/projects/turnament-hub</loc>
+       <lastmod>2025-03-06</lastmod>
+     </url>
+   </urlset>
+</xml>
