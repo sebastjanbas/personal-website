@@ -1,6 +1,5 @@
 import HeroSection from "@/components/content/herro-section";
 import ProjectContainer from "@/components/content/project-container";
-import StatsContainer from "@/components/content/stats-container";
 import TechStackSection from "@/components/content/tech-stack-section";
 import { ProjectList } from "@/lib/docs";
 
@@ -24,9 +23,7 @@ export default function Home() {
           passion for problem-solving, efficiency, and design. Take a look at my
           work and see it in action!
         </p> */}
-        <div>
-          <StatsContainer />
-        </div>
+        <div>{/*           <StatsContainer /> */}</div>
       </section>
       {ProjectList.map((project) => (
         <section

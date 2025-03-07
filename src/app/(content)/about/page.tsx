@@ -1,5 +1,4 @@
 import DisplayAge from "@/components/content/get-age";
-import TechStackBackground from "@/components/ui/techstack-background";
 import { sharedMetadata } from "@/lib/docs";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -30,7 +29,6 @@ const AboutPage = () => {
   return (
     <>
       <section className="w-screen h-screen p-5 md:p-10 xl:p-20">
-        <TechStackBackground />
         <div className="relative z-50 flex flex-col w-full h-full justify-center items-center pt-20 p-5 sm:p-10">
           <div className="flex flex-row max-w-7xl gap-x-20 justify-between items-center">
             <div>
