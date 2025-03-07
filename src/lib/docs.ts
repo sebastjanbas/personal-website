@@ -174,3 +174,10 @@ export const ProjectList = [
     type: "personal",
   },
 ];
+
+
+export const portfolioStats = [
+  {id: 1, name: "Over", value: "3+", desc: "projects finished"},
+  {id: 2, name: "Over", value: "4+", desc: "years of programing experience"},
+
+]

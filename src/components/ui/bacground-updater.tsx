@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import { useMotionValueEvent, useScroll } from "motion/react";
 // import { useState } from "react";
@@ -13,7 +14,8 @@ export default function BackgroundUpdater() {
 
     if (y >= 2 * vh && y < 4 * vh) {
       color = "#ffff";
-      fontColor = "#1D1D1F";
+      // fontColor = "#1D1D1F";
+      fontColor = "#62748E";
     }
     if (y >= 6 * vh) {
       color = "#2f2f2f";
@@ -26,8 +28,10 @@ export default function BackgroundUpdater() {
     // color = "#1C6E8C";
     // fontColor = "#FCC97D";
 
-    document.documentElement.style.setProperty("--background", color);
-    document.documentElement.style.setProperty("--foreground", fontColor);
+    // uncomment to enable background change
+
+    // document.documentElement.style.setProperty("--background", color);
+    // document.documentElement.style.setProperty("--foreground", fontColor);
   };
 
   useMotionValueEvent(scrollY, "change", (y) => {

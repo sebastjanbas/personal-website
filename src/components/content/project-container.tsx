@@ -21,14 +21,14 @@ const ProjectContainer = ({
   type,
 }: ProjectProps) => {
   return (
-    <div className="flex flex-col text-center md:text-start justify-between gap-5 w-full h-fit items-start">
-      <div className="flex flex-col md:mt-10 h-full w-full justify-center md:justify-start items-center md:items-start p-5 md:p-10 xl:p-20">
+    <div className="flex flex-col text-center md:text-start justify-center gap-5 w-full h-fit items-center">
+      <div className="flex flex-col max-w-5xl md:mt-10 h-full w-full justify-center md:justify-start items-center md:items-start p-5 md:p-10 xl:p-20">
         <span className="text-md capitalize md:text-xl font-semibold">
           {type} project
         </span>
         <h1
           className="bg-clip-text bg-gradient-to-r from-[#042943] to-[#8ED3EA] text-transparent
-          text-6xl sm:text-7xl lg:text-8xl font-semibold tracking-tight"
+          text-5xl sm:text-6xl lg:text-7xl font-semibold tracking-tight"
         >
           {name}
         </h1>
@@ -52,7 +52,7 @@ const ProjectContainer = ({
           </div>
         )}
       </div>
-      <div className="w-full flex flex-col justify-center items-center md:items-start p-5 md:p-10 xl:p-20">
+      <div className="w-full max-w-5xl flex flex-col justify-center items-center md:items-start p-5 md:p-10 xl:p-20">
         <p className="text-sm py-5 font-robotoFont font-normal">
           {description}
         </p>
