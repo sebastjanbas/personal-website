@@ -148,7 +148,7 @@ export const ProjectList = [
   {
     id: 1,
     name: "Slovene Step By Step",
-    image: "/slovene-step-by-step-landing-page.png",
+    image: "/slovene-step-by-step.png",
     imageLink: "https://slovene-step-by-step.vercel.app",
     href: "/projects/slovene-step-by-step",
     description: "A language learning platform.",

@@ -53,9 +53,14 @@ const HeroSection = () => {
                     <TooltipProvider delayDuration={300}>
                       <Tooltip>
                         <TooltipTrigger>
-                          <item.Component size="size-7" fillColor="fill-slate-600" />
+                          <item.Component
+                            size="size-7"
+                            fillColor="fill-slate-600"
+                          />
                         </TooltipTrigger>
-                        <TooltipContent side="right">{item.name}</TooltipContent>
+                        <TooltipContent side="right">
+                          {item.name}
+                        </TooltipContent>
                       </Tooltip>
                     </TooltipProvider>
                   </a>
@@ -63,16 +68,16 @@ const HeroSection = () => {
               ))}
             </div>
             <div
-              className="text-slate-600 font-bebasNeue text-lg text-center leading-none -translate-y-40 sm:translate-y-2 
-  after:block after:h-[1px] after:origin-left after:scale-x-0 after:bg-slate-600 
-  after:transition-transform after:duration-500 
-  hover:after:scale-x-100 hover:tracking-wider transition-all will-change-transform"
+              className="text-slate-600 font-semibold font-bebasNeue text-lg text-center leading-none -translate-y-40 sm:translate-y-2 
+              md:after:block md:after:h-[1px] md:after:origin-left md:after:scale-x-0 md:after:bg-slate-600 
+              md:after:transition-transform md:after:duration-500 
+              md:hover:after:scale-x-100 md:hover:tracking-wider transition-all will-change-transform"
             >
               <a
                 href="https://docs.google.com/document/d/1peoHs2uNtDp4bT8fS7wZnrPKTzGBYnTQbRC7RwZrg1k/export?format=pdf"
                 download
               >
-                Download CV
+               &darr; Download CV
               </a>
             </div>
           </div>

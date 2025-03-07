@@ -38,7 +38,7 @@ const ProjectContainer = ({
             src={image}
             width={1280}
             height={720}
-            className="w-full h-[300px] md:h-full object-cover scale-100 md:scale-100"
+            className="w-full h-[300px] object-cover scale-100 md:scale-100"
             alt="Project image"
           />
           </a>

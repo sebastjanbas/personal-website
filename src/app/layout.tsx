@@ -2,10 +2,8 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, Big_Shoulders_Display, Roboto, Sigmar } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/content/navbar";
 import { Analytics } from "@vercel/analytics/react";
 import BackgroundUpdater from "@/components/ui/bacground-updater";
-import { Footer } from "@/components/content/footer";
 
 const bebasNeue = Bebas_Neue({
   weight: "400",
@@ -83,10 +81,8 @@ export default function RootLayout({
       </head>
       <body className="overflow-x-hidden font-robotoFont">
         <BackgroundUpdater />
-        <Navbar />
         {children}
         <Analytics />
-        <Footer />
       </body>
     </html>
   );
