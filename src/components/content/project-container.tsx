@@ -22,7 +22,7 @@ const ProjectContainer = ({
 }: ProjectProps) => {
   return (
     <div className="flex flex-col text-center md:text-start justify-center gap-5 w-full h-fit items-center">
-      <div className="flex flex-col max-w-5xl md:mt-10 h-full w-full justify-center md:justify-start items-center md:items-start p-5 md:p-10 xl:p-20">
+      <div className="flex flex-col max-w-5xl md:my-10 h-full w-full justify-center md:justify-start items-center md:items-start">
         <span className="text-md capitalize md:text-xl font-semibold">
           {type} project
         </span>
