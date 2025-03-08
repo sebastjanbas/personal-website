@@ -1,7 +1,7 @@
 import { LogoProps } from "@/lib/docs";
 import React from "react";
 
-export const Figma = ({ color }: LogoProps) => {
+export const Figma = ({ color, className }: LogoProps) => {
   if (!color) {
     return (
       <svg
@@ -9,6 +9,7 @@ export const Figma = ({ color }: LogoProps) => {
         height="48"
         viewBox="0 0 36 48"
         xmlns="http://www.w3.org/2000/svg"
+        className={className}
       >
         <path
           className="fill-foreground"
@@ -26,6 +27,7 @@ export const Figma = ({ color }: LogoProps) => {
       viewBox="0 0 68 100"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <path
         d="M17.3333 100.001C26.5333 100.001 34 92.5339 34 83.3339V66.6672H17.3333C8.13329 66.6672 0.666626 74.1339 0.666626 83.3339C0.666626 92.5339 8.13329 100.001 17.3333 100.001Z"

@@ -1,4 +1,5 @@
 import React from "react";
+import LogoBackground from "../ui/logo-background";
 
 const TechStackSection = () => {
   return (
@@ -11,6 +12,9 @@ const TechStackSection = () => {
           <h2 className="text-lg font-robotoFont font-normal text-start pb-4">
             The tools I use to build, design, and deploy software.
           </h2>
+        </div>
+        <div className="my-16 w-full h-full md:h-[500px] flex justify-center items-center">
+          <LogoBackground />
         </div>
       </div>
     </section>

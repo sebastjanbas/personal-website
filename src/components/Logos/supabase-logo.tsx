@@ -1,7 +1,7 @@
 import { LogoProps } from "@/lib/docs";
 import React from "react";
 
-export const SupabaseLogo = ({ color }: LogoProps) => {
+export const SupabaseLogo = ({ color, className }: LogoProps) => {
   if (!color) {
     return (
       <svg
@@ -10,6 +10,7 @@ export const SupabaseLogo = ({ color }: LogoProps) => {
         viewBox="0 0 45 48"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className={className}
       >
         <path
           className="stroke-foreground"
@@ -31,6 +32,7 @@ export const SupabaseLogo = ({ color }: LogoProps) => {
       viewBox="0 0 98 100"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <path
         d="M56.8941 98.3382C54.3395 101.555 49.1596 99.7927 49.0981 95.6848L48.198 35.6028H88.5971C95.9144 35.6028 99.9955 44.0544 95.4454 49.7852L56.8941 98.3382Z"

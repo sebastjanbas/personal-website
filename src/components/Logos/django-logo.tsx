@@ -1,7 +1,7 @@
 import { LogoProps } from "@/lib/docs";
 import React from "react";
 
-export const DjangoLogo = ({ color }: LogoProps) => {
+export const DjangoLogo = ({ color, className }: LogoProps) => {
   if (!color) {
     return (
       <svg
@@ -10,6 +10,7 @@ export const DjangoLogo = ({ color }: LogoProps) => {
         viewBox="0 0 38 49"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className={className}
       >
         <path
           className="fill-foreground"
@@ -29,6 +30,7 @@ export const DjangoLogo = ({ color }: LogoProps) => {
       viewBox="0 0 79 100"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <path
         d="M35.2064 0.000488281H51.5478V74.8984C43.1774 76.4817 37.0154 77.1047 30.3483 77.1047C10.3895 77.0838 0 68.1672 0 51.0422C0 34.5422 11.0204 23.8338 28.0979 23.8338C30.7479 23.8338 32.7668 24.0423 35.2064 24.6671V0.000488281ZM35.779 38.1646C33.8651 37.5395 32.288 37.3312 30.2688 37.3312C22.0037 37.3312 17.2296 42.3728 17.2296 51.2081C17.2296 59.8103 21.7936 64.5602 30.1639 64.5602C31.9724 64.5602 33.4446 64.4584 35.779 64.1458V38.1646Z"

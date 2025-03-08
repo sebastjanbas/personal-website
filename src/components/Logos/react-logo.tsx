@@ -1,7 +1,7 @@
 import { LogoProps } from "@/lib/docs";
 import React from "react";
 
-export const ReactLogo = ({ color }: LogoProps) => {
+export const ReactLogo = ({ color, className }: LogoProps) => {
   if (!color) {
     return (
       <svg
@@ -10,6 +10,7 @@ export const ReactLogo = ({ color }: LogoProps) => {
         viewBox="0 0 46 42"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className={className}
       >
         <path
           className="fill-foreground"
@@ -41,6 +42,7 @@ export const ReactLogo = ({ color }: LogoProps) => {
       viewBox="0 0 101 90"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <path
         d="M50.3067 53.8168C55.1758 53.8168 59.1229 49.8696 59.1229 45.0006C59.1229 40.1315 55.1758 36.1843 50.3067 36.1843C45.4376 36.1843 41.4905 40.1315 41.4905 45.0006C41.4905 49.8696 45.4376 53.8168 50.3067 53.8168Z"

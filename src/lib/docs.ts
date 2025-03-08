@@ -16,6 +16,7 @@ import { TypescriptLogo } from "@/components/Logos/tyoescript-logo";
 
 export type LogoProps = {
   color: boolean;
+  className?: string;
 };
 
 export const sharedMetadata = [
