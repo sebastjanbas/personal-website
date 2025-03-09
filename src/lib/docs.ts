@@ -13,6 +13,7 @@ import XLogo from "@/components/Logos/social-media/x";
 import { SupabaseLogo } from "@/components/Logos/supabase-logo";
 import { TailwindLogo } from "@/components/Logos/tailwind-logo";
 import { TypescriptLogo } from "@/components/Logos/tyoescript-logo";
+import { DatabaseIcon, LockIcon, PaintRollerIcon } from "lucide-react";
 
 export type LogoProps = {
   color: boolean;
@@ -154,6 +155,15 @@ export const ProjectList = [
     href: "/projects/slovene-step-by-step",
     description: "A language learning platform.",
     type: "professional",
+    stats: [
+      { id: 1, icon: LockIcon, desc: "Authentication" },
+      { id: 2, icon: PaintRollerIcon, desc: "Beautiful design" },
+      {
+        id: 3,
+        icon: DatabaseIcon,
+        desc: "Video Content on demand",
+      },
+    ],
   },
   {
     id: 2,
@@ -163,6 +173,7 @@ export const ProjectList = [
     href: "/projects/elibrary",
     description: "A digital bookshelf for organizing physical books.",
     type: "personal",
+    stats: []
   },
   {
     id: 3,
@@ -173,12 +184,11 @@ export const ProjectList = [
     description:
       "A social tournament app for organizing competitions with friends and family.",
     type: "personal",
+    stats: []
   },
 ];
 
-
 export const portfolioStats = [
-  {id: 1, name: "Over", value: "3+", desc: "projects finished"},
-  {id: 2, name: "Over", value: "4+", desc: "years of programing experience"},
-
-]
+  { id: 1, name: "Over", value: "3+", desc: "projects finished" },
+  { id: 2, name: "Over", value: "4+", desc: "years of programing experience" },
+];

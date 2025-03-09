@@ -2,7 +2,7 @@ import HeroSection from "@/components/content/herro-section";
 import ProjectContainer from "@/components/content/project-container";
 import StatsContainer from "@/components/content/stats-container";
 import TechStackSection from "@/components/content/tech-stack-section";
-import { ProjectList } from "@/lib/docs";
+import { portfolioStats, ProjectList } from "@/lib/docs";
 
 export default function Home() {
   return (
@@ -18,7 +18,9 @@ export default function Home() {
             Building what’s missing with purpose-driven solutions.
           </h2>
           <div className="h-full w-full mt-5">
-            <StatsContainer />
+            <div className="flex flex-col mt-0 md:mt-10 md:flex-row justify-center md:justify-end items-end md:items-start gap-3">
+              <StatsContainer stats={portfolioStats} textDirection="text-end" />
+            </div>
           </div>
         </div>
       </section>
@@ -35,6 +37,7 @@ export default function Home() {
               href={project.href}
               description={project.description}
               type={project.type}
+              stats={project.stats}
             />
           </div>
         </section>
