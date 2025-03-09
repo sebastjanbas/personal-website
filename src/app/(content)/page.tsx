@@ -25,7 +25,7 @@ export default function Home() {
       {ProjectList.map((project) => (
         <section
           key={project.id}
-          className={`h-fit w-screen ${project.id === 1 ? "bg-gradient-to-b from-white to-[#F5F5F7]" : "bg-[#F5F5F7]"} p-5 flex flex-col justify-center items-center mb-[15px]`}
+          className={`h-fit w-screen ${project.id === 1 ? "bg-gradient-to-b from-white to-[#F5F5F7]" : "bg-[#F5F5F7]"} flex flex-col justify-center items-center mb-[15px]`}
         >
           <div className="w-full h-full">
             <ProjectContainer

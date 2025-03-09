@@ -22,7 +22,7 @@ const ProjectContainer = ({
 }: ProjectProps) => {
   return (
     <div className="flex flex-col text-center md:text-start justify-center gap-5 w-full h-fit items-center">
-      <div className="flex flex-col max-w-5xl md:my-10 h-full w-full justify-center md:justify-start items-center md:items-start">
+      <div className="flex flex-col max-w-5xl md:my-10 h-full w-full justify-center md:justify-start items-center md:items-start p-5">
         <span className="text-md capitalize md:text-xl font-semibold">
           {type} project
         </span>
@@ -33,14 +33,14 @@ const ProjectContainer = ({
           {name}
         </h1>
       </div>
-      <div className="w-full h-full overflow-hidden">
+      <div className="w-full h-full max-h-[800px] overflow-hidden">
         {image !== "#" ? (
           <a href={imageLink} target="_blank">
             <Image
               src={image}
               width={1280}
               height={720}
-              className="w-full h-[300px] md:h-full object-cover scale-100 md:scale-100"
+              className="w-full h-[200px] translate-y-10 md:-translate-y-28 md:h-full object-cover"
               alt="Project image"
             />
           </a>
