@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Git from "../Logos/git";
 import { ReactLogo } from "../Logos/react-logo";
 import { Figma } from "../Logos/figma";
@@ -16,19 +16,38 @@ import { motion, useInView } from "motion/react";
 
 const LogoBackground = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-  const initialScale = window.innerWidth < 1000 ? (window.innerWidth < 768 ? 0.5 : 0.6) : 0.8;
-  const finalScale = window.innerWidth < 1000 ? (window.innerWidth < 768 ? 0.7: 0.8) : 1;
+  const isInView = useInView(ref);
+
+  const [initialScale, setInitialScale] = useState(0.7);
+  const [finalScale, setFinalScale] = useState(1);
+
+  useEffect(() => {
+    if (window.innerWidth < 1000) {
+      if (window.innerWidth < 768) {
+        setInitialScale(0.5);
+        setFinalScale(0.7);
+      } else {
+        setInitialScale(0.6);
+        setFinalScale(0.8);
+      }
+    } else {
+      setInitialScale(0.8);
+      setFinalScale(1);
+    }
+  }, []);
 
   return (
     <div className="relative w-full max-w-4xl h-full overflow-hidden">
       <motion.div
         className="hidden md:block relative w-full h-full transition-transform"
-        style={{ transition: "2s ease-in-out" }}
         ref={ref}
-        initial={{ scale: initialScale }}
+        style={{
+          transform: `scale(${initialScale})`,
+          transition: "1.5s ease-in-out",
+        }}
+        initial={false}
         whileInView={{ scale: finalScale }}
-        viewport={{ amount: 0.8 }}
+        viewport={{ once: true, amount: 0.8 }}
       >
         <div>
           <div className="flex justify-center items-center absolute h-fit w-fit scale-[200%] p-2 aspect-square bg-white shadow-lg rounded-2xl translate-y-16 -translate-x-16 right-0">
@@ -75,11 +94,14 @@ const LogoBackground = () => {
 
       <motion.div
         className="block md:hidden relative w-full h-[600px] transition-transform"
-        style={{ transition: "2s ease-in-out" }}
         ref={ref}
-        initial={{ scale: initialScale }}
+        style={{
+          transform: `scale(${initialScale})`,
+          transition: "1.5s ease-in-out",
+        }}
+        initial={false}
         whileInView={{ scale: finalScale }}
-        viewport={{ amount: 0.8 }}
+        viewport={{ once: true, amount: 0.8 }}
       >
         <div>
           <div className="flex justify-center items-center absolute h-fit w-fit p-3 aspect-square bg-white shadow-lg rounded-2xl scale-[150%] right-0 -translate-x-10 bottom-0 -translate-y-60">
