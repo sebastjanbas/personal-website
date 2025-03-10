@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import {
   Bebas_Neue,
   Big_Shoulders_Display,
+  Manrope,
   Roboto,
   Sigmar,
 } from "next/font/google";
@@ -25,6 +26,11 @@ const sigmarFont = Sigmar({
   weight: "400",
   subsets: ["latin"],
 });
+
+const manrope = Manrope({
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+  subsets: ["latin"]
+})
 
 const bigShoulders = Big_Shoulders_Display({
   weight: ["400", "100", "200", "300", "500", "600", "700", "800", "900"],

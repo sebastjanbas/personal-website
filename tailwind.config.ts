@@ -53,6 +53,10 @@ export default {
   			}
   		},
   		fontFamily: {
+        mantropeFont: [
+          "Mantrope", 
+          "sans-serif"
+        ],
         robotoFont: [
           "Roboto",
           "sans-serif"
