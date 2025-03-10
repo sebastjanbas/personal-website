@@ -42,11 +42,11 @@ export default function Home() {
           </div>
         </section>
       ))}
-      <section className="h-screen w-screen p-5 md:p-10 xl:p-20">
+      {/* <section className="h-screen w-screen p-5 md:p-10 xl:p-20">
         <h1 className=" bg-clip-text bg-gradient-to-b from-black via-slate-500 to-white text-5xl lg:text-7xl text-start tracking-tight text-transparent font-semibold font-bebasNeue">
           Areas I wish to explore
         </h1>
-      </section>
+      </section> */}
     </>
   );
 }

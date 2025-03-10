@@ -1,18 +1,7 @@
-import { DjangoLogo } from "@/components/Logos/django-logo";
-import { DockerLogo } from "@/components/Logos/docker-logo";
-import { ElectronLogo } from "@/components/Logos/electron-logo";
-import { Figma } from "@/components/Logos/figma";
-import Git from "@/components/Logos/git";
-import { NextJsLogo } from "@/components/Logos/nextjs-logo";
-import { PostGreSql } from "@/components/Logos/postgresql-logo";
-import { ReactLogo } from "@/components/Logos/react-logo";
 import Github from "@/components/Logos/social-media/github";
 import Instagram from "@/components/Logos/social-media/instagram";
 import LinkedIn from "@/components/Logos/social-media/linked-in";
 import XLogo from "@/components/Logos/social-media/x";
-import { SupabaseLogo } from "@/components/Logos/supabase-logo";
-import { TailwindLogo } from "@/components/Logos/tailwind-logo";
-import { TypescriptLogo } from "@/components/Logos/tyoescript-logo";
 import { DatabaseIcon, LockIcon, PaintRollerIcon } from "lucide-react";
 
 export type LogoProps = {
@@ -71,80 +60,6 @@ export const navigation = [
   { name: "About", href: "/about", stayOpen: false },
 ];
 
-export const LogoList = [
-  {
-    name: "Figma",
-    Component: Figma,
-    description: "Design Tool",
-    href: "https://www.figma.com/",
-  },
-  {
-    name: "Git",
-    Component: Git,
-    description: "Version Control",
-    href: "https://git-scm.com/",
-  },
-  {
-    name: "React",
-    Component: ReactLogo,
-    description: "Frontend Library",
-    href: "https://react.dev/",
-  },
-  {
-    name: "Tailwind",
-    Component: TailwindLogo,
-    description: "CSS Framework",
-    href: "https://tailwindcss.com/",
-  },
-  {
-    name: "Typescript",
-    Component: TypescriptLogo,
-    description: "Javascript typesafe",
-    href: "https://www.typescriptlang.org/",
-  },
-  {
-    name: "Supabase",
-    Component: SupabaseLogo,
-    description: "Backend Tool",
-    href: "https://supabase.com/",
-  },
-  {
-    name: "Postgresql",
-    Component: PostGreSql,
-    description: "Relational Database",
-    href: "https://www.postgresql.org/",
-  },
-  {
-    name: "Django",
-    Component: DjangoLogo,
-    description: "Backend Python Framework",
-    href: "https://www.djangoproject.com/",
-  },
-  {
-    name: "Docker",
-    Component: DockerLogo,
-    description: "Containerization Platform",
-    href: "https://www.docker.com/",
-  },
-  {
-    name: "Nextjs",
-    Component: NextJsLogo,
-    description: "React Framework",
-    href: "https://nextjs.org/",
-  },
-  {
-    name: "Electron",
-    Component: ElectronLogo,
-    description: "Desktop development tool",
-    href: "https://www.electronjs.org/",
-  },
-  {
-    name: "React Native",
-    Component: ReactLogo,
-    description: "Mobile app development tool",
-    href: "https://reactnative.dev/",
-  },
-];
 
 export const ProjectList = [
   {
@@ -167,10 +82,11 @@ export const ProjectList = [
   },
   {
     id: 2,
-    name: "E - Library",
+    name: "ELibrary",
     image: "#",
     imageLink: "#",
-    href: "/projects/elibrary",
+    href: "#",
+    // href: "/projects/elibrary",
     description: "A digital bookshelf for organizing physical books.",
     type: "personal",
     stats: []
@@ -180,7 +96,8 @@ export const ProjectList = [
     name: "Turnament Hub",
     image: "#",
     imageLink: "#",
-    href: "/projects/turnament-hub",
+    href: "#",
+    // href: "/projects/turnament-hub",
     description:
       "A social tournament app for organizing competitions with friends and family.",
     type: "personal",

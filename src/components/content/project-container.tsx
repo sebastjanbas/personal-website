@@ -39,14 +39,14 @@ const ProjectContainer = ({
           {name}
         </h1>
       </div>
-      <div className="w-full h-full max-h-[800px] overflow-hidden">
+      <div className="w-full h-full max-h-[650px] max-w-[1700px] overflow-hidden">
         {image !== "#" ? (
           <a href={imageLink} target="_blank">
             <Image
               src={image}
               width={1280}
               height={720}
-              className="w-full h-[200px] translate-y-10 md:-translate-y-28 md:h-full object-cover"
+              className="w-full h-[300px] md:h-full opacity-90 md:opacity-80 md:hover:opacity-100 transition-opacity duration-300 translate-y-10 md:-translate-y-20 2xl:-translate-y-48 object-cover"
               alt="Project image"
             />
           </a>

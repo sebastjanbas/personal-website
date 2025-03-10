@@ -39,10 +39,9 @@ export const ImageBackground = () => {
     scrollYProgress,
     [0, 0.15],
     [strokeLength, 0],
-  );
-
+  )
   return (
-    <div className="absolute overflow-hidden z-20 w-screen max-h-[calc(100vh+120px)]">
+    <div className="absolute overflow-hidden bg-transparent z-20 w-screen max-h-[calc(100vh+120px)]">
       <motion.div
         className="relative overflow-x-visible flex justify-center items-center top-0 h-[calc(100vh+100px)] md:h-[calc(100vh+890px)] -translate-y-10 md:-translate-y-20 w-full bg-transparent"
         style={{

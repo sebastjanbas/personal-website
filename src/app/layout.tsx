@@ -9,6 +9,7 @@ import {
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import BackgroundUpdater from "@/components/ui/bacground-updater";
+import {Toaster} from "sonner"
 
 const bebasNeue = Bebas_Neue({
   weight: "400",
@@ -86,6 +87,7 @@ export default function RootLayout({
       </head>
       <body className="overflow-x-hidden font-robotoFont">
         <BackgroundUpdater />
+        <Toaster position="top-center" richColors />
         {children}
         <Analytics />
       </body>

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="h-fit w-screen p-5 sm:p-10 xl:p-20">
+    <footer className="h-fit w-screen mt-40 p-5 sm:p-10 xl:p-20">
       <div className="flex flex-row justify-start gap-32 items-start w-fit h-fit">
         <h1 className="bg-clip-text bg-gradient-to-br from-black via-slate-500 to-white tracking-tight text-4xl sm:text-6xl md:text-8xl lg:text-[150px] font-bebasNeue font-black uppercase text-transparent">
           Lets&apos;s work <br />

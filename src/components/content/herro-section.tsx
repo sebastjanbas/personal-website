@@ -7,11 +7,13 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "../ui/tooltip";
+import DownloadCVButton from "../ui/download-cv-button";
 
 const HeroSection = () => {
+
   return (
     <>
-      <section className="flex  flex-col justify-center items-center h-[calc(100vh+120px)] w-screen p-5 md:p-10 xl:p-20">
+      <section className="flex flex-col bg-gradient-to-b from-white to-[#D4EAF6] justify-center items-center h-[calc(100vh+120px)] w-screen p-5 md:p-10 xl:p-20">
         <ImageBackground />
         <div className="relative w-full mt-16 md:mt-0 h-fit z-10 flex justify-center items-start translate-y-10">
           <div className="flex flex-col">
@@ -73,12 +75,7 @@ const HeroSection = () => {
               md:after:transition-transform md:after:duration-500 
               md:hover:after:scale-x-100 md:hover:tracking-wider transition-all will-change-transform"
             >
-              <a
-                href="https://docs.google.com/document/d/1peoHs2uNtDp4bT8fS7wZnrPKTzGBYnTQbRC7RwZrg1k/export?format=pdf"
-                download
-              >
-               &darr; Download CV
-              </a>
+              <DownloadCVButton />
             </div>
           </div>
         </div>
