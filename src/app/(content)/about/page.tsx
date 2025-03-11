@@ -50,7 +50,8 @@ const AboutPage = () => {
               slovenia
             </strong>
             , currently studying in us. I love creating fun and creative
-            applications that improve how people interact with the world.{" "}
+            applications that improve the way people interact with the world.{" "}
+            <br className="block md:hidden" />
             <strong className="bg-clip-text bg-gradient-to-r from-[#0171e3] to-[#46b1ff] text-transparent">
               let&apos;s work together!{" "}
             </strong>
@@ -61,7 +62,7 @@ const AboutPage = () => {
         <div className="w-full max-w-6xl flex justify-start items-start h-full">
           <div className="grid grid-cols-1 grid-rows-6 lg:grid-cols-12 lg:grid-rows-2 gap-3 w-full h-full">
             <div className="flex flex-col justify-center lg:justify-start bg-transparent items-start h-full w-full row-span-1 lg:col-span-4">
-              <h3 className="text-xl uppercase">Beyong Portfolio</h3>
+              <h3 className="text-xl uppercase">Beyond Portfolio</h3>
               <h1 className="text-5xl xl:text-6xl font-normal font-mantropeFont tracking-tighter">
                 Let&apos;s know more about me
               </h1>
@@ -74,7 +75,7 @@ const AboutPage = () => {
                 Spoken Languages
               </h3>
               <h4 className="text-neutral-500 font-mantropeFont mb-5">
-                Slovenija moj doma ...
+                &quot;Due Cappucci e un cornetto per favore&quot;
               </h4>
               <LanguageCards />
             </div>

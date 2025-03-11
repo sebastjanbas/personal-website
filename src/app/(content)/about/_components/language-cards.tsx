@@ -14,7 +14,7 @@ const LanguageCards = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % languages.length);
-    }, 5000);
+    },3000);
 
     return () => clearInterval(interval);
   }, [languages.length]);
@@ -27,11 +27,11 @@ const LanguageCards = () => {
         return (
           <div
             key={lang.id}
-            className={`absolute flex flex-row justify-start items-center gap-3 shadow-xl rounded-xl p-5 bg-white w-full h-fit transition-all duration-700
-          ${isActive ? "opacity-100 scale-100 z-10" : "opacity-0 scale-[0.8]"}
+            className={`absolute flex flex-row justify-start items-center gap-3 shadow-xl rounded-xl p-5 bg-white w-full h-fit transition-all duration-700 ease-in-out
+          ${isActive ? "opacity-100 scale-100 z-10" : "opacity-0 scale-50"}
            `}
             style={{
-              transform: isActive ? "translateY(0)" : "translateY(-100%)",
+              transform: isActive ? "translateY(0)" : "translateY(-30%)",
             }}
           >
             <div className="bg-[#F1F0EA] px-3 py-2 aspect-square flex justify-center items-center text-2xl rounded-full">
