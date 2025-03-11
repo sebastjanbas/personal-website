@@ -60,7 +60,7 @@ const HeroSection = () => {
                             fillColor="fill-slate-600"
                           />
                         </TooltipTrigger>
-                        <TooltipContent side="right">
+                        <TooltipContent side="right" className="bg-slate-500">
                           {item.name}
                         </TooltipContent>
                       </Tooltip>

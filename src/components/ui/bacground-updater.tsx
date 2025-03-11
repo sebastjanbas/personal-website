@@ -1,10 +1,13 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import { useMotionValueEvent, useScroll } from "motion/react";
-// import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 export default function BackgroundUpdater() {
-  // const [scrollPosition, setScrollPosition] = useState(0);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const pathname = usePathname();
 
   const { scrollY } = useScroll();
   const updateBackground = (y: number) => {
@@ -12,10 +15,10 @@ export default function BackgroundUpdater() {
     let fontColor = "#1D1D1F";
     const vh = window.innerHeight;
 
-    if (y >= 2 * vh && y < 4 * vh) {
-      color = "#ffff";
-      // fontColor = "#1D1D1F";
-      fontColor = "#62748E";
+    if (pathname === "/about" && y > 300) {
+      color = "#F1F0EA";
+      fontColor = "#1D1D1F";
+      // fontColor = "#62748E";
     }
     if (y >= 6 * vh) {
       color = "#2f2f2f";
@@ -29,13 +32,12 @@ export default function BackgroundUpdater() {
     // fontColor = "#FCC97D";
 
     // uncomment to enable background change
-
     // document.documentElement.style.setProperty("--background", color);
     // document.documentElement.style.setProperty("--foreground", fontColor);
   };
 
   useMotionValueEvent(scrollY, "change", (y) => {
-    // setScrollPosition(y)
+    setScrollPosition(y)
     updateBackground(y);
   });
 
