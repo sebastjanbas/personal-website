@@ -2,7 +2,6 @@ import Github from "@/components/Logos/social-media/github";
 import Instagram from "@/components/Logos/social-media/instagram";
 import LinkedIn from "@/components/Logos/social-media/linked-in";
 import XLogo from "@/components/Logos/social-media/x";
-import { DatabaseIcon, LockIcon, PaintRollerIcon } from "lucide-react";
 
 export type LogoProps = {
   color: boolean;
@@ -65,43 +64,31 @@ export const ProjectList = [
   {
     id: 1,
     name: "Slovene Step By Step",
-    image: "/slovene-sbs-mockup.png",
-    imageLink: "https://slovene-step-by-step.vercel.app",
+    image: "/slovene-step-by-step-landing-page.png",
     href: "/projects/slovene-step-by-step",
-    description: "A language learning platform.",
-    type: "professional",
-    stats: [
-      { id: 1, icon: LockIcon, desc: "Authentication" },
-      { id: 2, icon: PaintRollerIcon, desc: "Beautiful design" },
-      {
-        id: 3,
-        icon: DatabaseIcon,
-        desc: "Video Content on demand",
-      },
-    ],
+    tech: "Next.js / Supabase / Tailwind",
+    type: "personal",
+    year: "2024"
   },
   {
     id: 2,
     name: "ELibrary",
     image: "#",
-    imageLink: "#",
     href: "#",
+    tech: "-",
     // href: "/projects/elibrary",
-    description: "A digital bookshelf for organizing physical books.",
     type: "personal",
-    stats: []
+    year: "Ongoing"
   },
   {
     id: 3,
     name: "Turnament Hub",
     image: "#",
-    imageLink: "#",
+    tech: "-",
     href: "#",
     // href: "/projects/turnament-hub",
-    description:
-      "A social tournament app for organizing competitions with friends and family.",
     type: "personal",
-    stats: []
+    year: "Ongoing"
   },
 ];
 

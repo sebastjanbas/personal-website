@@ -6,7 +6,7 @@ const LanguageCards = () => {
     { id: 1, name: "English", level: "Fluent", flag: "🇬🇧" },
     { id: 2, name: "Slovene", level: "Native", flag: "🇸🇮" },
     { id: 3, name: "Italian", level: "Beginner", flag: "🇮🇹" },
-    { id: 4, name: "German", level: "Inetermediate", flag: "🇩🇪" },
+    { id: 4, name: "German", level: "Intermediate", flag: "🇩🇪" },
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);

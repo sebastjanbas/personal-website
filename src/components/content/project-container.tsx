@@ -1,81 +1,86 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
-import { Button } from "../ui/button";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "../ui/tooltip";
 
 type ProjectProps = {
-  imageLink: string;
   image: string;
   name: string;
   href: string;
-  description: string;
   type: string;
-  stats: {
-    id: number;
-    icon: React.ComponentType<{ className?: string }>;
-    desc: string;
-  }[];
+  tech: string;
+  id: number;
+  year: string;
 };
 
 const ProjectContainer = ({
+  id,
   image,
-  imageLink,
-  name,
+  // name,
   href,
-  description,
+  tech,
+  year,
   type,
-  stats,
 }: ProjectProps) => {
   return (
-    <div className="flex flex-col text-center md:text-start justify-center gap-5 w-full h-fit items-center py-10">
-      <div className="flex flex-col max-w-5xl md:my-10 h-full w-full justify-center md:justify-start items-center md:items-start">
-        <span className="text-md capitalize md:text-xl font-semibold">
-          {type} project
-        </span>
-        <h1
-          className="bg-clip-text bg-gradient-to-r from-[#042943] to-[#8ED3EA] text-transparent
-          text-5xl sm:text-6xl lg:text-7xl font-semibold tracking-tight"
-        >
-          {name}
-        </h1>
-      </div>
-      <div className="w-full h-full max-h-[650px] max-w-[1700px] overflow-hidden">
-        {image !== "#" ? (
-          <a href={imageLink} target="_blank">
-            <Image
-              src={image}
-              width={1280}
-              height={720}
-              className="w-full h-[300px] md:h-full opacity-90 md:opacity-80 md:hover:opacity-100 transition-opacity duration-300 translate-y-10 md:-translate-y-20 2xl:-translate-y-48 object-cover"
-              alt="Project image"
-            />
-          </a>
-        ) : (
-          <div className="w-full h-full">
-            <h1 className="animate-pulse bg-clip-text bg-gradient-to-r from-slate-800 via-slate-400 to-slate-800 uppercase text-center text-5xl md:text-7xl lg:text-8xl  font-bebasNeue font-thin tracking-tight text-transparent">
-              coming soon
-            </h1>
+    <div className="flex flex-row justify-between items-center w-full xl:hover:h-[300px] transition-all duration-700 ease-in-out md:gap-10 h-[100px] overflow-hidden border-slate-500/30 border-t">
+      <div className="flex flex-row justify-center items-center h-full w-full">
+        <div className="flex flex-row gap-0 justify-start items-start w-[35%]">
+          <div className="w-[40%] h-full text-5xl font-bebasNeue">{id}</div>
+          <div className="flex self-start w-[60%] h-full font-bebasNeue tracking-widest text-slate-500">
+            <p>{year}</p>
           </div>
-        )}
-      </div>
-      <div className="w-full max-w-5xl flex flex-col justify-center items-center md:items-start">
-        <p className="text-xl font-semibold py-5 font-robotoFont capitalize">
-          {description}
-        </p>
-        <div className="flex text-center flex-row justify-between items-start gap-4 w-full h-full p-10 md:py-10">
-          {stats.map((stat) => (
-            <div
-              key={stat.id}
-              className="flex flex-col justify-center items-center gap-2 w-full"
-            >
-              <stat.icon className="size-8 text-[#1281EA]" />
-              <p>{stat.desc}</p>
-            </div>
-          ))}
         </div>
-        <Button className="mt-10" variant={"mine"}>
-          <Link href={href}>Learn More</Link>
-        </Button>
+        <div className="flex flex-col justify-center gap-2 items-start w-[65%] h-full">
+          <p className="text-slate-500 font-bebasNeue tracking-widest">
+            TC: <strong className="font-normal text-foreground">{tech}</strong>
+          </p>
+          <p className="text-slate-500 font-bebasNeue tracking-widest">
+            TY:{" "}
+            <strong className="capitalize text-foreground font-normal">
+              {type}
+            </strong>
+          </p>
+        </div>
+      </div>
+      <div className="flex justify-start items-center h-full max-w-2xl w-fit gap-10">
+        <TooltipProvider delayDuration={300}>
+          <Tooltip>
+            <TooltipTrigger>
+              <a href={href} target="_self">
+                <div className="h-fit w-fit bg-white border-slate-500/20 group p-2 border-[0.5px] rounded-full shadow-md hover:shadow-sm">
+                  <IoIosArrowRoundForward className="size-5 group-hover:rotate-[-45deg] transition-transform duration-200 ease-in-out" />
+                </div>
+              </a>
+            </TooltipTrigger>
+            <TooltipContent className="bg-[#F1F0EA] text-neutral-500">
+              Learn More
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+        <div className="hidden xl:flex justify-center items-center w-full h-full">
+          {image !== "#" ? (
+            <div className="relative h-full w-full">
+              {/* <p className="absolute text-3xl text-center font-bebasNeue bg-transparent w-full h-full flex justify-center items-center">
+                {name}
+              </p> */}
+              <Image
+                src={image}
+                alt="Project photo"
+                width={1920}
+                height={1080}
+                className="self-start object-"
+              />
+            </div>
+          ) : (
+            <p className="animate-pulse w-[1920px]">COMING SOON</p>
+          )}
+        </div>
       </div>
     </div>
   );
