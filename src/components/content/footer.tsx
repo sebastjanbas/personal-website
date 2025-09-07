@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="h-fit w-screen mt-40 p-5 sm:p-10 xl:p-20">
+    <footer className="h-fit w-screen px-5 sm:px-10 xl:px-20 xl:pb-20">
       <div className="flex justify-center items-center w-full h-[1px]">
         <div className="w-full h-full bg-foreground"></div>
       </div>
@@ -42,7 +42,10 @@ export const Footer = () => {
           </ul>
         </div>
         <div className="flex justify-center items-center">
-          <SocialMedia size="size-[16px] lg:size-[24px]" spacing="gap-8 lg:gap-10" />
+          <SocialMedia
+            size="size-[16px] lg:size-[24px]"
+            spacing="gap-8 lg:gap-10"
+          />
         </div>
       </div>
 
@@ -65,7 +68,7 @@ export const Footer = () => {
               <li key={link.name}>
                 <Link
                   href={link.href}
-                  className="text-xl lg:text-4xl text-slate-500" 
+                  className="text-xl lg:text-4xl text-slate-500"
                 >
                   {link.name}
                 </Link>

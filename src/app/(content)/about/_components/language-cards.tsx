@@ -6,7 +6,7 @@ const LanguageCards = () => {
     { id: 1, name: "English", level: "Fluent", flag: "🇬🇧" },
     { id: 2, name: "Slovene", level: "Native", flag: "🇸🇮" },
     { id: 3, name: "Italian", level: "Beginner", flag: "🇮🇹" },
-    { id: 4, name: "German", level: "Intermediate", flag: "🇩🇪" },
+    { id: 4, name: "German", level: "Beginner", flag: "🇩🇪" },
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -14,7 +14,7 @@ const LanguageCards = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % languages.length);
-    },3000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [languages.length]);

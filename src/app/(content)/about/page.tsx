@@ -118,7 +118,7 @@ const AboutPage = () => {
                       </TooltipTrigger>
                       <TooltipContent className="bg-gray-50 border-slate-500/30 border-[1px] rounded-lg">
                         <p className="font-mantropeFont text-foreground">
-                          World Athletics | Sebatjan Bas
+                          World Athletics | Sebastjan Bas
                         </p>
                       </TooltipContent>
                     </Tooltip>

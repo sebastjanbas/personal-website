@@ -72,13 +72,17 @@ export default {
 			sigmarFont: [
 				"Sigmar",
 				"sans-serif"
+			],
+			dmDisplay: [
+				"DM Serif Display",
+				"sans-serif"
 			]
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
   	}
   },
   plugins: [require("tailwindcss-animate"),

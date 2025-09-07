@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import {
   Bebas_Neue,
   Big_Shoulders_Display,
+  DM_Serif_Display,
   Manrope,
   Roboto,
   Sigmar,
@@ -10,7 +11,8 @@ import {
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import BackgroundUpdater from "@/components/ui/bacground-updater";
-import {Toaster} from "sonner"
+import CustomCursor from "@/components/ui/custom-cursor";
+import { Toaster } from "sonner";
 
 const bebasNeue = Bebas_Neue({
   weight: "400",
@@ -29,8 +31,13 @@ const sigmarFont = Sigmar({
 
 const manrope = Manrope({
   weight: ["200", "300", "400", "500", "600", "700", "800"],
-  subsets: ["latin"]
-})
+  subsets: ["latin"],
+});
+
+const dmDisplay = DM_Serif_Display({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 const bigShoulders = Big_Shoulders_Display({
   weight: ["400", "100", "200", "300", "500", "600", "700", "800", "900"],
@@ -92,10 +99,12 @@ export default function RootLayout({
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </head>
       <body className="overflow-x-hidden font-mantropeFont">
-        <BackgroundUpdater />
-        <Toaster position="top-center" richColors />
-        {children}
-        <Analytics />
+        <CustomCursor>
+          <BackgroundUpdater />
+          <Toaster position="top-center" richColors />
+          {children}
+          <Analytics />
+        </CustomCursor>
       </body>
     </html>
   );

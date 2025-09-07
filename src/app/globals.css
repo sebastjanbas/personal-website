@@ -19,7 +19,7 @@
 @layer base {
   :root {
     --background: #ffffff;
-    --foreground: #1D1D1F;
+    --foreground: #1d1d1f;
     --card: hsl(0 0% 100%);
     --card-foreground: hsl(0 0% 3.9%);
     --popover: hsl(0 0% 100%);
@@ -75,11 +75,16 @@
 @layer base {
   * {
     @apply border-border outline-ring;
+    cursor: none !important; /* Hide default cursor */
+  }
+  html {
+    scroll-behavior: smooth;
   }
   html,
   body {
     color: var(--foreground);
     background-color: var(--background); /* Default to white */
     transition: background-color 0.3s ease-in-out;
+    cursor: none !important; /* Hide default cursor */
   }
 }
