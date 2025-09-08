@@ -1,0 +1,8 @@
+.noisy-bg {
+  /* background: rgba(25, 25, 25, 0.5); */
+  background-image: url("/noise.png");
+}
+.noisy-bg2 {
+  /* background: rgba(25, 25, 25, 0.5); */
+  background-image: url("/noise.svg");
+}

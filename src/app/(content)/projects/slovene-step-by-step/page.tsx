@@ -1,4 +1,5 @@
 import React from "react";
+import "./_components/noisy-bg.modules.css";
 import {
   Globe,
   Users,
@@ -13,6 +14,7 @@ import {
   MessageCircle,
 } from "lucide-react";
 import { VideoPlaceholder } from "./_components/video-player";
+import ProjectLogo from "./_components/project-logo";
 
 const hoverStyle =
   "inline-block translate-y-1 text-lg text-center leading-none md:after:block md:after:h-[1px] md:after:origin-left md:after:scale-x-0 md:after:transition-transform md:after:duration-300 md:hover:after:scale-x-100 md:hover:tracking-wider transition-all will-change-transform text-foreground md:after:bg-foreground";
@@ -21,12 +23,22 @@ const SloPage = () => {
   return (
     <div className="min-h-screen w-full">
       {/* Hero Section */}
-      <section className="relative isolate overflow-hidden px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0 flex justify-center items-center bg-gradient-to-b from-[#F1F0EA] to-white">
-        <div className="mx-auto grid gap-x-8 grid-cols-2 items-start gap-y-10 max-w-6xl w-full">
-          <div className="col-span-2 col-start-1 row-start-1 mx-auto grid grid-cols-2 gap-x-8 px-8 w-full">
-            <div className="pr-4 w-[650px]">
+      <section className="relative isolate overflow-hidden px-6 py-24 sm:py-28 lg:overflow-visible lg:px-0 flex justify-center items-center bg-gradient-to-b from-[#F1F0EA] to-white">
+        <div className="mx-auto grid gap-x-8 grid-cols-1 lg:grid-cols-2 items-start gap-y-10 max-w-6xl w-full">
+          <div className="col-span-1 lg:col-span-2 col-start-1 row-start-1 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-x-8 lg:px-6">
+            <div className="w-full lg:w-[650px]">
               <div className="w-full">
-                <p className="text-base/7 font-semibold font-bebasNeue tracking-wide text-[#0978E7]">
+                {/* <div className="noisy-bg block lg:hidden w-full h-[200px] bg-sky-300 rounded-[2.5rem] mb-10" /> */}
+                <div className="noisy-bg2 lg:hidden w-full h-[200px] bg-sky-200 rounded-[2.5rem] mb-10 flex justify-center items-center">
+                  <h1 className="inline-flex items-center gap-2 text-3xl md:text-5xl font-bebasNeue font-bold text-white">
+                    Slovene
+                    <span>
+                      <ProjectLogo className="size-12 md:size-20" />
+                    </span>
+                    Step by Step
+                  </h1>
+                </div>
+                <p className="text-lg font-normal font-bebasNeue tracking-wider text-[#0978E7]">
                   Project for a client
                 </p>
                 <h1 className="text-5xl md:text-6xl text-foreground mb-6 font-dmDisplay tracking-tight">
@@ -40,15 +52,23 @@ const SloPage = () => {
               </div>
             </div>
           </div>
-          <div className="-mt-8 p-8 sticky top-40 col-start-2 row-span-2 row-start-1 overflow-hidden flex justify-end self-start ml-auto">
-            <div className="w-[400px] h-[750px] bg-gradient-to-br from-orange-500/50 to-white rounded-[2.5rem]" />
+          <div className="hidden lg:flex -mt-8 p-8 sticky top-40 col-start-3 row-span-2 row-start-1 overflow-hidden justify-end self-start ml-auto">
+            <div className="noisy-bg2 w-[400px] h-[750px] bg-sky-300 rounded-[2.5rem] flex justify-center items-center">
+              <h1 className="flex flex-col text-white items-center gap-2 text-5xl font-bebasNeue font-bold">
+                Slovene
+                <span>
+                  <ProjectLogo className="size-20" />
+                </span>
+                Step by Step
+              </h1>
+            </div>
           </div>
 
           {/* Project Info Cards */}
-          <div className="col-span-2 col-start-1 row-start-2 mx-auto grid w-full max-w-7xl grid-cols-2 gap-x-8 px-8">
-            <div className="w-[650px] pr-4">
+          <div className="col-span-1 lg:col-span-2 col-start-1 row-start-2 mx-auto grid w-full max-w-7xl grid-cols-1 lg:grid-cols-2 gap-x-8">
+            <div className="w-full lg:w-[650px]">
               <div className="grid grid-cols-2 gap-6">
-                <div className="p-6">
+                <div className="p-1 lg:p-6">
                   <h3 className="text-sm font-semibold text-foreground uppercase tracking-wide mb-2">
                     Role
                   </h3>
@@ -61,7 +81,7 @@ const SloPage = () => {
                     <p>DevOps Engineer</p>
                   </div>
                 </div>
-                <div className="p-6">
+                <div className="p-1 lg:p-6">
                   <h3 className="text-sm font-semibold text-foreground uppercase tracking-wide mb-2">
                     Deliverable
                   </h3>
@@ -74,7 +94,7 @@ const SloPage = () => {
                     <p>Progress Tracking System</p>
                   </div>
                 </div>
-                <div className="p-6">
+                <div className="p-1 lg:p-6">
                   <h3 className="text-sm font-semibold text-foreground uppercase tracking-wide mb-2">
                     Team
                   </h3>
@@ -82,7 +102,7 @@ const SloPage = () => {
                     Solo Project
                   </p>
                 </div>
-                <div className="p-6">
+                <div className="p-1 lg:p-6">
                   <h3 className="text-sm font-semibold text-foreground uppercase tracking-wide mb-2">
                     Date
                   </h3>
@@ -94,9 +114,9 @@ const SloPage = () => {
               <div className="w-full h-px bg-foreground opacity-10 my-5" />
 
               {/* Links to other sections */}
-              <div className="w-[650px] pr-4">
-                <div className="grid grid-cols-2 gap-6 mb-16">
-                  <div className="p-6">
+              <div className="w-full lg:w-[650px]">
+                <div className="grid grid-cols-2 gap-5 lg:gap-6 mb-16 w-full">
+                  <div className="p-1 lg:px-6">
                     <a
                       href="#overview"
                       className={hoverStyle}
@@ -111,7 +131,7 @@ const SloPage = () => {
                       </span>
                     </a>
                   </div>
-                  <div className="p-6">
+                  <div className="p-1 lg:px-6">
                     <a
                       href="#features"
                       className={hoverStyle}
@@ -126,7 +146,7 @@ const SloPage = () => {
                       </span>
                     </a>
                   </div>
-                  <div className="p-6">
+                  <div className="p-1 lg:px-6">
                     <a
                       href="#features-action"
                       className={hoverStyle}
@@ -141,7 +161,7 @@ const SloPage = () => {
                       </span>
                     </a>
                   </div>
-                  <div className="p-6">
+                  <div className="p-1 lg:px-6">
                     <a
                       href="#project-highlights"
                       className={hoverStyle}
@@ -189,7 +209,7 @@ const SloPage = () => {
             </div>
             <div className="grid grid-cols-2 gap-6">
               {/* Frontend */}
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8">
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-5 md:p-8">
                 <h3 className="text-xl font-semibold text-slate-800 mb-6 flex items-center">
                   <Zap className="w-5 h-5 mr-2 text-blue-600" />
                   Frontend
@@ -205,7 +225,7 @@ const SloPage = () => {
               </div>
 
               {/* Backend */}
-              <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-8">
+              <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-5 md:p-8">
                 <h3 className="text-xl font-semibold text-slate-800 mb-6 flex items-center">
                   <Shield className="w-5 h-5 mr-2 text-green-600" />
                   Backend
@@ -220,7 +240,7 @@ const SloPage = () => {
               </div>
 
               {/* Payment & Communication */}
-              <div className="bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-8">
+              <div className="bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-5 md:p-8">
                 <h3 className="text-xl font-semibold text-slate-800 mb-6 flex items-center">
                   <CreditCard className="w-5 h-5 mr-2 text-purple-600" />
                   Services
@@ -234,7 +254,7 @@ const SloPage = () => {
               </div>
 
               {/* Development */}
-              <div className="bg-gradient-to-br from-orange-50 to-amber-100 rounded-2xl p-8">
+              <div className="bg-gradient-to-br from-orange-50 to-amber-100 rounded-2xl p-5 md:p-8">
                 <h3 className="text-xl font-semibold text-slate-800 mb-6 flex items-center">
                   <Settings className="w-5 h-5 mr-2 text-orange-600" />
                   Development

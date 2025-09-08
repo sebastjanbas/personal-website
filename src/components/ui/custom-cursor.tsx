@@ -10,8 +10,22 @@ export default function CustomCursor({ children }: CustomCursorProps) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isClicking, setIsClicking] = useState(false);
   const [isHoveringInteractive, setIsHoveringInteractive] = useState(false);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   useEffect(() => {
+    // Detect if device has touch capability
+    const checkTouchDevice = () => {
+      const hasTouch = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+      setIsTouchDevice(hasTouch);
+    };
+
+    checkTouchDevice();
+
+    // If it's a touch device, don't set up cursor functionality
+    if (isTouchDevice) {
+      return;
+    }
+
     let animationFrameId: number;
 
     const updateMousePosition = (e: MouseEvent) => {
@@ -63,32 +77,34 @@ export default function CustomCursor({ children }: CustomCursorProps) {
         element.removeEventListener("mouseleave", handleInteractiveLeave);
       });
     };
-  }, []);
+  }, [isTouchDevice]);
 
   return (
     <>
       {children}
-      {/* Inverting cursor dot */}
-      <div
-        className="fixed pointer-events-none"
-        style={{
-          left: mousePosition.x,
-          top: mousePosition.y,
-          transform: "translate(-50%, -50%)",
-          mixBlendMode: "difference",
-          zIndex: 999999,
-        }}
-      >
+      {/* Only show custom cursor on non-touch devices */}
+      {!isTouchDevice && (
         <div
-          className={`absolute rounded-full bg-white transition-all duration-300 ease-out ${
-            isClicking ? "scale-75" : "scale-100"
-          }`}
+          className="fixed pointer-events-none"
           style={{
-            width: isHoveringInteractive ? "24px" : "16px",
-            height: isHoveringInteractive ? "24px" : "16px",
+            left: mousePosition.x,
+            top: mousePosition.y,
+            transform: "translate(-50%, -50%)",
+            mixBlendMode: "difference",
+            zIndex: 999999,
           }}
-        />
-      </div>
+        >
+          <div
+            className={`absolute rounded-full bg-white transition-all duration-300 ease-out ${
+              isClicking ? "scale-75" : "scale-100"
+            }`}
+            style={{
+              width: isHoveringInteractive ? "24px" : "16px",
+              height: isHoveringInteractive ? "24px" : "16px",
+            }}
+          />
+        </div>
+      )}
     </>
   );
 }
