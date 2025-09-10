@@ -72,6 +72,15 @@ export const ProjectList = [
   },
   {
     id: 2,
+    name: "Discord Bot",
+    image: "/discord-bot-landing-page.png",
+    href: "/projects/discord-bot",
+    tech: "Python",
+    type: "personal",
+    year: "2021 - 2022"
+  },
+  {
+    id: 3,
     name: "ELibrary",
     image: "#",
     href: "#",
@@ -81,7 +90,7 @@ export const ProjectList = [
     year: "Ongoing"
   },
   {
-    id: 3,
+    id: 4,
     name: "Turnament Hub",
     image: "#",
     tech: "-",
