@@ -66,38 +66,30 @@ export const ProjectList = [
     name: "Slovene Step By Step",
     image: "/slovene-step-by-step-landing-page.png",
     href: "/projects/slovene-step-by-step",
-    tech: "Next.js / Supabase / Tailwind",
-    type: "personal",
-    year: "2024"
+    tech: "Next.js / Supabase / Tailwind / PostgreSQL / Docker / Docker Compose / Maven",
+    type: "Individual Project - Freelance",
+    year: "2024",
+    description: "Complete language learning platform with booking system, payments, and community features for 1,200+ users."
   },
   {
     id: 2,
-    name: "Discord Bot",
-    image: "/discord-bot-landing-page.png",
-    href: "/projects/discord-bot",
-    tech: "Python",
-    type: "personal",
-    year: "2021 - 2022"
+    name: "Movie App",
+    image: "#",
+    href: "/projects/movie-app",
+    tech: "Spring Boot / Angular / PostgreSQL / Docker / Docker Compose / Maven",
+    type: "Teads Summer School Project",
+    year: "2024",
+    description: "Movie app with search functionality and detailed movie information."
   },
   {
     id: 3,
-    name: "ELibrary",
+    name: "Discord Bot",
     image: "#",
-    href: "#",
-    tech: "-",
-    // href: "/projects/elibrary",
-    type: "personal",
-    year: "Ongoing"
-  },
-  {
-    id: 4,
-    name: "Turnament Hub",
-    image: "#",
-    tech: "-",
-    href: "#",
-    // href: "/projects/turnament-hub",
-    type: "personal",
-    year: "Ongoing"
+    href: "/projects/discord-bot",
+    tech: "Python / Discord.py / Wavelink / Lavalink / Selenium / BeautifulSoup4 / Windows 10+",
+    type: "Personal Project",
+    year: "2021 - 2022",
+    description: "Feature-rich Discord bot with moderation tools, music functionality, and custom commands for community management."
   },
 ];
 

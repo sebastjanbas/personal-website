@@ -1,314 +1,409 @@
-# Olympy Discord Bot
+# MovieApp
 
-![Olympy Banner](photos/discord-bot-cover.png)
+A Spring Boot application for managing movie playlists and fetching movie data from The Movie Database (TMDB) API. This project was developed as part of the Teads Summer School program.
 
-A feature-rich Discord bot built with Python and discord.py, featuring music playback, Amazon product scraping, and entertainment commands.
+## Features
 
-## ⚠️ Disclaimer
+- **Movie Discovery**: Fetch popular movies from TMDB API
+- **Movie Search**: Search movies by name
+- **Movie Details**: Get detailed information about specific movies
+- **Streaming Providers**: Find where movies are available to stream
+- **Movie Videos**: Get trailers and videos for movies
+- **Playlist Management**: Create and manage movie playlists
+- **Database Storage**: Save movies to playlists in PostgreSQL database
+- **Monitoring & Observability**: Integrated with Prometheus, Grafana, and ELK stack
 
-**Important:** This project was originally built in 2021 and 2022. Due to changes in YouTube's policy, the music playback features of this bot are no longer functional and are unavailable. Please be aware that music commands and related features will not work as intended.
+## Architecture
 
-> **Apology:**  
-> I would like to apologize for the lack of commits in this repository. When I started this project, I was not familiar with Git's version control system, so there is only one full project commit. Thank you for your understanding!
+The application follows a layered architecture:
 
-## 🎵 Features
+- **Controllers**: REST API endpoints for handling HTTP requests
+- **Services**: Business logic for movie operations and data processing
+- **Repositories**: Data access layer for database operations
+- **Entities**: JPA entities for database mapping
+- **Client**: External API client for TMDB integration
 
-### 🎵 Music System
+### Tech Stack
 
-- **Advanced Music Player**: Full-featured music bot with queue management
-- **Multiple Sources**: Support for YouTube, direct URLs, search queries, and playlist URLs
-- **Queue Management**: Add, remove, shuffle, and navigate through tracks
-- **Audio Controls**: Play, pause, stop, skip, previous, volume control
-- **Equalizer**: Built-in equalizer with presets (flat, boost, metal, piano) and advanced custom settings
-- **Lyrics**: Automatic lyrics fetching for currently playing songs
-- **Seek & Restart**: Seek to specific timestamps and restart tracks
-- **Repeat Modes**: None, single track, or entire queue repeat
+- **Backend**: Spring Boot 3.5.3, Java 21
+- **Database**: PostgreSQL with pgvector extension
+- **Monitoring**: Prometheus, Grafana, Elasticsearch, Kibana, Filebeat
+- **Containerization**: Docker & Docker Compose
+- **Build Tool**: Maven
 
-### 🛒 Amazon Scraper
-
-- **Product Search**: Search Amazon products across different regions
-- **Multi-page Scraping**: Scrape up to 20 pages of results
-- **CSV Export**: Automatic export of results to CSV file
-- **Regional Support**: Search on Amazon US (.com), UK (.co.uk), Germany (.de)
-- **Product Details**: Extract title, price, rating, review count, and URLs
-
-### 🎮 Entertainment Commands
-
-- **Server Information**: Display detailed server stats
-- **Random Responses**: Fun hello messages and jokes
-- **Rock Paper Scissors**: Interactive game with image responses
-- **Propaganda**: Special promotional features
-- **Gay Meter**: Fun percentage calculator (DM-based)
-
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
-- **Operating System**: Microsoft Windows 10+
-- **Python**: 3.8 or higher
-- **Java**: 13+ (for Lavalink music server)
-- **Browser**: Chrome/Chromium (for Amazon scraping)
-- **Discord**: Bot Token from Discord Developer Portal
+- Java 21
+- Maven
+- Docker & Docker Compose
 
-### Installation
+### Running with Docker Compose
 
 1. **Clone the repository**
 
    ```bash
    git clone <repository-url>
-   cd Olympy
+   cd MovieApp
    ```
 
-2. **Install Python dependencies**
+2. **Start all services**
 
    ```bash
-   pip install discord.py wavelink selenium beautifulsoup4 aiohttp
+   docker-compose up -d
    ```
 
-3. **Set up Lavalink Music Server**
+3. **Build and run the application**
+   ```bash
+   mvn clean package
+   java -jar target/MovieApp-0.0.1-SNAPSHOT.jar
+   ```
 
-   - Download Lavalink.jar
-   - Place it in the project directory
-   - Ensure Java 13+ is installed
+The application will be available at `http://localhost:8080`
 
-4. **Configure Bot Token**
+### Running Locally
 
-- Go to [Discord Developers Portal](https://discord.com/developers/applications)
-- Create a new application and bot
-- Go to OAuth 2 and get your token
-- Create `Data` directory and paste the token in `token.0` file
-
-5. **Install Chrome WebDriver**
-   - Download chromedriver.exe for Amazon scraping
-   - Place it in the project root
-
-### Running the Bot
-
-#### Manual Start
-
-1. Start Lavalink server:
+1. **Start the database and monitoring stack**
 
    ```bash
-   java -jar Lavalink.jar
+   docker-compose up -d postgres prometheus grafana elasticsearch kibana filebeat
    ```
 
-2. Start the bot:
+2. **Run the application**
    ```bash
-   python launcher.py
+   mvn spring-boot:run
    ```
 
-#### Automated Start (Windows)
+## Monitoring & Observability
 
-Use the automation script:
+The application includes comprehensive monitoring:
+
+- **Prometheus**: Metrics collection at `http://localhost:9090`
+- **Grafana**: Dashboards at `http://localhost:3000` (admin/admin)
+- **Elasticsearch**: Log aggregation at `http://localhost:9200`
+- **Kibana**: Log visualization at `http://localhost:5601`
+
+### Available Metrics
+
+- `search_results`: Counter for movie searches
+- `search_timer`: Timer for search operations
+- Spring Boot actuator metrics
+
+## API Endpoints
+
+### Movies
+
+- `GET /api/movies` - Get popular movies
+- `GET /api/movies/n/{name}` - Search movies by name
+- `GET /api/movies/{id}` - Get movie details
+- `GET /api/movies/{id}/streaming` - Get streaming providers
+- `GET /api/movies/{id}/videos` - Get movie videos
+- `POST /api/movies/save/{id}?i={playlistId}` - Save movie to playlist
+
+### Playlists
+
+- `GET /api/playlists` - Get user playlists
+- `POST /api/playlists` - Create new playlist
+- `GET /api/playlists/{id}` - Get playlist by ID
+- `GET /api/playlists/{id}/movies` - Get movies in playlist
+
+### Health & Monitoring
+
+- `GET /actuator/health` - Application health check
+- `GET /actuator/metrics` - Application metrics
+- `GET /actuator/prometheus` - Prometheus metrics endpoint
+
+## Database Schema
+
+The application uses PostgreSQL with the following main entities:
+
+- **MovieEntity**: Stores movie information and metadata
+- **PlaylistEntity**: Manages user playlists
+- **Provider**: Streaming service information
+- **MovieVideo**: Video content for movies
+
+## Configuration
+
+### Environment Variables
+
+- `api.auth.key`: TMDB API authentication token
+- `spring.datasource.url`: Database connection URL
+- `spring.datasource.username`: Database username
+- `spring.datasource.password`: Database password
+
+### Profiles
+
+- **default**: Development configuration with H2 database
+- **production**: Production configuration with PostgreSQL
+
+## Logging
+
+The application uses structured logging with Logback and Logstash encoder. Logs are:
+
+- Written to `logs/application.log`
+- Archived daily to `logs/archived/`
+- Forwarded to Elasticsearch via Filebeat
+
+## Testing
+
+Run tests with:
 
 ```bash
-python Automation/Bot.py
+mvn test
 ```
 
-## 📋 Commands
+## Docker
 
-### Music Commands
+### Building the Image
 
-| Command       | Aliases            | Description                       |
-| ------------- | ------------------ | --------------------------------- |
-| `-connect`    | `join`, `j`        | Connect bot to voice channel      |
-| `-disconnect` | `leave`, `d`       | Disconnect from voice channel     |
-| `-play`       | `p`                | Play music (URL or search term)   |
-| `-pause`      |                    | Pause current track               |
-| `-stop`       |                    | Stop and clear queue              |
-| `-next`       | `skip`, `s`        | Skip to next track                |
-| `-previous`   |                    | Play previous track               |
-| `-shuffle`    |                    | Shuffle queue                     |
-| `-queue`      | `q`                | Show current queue                |
-| `-volume`     |                    | Set volume (0-1000%)              |
-| `-lyrics`     | `ly`               | Show song lyrics                  |
-| `-playing`    | `np`, `nowplaying` | Show current track info           |
-| `-seek`       |                    | Seek to timestamp (e.g., "2m34s") |
-| `-restart`    |                    | Restart current track             |
-
-### Amazon Commands
-
-| Command       | Aliases      | Description             |
-| ------------- | ------------ | ----------------------- |
-| `-amazon`     | `find`, `az` | Search Amazon products  |
-| `-amazonhelp` |              | Show Amazon search help |
-
-**Amazon Search Syntax:**
-
-```
--amazon product_name pages country
+```bash
+docker build -t movieapp .
 ```
 
-- `product_name`: Use underscores for spaces
-- `pages`: Number of pages (1-20)
-- `country`: com (US), co.uk (UK), de (Germany)
+### Running the Container
 
-### Entertainment Commands
-
-| Command              | Aliases | Description                 |
-| -------------------- | ------- | --------------------------- |
-| `-hello`             | `h`     | Get random greeting         |
-| `-joke`              | `haha`  | Tell a random joke          |
-| `-serverinfo`        | `sinfo` | Show server information     |
-| `-rockpaperscissors` | `rps`   | Play rock, paper, scissors  |
-| `-propaganda`        | `prop`  | Special promotional content |
-| `-credits`           |         | Show bot credits            |
-| `-dm`                |         | Fun percentage calculator   |
-
-## ⚙️ Configuration
-
-### Bot Prefix
-
-The bot uses `-` as the default prefix and responds to mentions.
-
-### Music Server Configuration
-
-Lavalink configuration in `music.py`:
-
-```python
-nodes = {
-    'MAIN': {
-        'host': '127.0.0.1',
-        'port': 2333,
-        'rest_uri': 'http://127.0.0.1:2333',
-        'password': 'youshallnotpass',
-        'identifier': 'MAIN',
-        'region': 'europe',
-    }
-}
+```bash
+docker run -p 8080:80 movieapp
 ```
 
-### File Structure
+## 📄 License
+
+This project is part of the Teads Summer School program.
+
+## External Dependencies
+
+- **The Movie Database (TMDB) API**: For movie data and metadata
+- **PostgreSQL**: Primary database
+- **Prometheus**: Metrics collection
+- **Grafana**: Metrics visualization
+- **Elasticsearch**: Log aggregation
+- **Kibana**: Log visualization
+
+# Movie App Frontend
+
+A modern Angular application for browsing, searching, and managing movie collections with playlist functionality. This frontend interfaces with the [MovieApp backend](https://github.com/teads-sess-2025/MovieApp), which is built using Java and Spring Boot. It provides an intuitive experience for movie enthusiasts to discover films and organize them into custom playlists.
+
+This project was developed as part of the Teads Summer School program.
+
+## Features
+
+- **Movie Browsing**: Browse through a comprehensive collection of movies
+- **Advanced Search**: Search for movies by title with real-time results
+- **Movie Details**: View detailed information about individual movies including:
+  - Movie metadata (title, release date, genres, etc.)
+  - Production details (budget, revenue, production companies)
+  - Ratings and reviews (vote average, vote count)
+  - Movie overview and tagline
+- **Playlist Management**:
+  - Create custom playlists
+  - Add movies to playlists
+  - View playlist contents
+  - Organize your favorite movies
+- **Responsive Design**: Modern, mobile-friendly interface built with Angular Material
+- **Real-time Updates**: Dynamic content loading with Angular signals
+
+## Technology Stack
+
+- **Framework**: Angular 20.1.0
+- **UI Components**: Angular Material 20.1.0
+- **HTTP Client**: Angular HttpClient for API communication
+- **State Management**: Angular Signals for reactive state management
+- **Routing**: Angular Router with component input binding
+- **Styling**: CSS with Angular Material theming
+- **Build Tool**: Angular CLI with modern build system
+- **Testing**: Jasmine & Karma for unit testing
+
+## Prerequisites
+
+Before running this application, ensure you have the following installed:
+
+- **Node.js**: Version 20.19 or higher
+- **npm**: Comes with Node.js
+- **Angular CLI**: Install globally with `npm install -g @angular/cli`
+
+## Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone <repository-url>
+cd movie_app_frontend
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure Backend URL
+
+The application is configured to connect to a backend API. You can modify the backend URL in `src/app/app.config.ts`:
+
+```typescript
+// For local development
+export const BACKEND_BASE_URL = "http://localhost:8080";
+
+// For production (uncomment and modify as needed)
+// export const BACKEND_BASE_URL = 'https://your-backend-url.com';
+```
+
+### 4. Start the Development Server
+
+```bash
+npm start
+# or
+ng serve
+```
+
+The application will be available at `http://localhost:4200/`. The app will automatically reload when you make changes to the source files.
+
+## Project Structure
 
 ```
-Olympy/
-├── bot/
-│   ├── __init__.py
-│   ├── bot.py              # Main bot class
-│   └── cogs/
-│       ├── music.py        # Music functionality
-│       ├── amazon.py       # Amazon scraping
-│       └── ostalo.py       # Entertainment commands
-├── Automation/
-│   └── Bot.py              # Auto-start script
-├── Data/
-│   └── token.0             # Bot token
-├── launcher.py             # Bot launcher
-├── chromedriver.exe        # Web scraping driver
-├── Lavalink.jar            # Music server
-└── README.md
+src/
+├── app/
+│   ├── browse-view/          # Movie browsing interface
+│   ├── home-view/            # Landing page
+│   ├── movie-view/           # Individual movie details
+│   ├── playlist-view/        # Playlist management
+│   ├── playlist-movie-view/  # Movies within a playlist
+│   ├── playlist-dialog/      # Playlist selection dialog
+│   ├── search-view/          # Movie search functionality
+│   ├── header/               # Navigation header
+│   ├── footer/               # Application footer
+│   ├── types/                # TypeScript type definitions
+│   │   ├── movie.ts          # Movie data model
+│   │   └── playlist.ts       # Playlist data model
+│   ├── app.config.ts         # Application configuration
+│   ├── app.routes.ts         # Routing configuration
+│   └── app.ts                # Main application component
+├── styles.css                # Global styles
+└── index.html                # Main HTML template
 ```
 
-## 🛠️ Technical Details
+## Available Routes
 
-### Dependencies
+- `/` - Home page
+- `/browse` - Browse all movies
+- `/search` - Search for movies
+- `/movie/:id` - View movie details
+- `/playlists` - Manage playlists
+- `/playlists/:id` - View playlist contents
 
-- **discord.py**: Discord API wrapper
-- **wavelink**: Music library for Lavalink
-- **selenium**: Web scraping for Amazon
-- **beautifulsoup4**: HTML parsing
-- **aiohttp**: Async HTTP client
+## Development Commands
 
-### Music Features
+### Start Development Server
 
-- **Wavelink Integration**: Professional music streaming
-- **Queue System**: Advanced queue management with history
-- **Equalizer**: 15-band equalizer with presets
-- **Volume Control**: 0-1000% volume range
-- **Auto-disconnect**: Leaves voice channel when empty
+```bash
+npm start
+# or
+ng serve
+```
 
-### Amazon Scraping
+### Build for Production
 
-- **Multi-region Support**: US, UK, Germany
-- **CSV Export**: Structured data export
-- **Error Handling**: Graceful handling of missing data
-- **Rate Limiting**: Built-in delays for respectful scraping
+```bash
+npm run build
+# or
+ng build
+```
 
-## 📝 License
+### Build with Watch Mode
 
-No license is provided for this project, as it is for informational purposes only
+```bash
+npm run watch
+# or
+ng build --watch --configuration development
+```
 
-## 👨‍💻 Credits
+### Run Unit Tests
 
-**Made by:** Sebastjan Bas
+```bash
+npm test
+# or
+ng test
+```
 
-Special credit for the music system implementation goes to the open-source community, with significant inspiration and code contributions from [Carberra](https://github.com/Carberra) and [RK Coding](https://github.com/RK-Coding). Their work on Discord music bots and Wavelink integration was instrumental in the development of Olympy's music features.
+### Code Generation
 
-## 🐛 Troubleshooting
+```bash
+# Generate a new component
+ng generate component component-name
 
-### Common Issues
+# Generate a new service
+ng generate service service-name
 
-1. **Bot won't connect to voice**
+# See all available schematics
+ng generate --help
+```
 
-   - Ensure Lavalink server is running
-   - Check Java version (13+ required)
-   - Verify network connectivity
+## API Integration
 
-2. **Amazon scraping fails**
+The application integrates with a backend API for the following operations:
 
-   - Update chromedriver.exe
-   - Check internet connection
-   - Verify Amazon region codes
+### Movies
 
-3. **Music commands not working**
-   (MUSIC PART OF THE BOT DOES NOT WORK ANYMORE)
-   - Ensure bot has voice permissions
-   - Check Lavalink server status
-   - Verify bot token is correct
+- `GET /api/movies` - Fetch all movies
+- `GET /api/movies/n/{name}` - Search movies by name
 
-### Support
+### Playlists
 
-For issues and questions, please check the troubleshooting section above or create an issue in the repository.
+- `GET /api/playlists` - Fetch user playlists
+- `POST /api/playlists` - Create new playlist
+- `GET /api/playlists/{id}` - Fetch playlist contents
 
-## 📸 Screenshots
+## UI Components
 
-### Music Commands in Action
+The application uses Angular Material components for a consistent and modern user experience:
 
-![Song selection with search query](photos/screenshots/playsong-query.png)
-_Bot supports adding whole playlists into the queue_
+- Material Design components
+- Responsive layout
+- Dark/Light theme support
+- Accessible interface
 
-![Song selection with link](photos/screenshots/playsong-link.png)
-_Direct URL and playlist support_
+## Testing
 
-### Queue Management
+The project includes comprehensive testing setup:
 
-![Skip a song in a queue](photos/screenshots/queue-skip.png)
-_Skip to next track in queue_
+- **Unit Tests**: Jasmine framework with Karma test runner
+- **Component Testing**: Angular testing utilities
+- **Coverage Reports**: Built-in code coverage reporting
 
-![Show currently playing song](photos/screenshots/queue-nowplaying.png)
-_Display current track information_
+Run tests with:
 
-![More queue commands](photos/screenshots/queue-morecommands.png)
-_Queue management and controls_
+```bash
+ng test
+```
 
-### Audio Controls & Equalizer
+## Build and Deployment
 
-![Volume controls](photos/screenshots/eq-volume.png)
-_Volume adjustment and equalizer presets_
+### Production Build
 
-![Advanced equalizer settings](photos/screenshots/eq-adjustment.png)
-_Custom equalizer band adjustments_
+```bash
+ng build --configuration production
+```
 
-### Additional Features
+The build artifacts will be stored in the `dist/` directory, optimized for production with:
 
-![Show lyrics of the song](photos/screenshots/lyrics.png)
-_Automatic lyrics fetching_
+- Minified code
+- Tree shaking
+- AOT compilation
+- Bundle optimization
 
-![Seek to specific timestamp](photos/screenshots/seek-song.png)
-_Seek functionality for precise control_
+### Deployment
 
-### 🛒 Amazon Scraper
+The `dist/` folder contains all files needed to deploy the application to any static hosting service.
 
-![Amazon scraping example](photos/screenshots/amazon-scraping.png)
-_Amazon product search with CSV export_
+## License
 
-### 🎮 Entertainment Commands
+This project is part of the Teads Summer School program.
 
-![Show server info](photos/screenshots/server-info.png)
-_Detailed server information display_
+## Support
 
-![Greet the bot](photos/screenshots/bot-hello.png)
-_Fun greeting responses_
+For support and questions:
 
-![Play rock paper scissors](photos/screenshots/bot-rockpaperscissors.png)
-_Interactive rock-paper-scissors game_
+- Check the [Angular Documentation](https://angular.dev)
+- Review the [Angular CLI Documentation](https://angular.dev/tools/cli)
+- Open an issue in the repository
