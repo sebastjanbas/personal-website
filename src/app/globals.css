@@ -75,7 +75,7 @@
 @layer base {
   * {
     @apply border-border outline-ring;
-    cursor: none !important; /* Hide default cursor */
+    /* cursor: none !important;  */
   }
   html {
     scroll-behavior: smooth;
@@ -85,6 +85,6 @@
     color: var(--foreground);
     background-color: var(--background); /* Default to white */
     transition: background-color 0.3s ease-in-out;
-    cursor: none !important; /* Hide default cursor */
+    /* cursor: none !important;  */
   }
 }

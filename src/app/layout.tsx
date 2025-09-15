@@ -11,7 +11,6 @@ import {
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import BackgroundUpdater from "@/components/ui/bacground-updater";
-import CustomCursor from "@/components/ui/custom-cursor";
 import { Toaster } from "sonner";
 
 const bebasNeue = Bebas_Neue({
@@ -99,12 +98,10 @@ export default function RootLayout({
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </head>
       <body className="overflow-x-hidden font-mantropeFont">
-        <CustomCursor>
-          <BackgroundUpdater />
-          <Toaster position="top-center" richColors />
-          {children}
-          <Analytics />
-        </CustomCursor>
+        <BackgroundUpdater />
+        <Toaster position="top-center" richColors />
+        {children}
+        <Analytics />
       </body>
     </html>
   );

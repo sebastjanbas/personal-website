@@ -66,30 +66,27 @@ export const ProjectList = [
     name: "Slovene Step By Step",
     image: "/slovene-step-by-step-landing-page.png",
     href: "/projects/slovene-step-by-step",
-    tech: "Next.js / Supabase / Tailwind / PostgreSQL / Docker / Docker Compose / Maven",
     type: "Individual Project - Freelance",
-    year: "2024",
-    description: "Complete language learning platform with booking system, payments, and community features for 1,200+ users."
+    year: "2024 - Present",
+    description: "A modern, multilingual online language learning platform designed to help users master Slovenian through personalized lessons, interactive features, and community support."
   },
   {
     id: 2,
     name: "Movie App",
     image: "#",
     href: "/projects/movie-app",
-    tech: "Spring Boot / Angular / PostgreSQL / Docker / Docker Compose / Maven",
     type: "Teads Summer School Project",
-    year: "2024",
-    description: "Movie app with search functionality and detailed movie information."
+    year: "July, 2025",
+    description: "A modern Angular application for browsing, searching, and managing movie collections with playlist functionality. This frontend interfaces with the MovieApp backend, which is built using Java and Spring Boot. It provides an intuitive experience for movie enthusiasts to discover films and organize them into custom playlists."
   },
   {
     id: 3,
     name: "Discord Bot",
     image: "#",
     href: "/projects/discord-bot",
-    tech: "Python / Discord.py / Wavelink / Lavalink / Selenium / BeautifulSoup4 / Windows 10+",
     type: "Personal Project",
     year: "2021 - 2022",
-    description: "Feature-rich Discord bot with moderation tools, music functionality, and custom commands for community management."
+    description: "A feature-rich Discord bot built with Python and discord.py, featuring music playback, Amazon product scraping, and entertainment commands. Originally developed in 2021-2022 as a comprehensive server management tool."
   },
 ];
 
