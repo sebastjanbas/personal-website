@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import {
   Bebas_Neue,
-  Big_Shoulders_Display,
+  // Big_Shoulders_Display,
   DM_Serif_Display,
   Manrope,
   Roboto,
@@ -38,10 +38,10 @@ const dmDisplay = DM_Serif_Display({
   subsets: ["latin"],
 });
 
-const bigShoulders = Big_Shoulders_Display({
-  weight: ["400", "100", "200", "300", "500", "600", "700", "800", "900"],
-  subsets: ["latin"],
-});
+// const bigShoulders = Big_Shoulders_Display({
+//   weight: ["400", "100", "200", "300", "500", "600", "700", "800", "900"],
+//   subsets: ["latin"],
+// });
 
 export const metadata: Metadata = {
   title: {
