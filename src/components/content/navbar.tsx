@@ -38,10 +38,10 @@ const Navbar = () => {
         className="fixed top-0 flex w-full h-fit justify-center items-center"
         style={{ zIndex: 99999 }}
       >
-        <nav className="relative flex w-full max-w-5xl rounded-full backdrop-blur-sm px-8 py-5 justify-between items-center">
+        <nav className="relative flex w-full max-w-5xl rounded-full backdrop-blur-xs px-8 py-5 justify-between items-center">
           <Link
             className={`translate-y-1 font-bebasNeue text-lg text-center leading-none
-  md:after:block md:after:h-[1px] md:after:origin-left md:after:scale-x-0
+  md:after:block md:after:h-px md:after:origin-left md:after:scale-x-0
   md:after:transition-transform md:after:duration-300 
   md:hover:after:scale-x-100 md:hover:tracking-wider transition-all will-change-transform ${
     mobileMenuOpen

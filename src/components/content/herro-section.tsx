@@ -31,7 +31,7 @@ const HeroSection = () => {
     split.chars.forEach((char) => {
       char.classList.add(
         "bg-clip-text",
-        "bg-gradient-to-b",
+        "bg-linear-to-b",
         "from-black",
         "via-slate-500",
         "to-white",
@@ -114,7 +114,7 @@ const HeroSection = () => {
 
   return (
     <>
-      <section className="flex flex-col bg-gradient-to-b from-white to-[#D4EAF6] justify-center items-center h-[calc(100vh+120px)] w-screen 0.8 md:p-10 xl:p-20">
+      <section className="flex flex-col bg-linear-to-b from-white to-[#D4EAF6] justify-center items-center h-[calc(100vh+120px)] w-screen 0.8 md:p-10 xl:p-20">
         <div
           ref={imageBackground}
           className="absolute overflow-hidden bg-transparent z-20 w-screen max-h-[calc(100vh+120px)]"
@@ -134,16 +134,16 @@ const HeroSection = () => {
               "
             >
               <div
-                className="bg-clip-text bg-gradient-to-b from-slate-600 to-gray-400 text-transparent"
+                className="bg-clip-text bg-linear-to-b from-slate-600 to-gray-400 text-transparent"
                 ref={subtitle1}
               >
                 Software Engineer
               </div>
-              <span className="bg-clip-text bg-gradient-to-b from-slate-600 to-gray-400 text-transparent">
+              <span className="bg-clip-text bg-linear-to-b from-slate-600 to-gray-400 text-transparent">
                 |
               </span>
               <div
-                className="bg-clip-text bg-gradient-to-b from-slate-600 to-gray-400 text-transparent"
+                className="bg-clip-text bg-linear-to-b from-slate-600 to-gray-400 text-transparent"
                 ref={subtitle2}
               >
                 Full-stack dev
@@ -192,7 +192,7 @@ const HeroSection = () => {
             <div ref={downloadCVButton}>
               <div
                 className="text-slate-600 font-semibold font-bebasNeue text-lg text-center leading-none -translate-y-44 sm:translate-y-2 
-              md:after:block md:after:h-[1px] md:after:origin-left md:after:scale-x-0 md:after:bg-slate-600 
+              md:after:block md:after:h-px md:after:origin-left md:after:scale-x-0 md:after:bg-slate-600 
               md:after:transition-transform md:after:duration-500 
               md:hover:after:scale-x-100 md:hover:tracking-wider transition-all will-change-transform"
               >

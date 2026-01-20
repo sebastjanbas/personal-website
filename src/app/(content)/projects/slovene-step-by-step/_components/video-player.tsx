@@ -17,7 +17,7 @@ export const VideoPlaceholder = ({
     <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
       <div className="relative">
         {/* Video Placeholder */}
-        <div className="relative bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl aspect-video mb-6 overflow-hidden">
+        <div className="relative bg-linear-to-br from-slate-100 to-slate-200 rounded-xl aspect-video mb-6 overflow-hidden">
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center">
               <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center mb-4 mx-auto shadow-lg">
@@ -39,7 +39,7 @@ export const VideoPlaceholder = ({
 
         {/* Content */}
         <div className="flex items-start space-x-4">
-          <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+          <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center shrink-0">
             <Icon className="w-6 h-6 text-blue-600" />
           </div>
           <div className="flex-1">

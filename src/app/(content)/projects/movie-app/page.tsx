@@ -55,7 +55,7 @@ const MovieAppPage = () => {
   return (
     <div className="min-h-screen w-full relative">
       {/* Immersive Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-linear-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Animated Background */}
         <div className="absolute inset-0">
           <div
@@ -102,7 +102,7 @@ const MovieAppPage = () => {
         >
           <motion.div className="mb-8" variants={item}>
             <motion.div
-              className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/80 text-sm font-medium mb-6"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-xs rounded-full text-white/80 text-sm font-medium mb-6"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
@@ -197,7 +197,7 @@ const MovieAppPage = () => {
       </section>
 
       {/* The Story Begins */}
-      <section className="relative py-32 px-6 bg-gradient-to-b from-slate-50 to-white overflow-hidden">
+      <section className="relative py-32 px-6 bg-linear-to-b from-slate-50 to-white overflow-hidden">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 60, scale: 0.95 }}
@@ -223,7 +223,7 @@ const MovieAppPage = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div className="relative">
-                <div className="absolute -left-6 top-0 w-1 h-full bg-gradient-to-b from-red-500 to-blue-500"></div>
+                <div className="absolute -left-6 top-0 w-1 h-full bg-linear-to-b from-red-500 to-blue-500"></div>
                 <h3 className="text-3xl font-bold text-slate-900 mb-4">
                   The Challenge
                 </h3>
@@ -262,7 +262,7 @@ const MovieAppPage = () => {
             </div>
 
             <div className="relative">
-              <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 text-white">
+              <div className="bg-linear-to-br from-slate-900 to-slate-800 rounded-3xl p-8 text-white">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-red-500 rounded-xl flex items-center justify-center">
                     <Code className="w-6 h-6" />
@@ -321,8 +321,8 @@ const MovieAppPage = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Backend */}
-            <div className="group relative bg-gradient-to-br from-red-50 to-rose-100 rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 cursor-pointer">
-              <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="group relative bg-linear-to-br from-red-50 to-rose-100 rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 cursor-pointer">
+              <div className="absolute inset-0 bg-linear-to-br from-red-500/10 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="relative z-10">
                 <div className="w-16 h-16 bg-red-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                   <Server className="w-8 h-8 text-white" />
@@ -355,8 +355,8 @@ const MovieAppPage = () => {
             </div>
 
             {/* Frontend */}
-            <div className="group relative bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 cursor-pointer">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="group relative bg-linear-to-br from-blue-50 to-indigo-100 rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 cursor-pointer">
+              <div className="absolute inset-0 bg-linear-to-br from-blue-500/10 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="relative z-10">
                 <div className="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                   <Monitor className="w-8 h-8 text-white" />
@@ -389,8 +389,8 @@ const MovieAppPage = () => {
             </div>
 
             {/* Monitoring */}
-            <div className="group relative bg-gradient-to-br from-green-50 to-emerald-100 rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 cursor-pointer">
-              <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="group relative bg-linear-to-br from-green-50 to-emerald-100 rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 cursor-pointer">
+              <div className="absolute inset-0 bg-linear-to-br from-green-500/10 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="relative z-10">
                 <div className="w-16 h-16 bg-green-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                   <BarChart3 className="w-8 h-8 text-white" />
@@ -423,8 +423,8 @@ const MovieAppPage = () => {
             </div>
 
             {/* DevOps */}
-            <div className="group relative bg-gradient-to-br from-purple-50 to-violet-100 rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 cursor-pointer">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="group relative bg-linear-to-br from-purple-50 to-violet-100 rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 cursor-pointer">
+              <div className="absolute inset-0 bg-linear-to-br from-purple-500/10 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="relative z-10">
                 <div className="w-16 h-16 bg-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                   <Cloud className="w-8 h-8 text-white" />
@@ -460,7 +460,7 @@ const MovieAppPage = () => {
       </section>
 
       {/* The Features Journey */}
-      <section className="relative py-32 px-6 bg-gradient-to-b from-slate-50 to-white overflow-hidden">
+      <section className="relative py-32 px-6 bg-linear-to-b from-slate-50 to-white overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 font-dmDisplay tracking-tight">
@@ -498,19 +498,19 @@ const MovieAppPage = () => {
                   intuitive.
                 </p>
                 <div className="grid grid-cols-3 gap-4">
-                  <div className="text-center p-4 bg-white rounded-xl shadow-sm">
+                  <div className="text-center p-4 bg-white rounded-xl shadow-xs">
                     <div className="text-2xl font-bold text-red-500 mb-1">
                       500+
                     </div>
                     <div className="text-sm text-slate-600">Movies</div>
                   </div>
-                  <div className="text-center p-4 bg-white rounded-xl shadow-sm">
+                  <div className="text-center p-4 bg-white rounded-xl shadow-xs">
                     <div className="text-2xl font-bold text-blue-500 mb-1">
                       Real-time
                     </div>
                     <div className="text-sm text-slate-600">Search</div>
                   </div>
-                  <div className="text-center p-4 bg-white rounded-xl shadow-sm">
+                  <div className="text-center p-4 bg-white rounded-xl shadow-xs">
                     <div className="text-2xl font-bold text-green-500 mb-1">
                       Rich
                     </div>
@@ -519,21 +519,21 @@ const MovieAppPage = () => {
                 </div>
               </div>
               <div className="relative">
-                <div className="bg-gradient-to-br from-red-50 to-rose-100 rounded-3xl p-8">
+                <div className="bg-linear-to-br from-red-50 to-rose-100 rounded-3xl p-8">
                   <div className="space-y-4">
-                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm">
+                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-xs">
                       <div className="w-3 h-3 bg-red-400 rounded-full"></div>
                       <span className="font-medium">
                         Popular movies browsing
                       </span>
                     </div>
-                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm">
+                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-xs">
                       <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
                       <span className="font-medium">
                         Advanced search by name
                       </span>
                     </div>
-                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm">
+                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-xs">
                       <div className="w-3 h-3 bg-green-400 rounded-full"></div>
                       <span className="font-medium">
                         Detailed movie metadata
@@ -548,21 +548,21 @@ const MovieAppPage = () => {
             {/* Playlist Management Story */}
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="relative order-2 lg:order-1">
-                <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-3xl p-8">
+                <div className="bg-linear-to-br from-green-50 to-emerald-100 rounded-3xl p-8">
                   <div className="space-y-4">
-                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm">
+                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-xs">
                       <div className="w-3 h-3 bg-green-400 rounded-full"></div>
                       <span className="font-medium">
                         Custom playlist creation
                       </span>
                     </div>
-                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm">
+                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-xs">
                       <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
                       <span className="font-medium">
                         Movie addition/removal
                       </span>
                     </div>
-                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm">
+                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-xs">
                       <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
                       <span className="font-medium">Playlist organization</span>
                     </div>
@@ -595,19 +595,19 @@ const MovieAppPage = () => {
                   collections.
                 </p>
                 <div className="grid grid-cols-3 gap-4">
-                  <div className="text-center p-4 bg-white rounded-xl shadow-sm">
+                  <div className="text-center p-4 bg-white rounded-xl shadow-xs">
                     <div className="text-2xl font-bold text-green-500 mb-1">
                       Unlimited
                     </div>
                     <div className="text-sm text-slate-600">Playlists</div>
                   </div>
-                  <div className="text-center p-4 bg-white rounded-xl shadow-sm">
+                  <div className="text-center p-4 bg-white rounded-xl shadow-xs">
                     <div className="text-2xl font-bold text-blue-500 mb-1">
                       Instant
                     </div>
                     <div className="text-sm text-slate-600">Updates</div>
                   </div>
-                  <div className="text-center p-4 bg-white rounded-xl shadow-sm">
+                  <div className="text-center p-4 bg-white rounded-xl shadow-xs">
                     <div className="text-2xl font-bold text-purple-500 mb-1">
                       Persistent
                     </div>
@@ -638,19 +638,19 @@ const MovieAppPage = () => {
                   application&apos;s performance, health, and user behavior.
                 </p>
                 <div className="grid grid-cols-3 gap-4">
-                  <div className="text-center p-4 bg-white rounded-xl shadow-sm">
+                  <div className="text-center p-4 bg-white rounded-xl shadow-xs">
                     <div className="text-2xl font-bold text-orange-500 mb-1">
                       Real-time
                     </div>
                     <div className="text-sm text-slate-600">Metrics</div>
                   </div>
-                  <div className="text-center p-4 bg-white rounded-xl shadow-sm">
+                  <div className="text-center p-4 bg-white rounded-xl shadow-xs">
                     <div className="text-2xl font-bold text-blue-500 mb-1">
                       Visual
                     </div>
                     <div className="text-sm text-slate-600">Dashboards</div>
                   </div>
-                  <div className="text-center p-4 bg-white rounded-xl shadow-sm">
+                  <div className="text-center p-4 bg-white rounded-xl shadow-xs">
                     <div className="text-2xl font-bold text-green-500 mb-1">
                       Centralized
                     </div>
@@ -659,17 +659,17 @@ const MovieAppPage = () => {
                 </div>
               </div>
               <div className="relative">
-                <div className="bg-gradient-to-br from-orange-50 to-amber-100 rounded-3xl p-8">
+                <div className="bg-linear-to-br from-orange-50 to-amber-100 rounded-3xl p-8">
                   <div className="space-y-4">
-                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm">
+                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-xs">
                       <div className="w-3 h-3 bg-orange-400 rounded-full"></div>
                       <span className="font-medium">Prometheus metrics</span>
                     </div>
-                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm">
+                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-xs">
                       <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
                       <span className="font-medium">Grafana dashboards</span>
                     </div>
-                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm">
+                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-xs">
                       <div className="w-3 h-3 bg-green-400 rounded-full"></div>
                       <span className="font-medium">ELK log aggregation</span>
                     </div>
@@ -686,7 +686,7 @@ const MovieAppPage = () => {
       </section>
 
       {/* The Demo Experience */}
-      <section className="relative py-32 px-6 bg-gradient-to-b from-slate-900 to-slate-800 overflow-hidden">
+      <section className="relative py-32 px-6 bg-linear-to-b from-slate-900 to-slate-800 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 font-dmDisplay tracking-tight">
@@ -703,7 +703,7 @@ const MovieAppPage = () => {
             {/* Main Demos */}
             <div className="grid lg:grid-cols-2 gap-12">
               <div className="group relative">
-                <div className="bg-gradient-to-br from-red-500/20 to-red-600/10 rounded-3xl p-8 border border-red-500/20 hover:border-red-500/40 transition-all duration-500">
+                <div className="bg-linear-to-br from-red-500/20 to-red-600/10 rounded-3xl p-8 border border-red-500/20 hover:border-red-500/40 transition-all duration-500">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-16 h-16 bg-red-500 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                       <Server className="w-8 h-8 text-white" />
@@ -731,7 +731,7 @@ const MovieAppPage = () => {
               </div>
 
               <div className="group relative">
-                <div className="bg-gradient-to-br from-blue-500/20 to-blue-600/10 rounded-3xl p-8 border border-blue-500/20 hover:border-blue-500/40 transition-all duration-500">
+                <div className="bg-linear-to-br from-blue-500/20 to-blue-600/10 rounded-3xl p-8 border border-blue-500/20 hover:border-blue-500/40 transition-all duration-500">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                       <Monitor className="w-8 h-8 text-white" />
@@ -763,7 +763,7 @@ const MovieAppPage = () => {
 
             {/* Feature Demos */}
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-500">
+              <div className="group relative bg-white/5 backdrop-blur-xs rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-500">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <Search className="w-5 h-5 text-white" />
@@ -785,7 +785,7 @@ const MovieAppPage = () => {
                 </div>
               </div>
 
-              <div className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-500">
+              <div className="group relative bg-white/5 backdrop-blur-xs rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-500">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <BookOpen className="w-5 h-5 text-white" />
@@ -807,7 +807,7 @@ const MovieAppPage = () => {
                 </div>
               </div>
 
-              <div className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-500">
+              <div className="group relative bg-white/5 backdrop-blur-xs rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-500">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <BarChart3 className="w-5 h-5 text-white" />
@@ -850,14 +850,14 @@ const MovieAppPage = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div className="relative">
-                <div className="absolute -left-6 top-0 w-1 h-full bg-gradient-to-b from-red-500 via-blue-500 to-green-500"></div>
+                <div className="absolute -left-6 top-0 w-1 h-full bg-linear-to-b from-red-500 via-blue-500 to-green-500"></div>
                 <h3 className="text-3xl font-bold text-slate-900 mb-6">
                   The Foundation
                 </h3>
 
                 <div className="space-y-6">
                   <div className="flex items-start gap-4 group">
-                    <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
                       <Layers className="w-6 h-6 text-red-600" />
                     </div>
                     <div>
@@ -875,7 +875,7 @@ const MovieAppPage = () => {
                   </div>
 
                   <div className="flex items-start gap-4 group">
-                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
                       <Globe className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
@@ -892,7 +892,7 @@ const MovieAppPage = () => {
                   </div>
 
                   <div className="flex items-start gap-4 group">
-                    <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
                       <Zap className="w-6 h-6 text-green-600" />
                     </div>
                     <div>
@@ -909,7 +909,7 @@ const MovieAppPage = () => {
                   </div>
 
                   <div className="flex items-start gap-4 group">
-                    <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
                       <Shield className="w-6 h-6 text-purple-600" />
                     </div>
                     <div>
@@ -929,7 +929,7 @@ const MovieAppPage = () => {
             </div>
 
             <div className="relative">
-              <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 text-white">
+              <div className="bg-linear-to-br from-slate-900 to-slate-800 rounded-3xl p-8 text-white">
                 <div className="flex items-center gap-4 mb-8">
                   <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center">
                     <Cpu className="w-6 h-6" />
@@ -1015,7 +1015,7 @@ const MovieAppPage = () => {
       </section>
 
       {/* The Journey's End */}
-      <section className="relative py-32 px-6 bg-gradient-to-b from-slate-50 to-white overflow-hidden">
+      <section className="relative py-32 px-6 bg-linear-to-b from-slate-50 to-white overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 font-dmDisplay tracking-tight">
@@ -1031,14 +1031,14 @@ const MovieAppPage = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div className="relative">
-                <div className="absolute -left-6 top-0 w-1 h-full bg-gradient-to-b from-red-500 via-blue-500 to-green-500"></div>
+                <div className="absolute -left-6 top-0 w-1 h-full bg-linear-to-b from-red-500 via-blue-500 to-green-500"></div>
                 <h3 className="text-3xl font-bold text-slate-900 mb-6">
                   Key Achievements
                 </h3>
 
                 <div className="space-y-6">
                   <div className="flex items-start gap-4 group">
-                    <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
                       <Star className="w-6 h-6 text-red-600" />
                     </div>
                     <div>
@@ -1054,7 +1054,7 @@ const MovieAppPage = () => {
                   </div>
 
                   <div className="flex items-start gap-4 group">
-                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
                       <GitBranch className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
@@ -1070,7 +1070,7 @@ const MovieAppPage = () => {
                   </div>
 
                   <div className="flex items-start gap-4 group">
-                    <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
                       <Shield className="w-6 h-6 text-green-600" />
                     </div>
                     <div>
@@ -1086,7 +1086,7 @@ const MovieAppPage = () => {
                   </div>
 
                   <div className="flex items-start gap-4 group">
-                    <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
                       <Cloud className="w-6 h-6 text-purple-600" />
                     </div>
                     <div>
@@ -1105,7 +1105,7 @@ const MovieAppPage = () => {
             </div>
 
             <div className="relative">
-              <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 text-white">
+              <div className="bg-linear-to-br from-slate-900 to-slate-800 rounded-3xl p-8 text-white">
                 <div className="flex items-center gap-4 mb-8">
                   <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center">
                     <Settings className="w-6 h-6" />
@@ -1187,7 +1187,7 @@ const MovieAppPage = () => {
       </section>
 
       {/* The Final Call */}
-      <section className="relative py-32 px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
+      <section className="relative py-32 px-6 bg-linear-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0">
           <div

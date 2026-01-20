@@ -53,8 +53,8 @@ const ProjectContainer = ({
           <Tooltip>
             <TooltipTrigger>
               <a href={href} target="_self">
-                <div className="h-fit w-fit bg-white border-slate-500/20 group p-2 border-[0.5px] rounded-full shadow-md hover:shadow-sm">
-                  <IoIosArrowRoundForward className="size-5 group-hover:rotate-[-45deg] transition-transform duration-200 ease-in-out" />
+                <div className="h-fit w-fit bg-white border-slate-500/20 group p-2 border-[0.5px] rounded-full shadow-md hover:shadow-xs">
+                  <IoIosArrowRoundForward className="size-5 group-hover:-rotate-45 transition-transform duration-200 ease-in-out" />
                 </div>
               </a>
             </TooltipTrigger>

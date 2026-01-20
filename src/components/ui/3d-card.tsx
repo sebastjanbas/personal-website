@@ -112,13 +112,13 @@ export default function ThreeDCard({
   return (
     <div
       ref={rootRef}
-      className="relative mx-auto w-full select-none [perspective:1000px]"
+      className="relative mx-auto w-full select-none perspective-[1000px]"
     >
       <div
         ref={cardRef}
-        className="relative rounded-2xl p-5 shadow-2xl transition-[box-shadow] duration-300 will-change-transform
-                   bg-gradient-to-br from-white/80 via-white/70 to-white/60 dark:from-slate-900/70 dark:via-slate-900/60 dark:to-slate-900/50
-                   ring-1 ring-black/5 dark:ring-white/10 backdrop-blur"
+        className="relative rounded-2xl p-5 shadow-2xl transition-shadow duration-300 will-change-transform
+                   bg-linear-to-br from-white/80 via-white/70 to-white/60 dark:from-slate-900/70 dark:via-slate-900/60 dark:to-slate-900/50
+                   ring-1 ring-black/5 dark:ring-white/10 backdrop-blur-sm"
       >
         <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-black/5 dark:ring-white/5" />
 

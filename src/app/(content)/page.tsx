@@ -11,7 +11,7 @@ export default function Home() {
       {/* Skills Section */}
       <section
         id="skills"
-        className="w-full py-20 px-5 md:px-10 xl:px-20 bg-gradient-to-t from-white to-[#D4EAF6] overflow-hidden"
+        className="w-full py-20 px-5 md:px-10 xl:px-20 bg-linear-to-t from-white to-[#D4EAF6] overflow-hidden"
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">

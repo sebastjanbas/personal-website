@@ -34,13 +34,13 @@ export const metadata: Metadata = {
 };
 
 const hoverStyle =
-  "inline-block translate-y-1 text-lg text-center leading-none md:after:block md:after:h-[1px] md:after:origin-left md:after:scale-x-0 md:after:transition-transform md:after:duration-300 md:hover:after:scale-x-100 md:hover:tracking-wider transition-all will-change-transform text-foreground md:after:bg-foreground";
+  "inline-block translate-y-1 text-lg text-center leading-none md:after:block md:after:h-px md:after:origin-left md:after:scale-x-0 md:after:transition-transform md:after:duration-300 md:hover:after:scale-x-100 md:hover:tracking-wider transition-all will-change-transform text-foreground md:after:bg-foreground";
 
 const WorkPage = () => {
   return (
     <div className="min-h-screen w-full">
       {/* Hero Section */}
-      <section className="relative isolate overflow-hidden px-6 py-24 sm:py-28 lg:overflow-visible lg:px-0 flex justify-center items-center bg-gradient-to-b from-white to-[#D4EAF6]">
+      <section className="relative isolate overflow-hidden px-6 py-24 sm:py-28 lg:overflow-visible lg:px-0 flex justify-center items-center bg-linear-to-b from-white to-[#D4EAF6]">
         <div className="mx-auto grid gap-x-8 grid-cols-1 lg:grid-cols-2 items-start gap-y-10 max-w-6xl w-full">
           <div className="col-span-1 lg:col-span-2 col-start-1 row-start-1 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-x-8 lg:px-6">
             <div className="w-full lg:w-[650px]">
@@ -193,9 +193,9 @@ const WorkPage = () => {
 
           <div className="space-y-12">
             {/* Current Focus */}
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8">
+            <div className="bg-linear-to-br from-blue-50 to-indigo-100 rounded-2xl p-8">
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center shrink-0">
                   <Briefcase className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex-1">
@@ -234,7 +234,7 @@ const WorkPage = () => {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white border border-slate-200 rounded-2xl p-8 hover:shadow-lg transition-shadow">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center shrink-0">
                     <Globe className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
@@ -261,7 +261,7 @@ const WorkPage = () => {
 
               <div className="bg-white border border-slate-200 rounded-2xl p-8 hover:shadow-lg transition-shadow">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center shrink-0">
                     <Code className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
@@ -292,7 +292,7 @@ const WorkPage = () => {
       {/* Projects Section */}
       <section
         id="projects"
-        className="py-20 px-5 md:px-10 xl:px-20 bg-gradient-to-b from-[#D4EAF6] to-white"
+        className="py-20 px-5 md:px-10 xl:px-20 bg-linear-to-b from-[#D4EAF6] to-white"
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -424,7 +424,7 @@ const WorkPage = () => {
       {/* Achievements Section */}
       <section
         id="achievements"
-        className="py-20 px-5 md:px-10 xl:px-20 bg-gradient-to-b from-white to-[#D4EAF6]"
+        className="py-20 px-5 md:px-10 xl:px-20 bg-linear-to-b from-white to-[#D4EAF6]"
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">

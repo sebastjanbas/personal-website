@@ -14,7 +14,7 @@ import {
 import "../slovene-step-by-step/_components/noisy-bg.modules.css";
 
 const hoverStyle =
-  "inline-block translate-y-1 text-lg text-center leading-none md:after:block md:after:h-[1px] md:after:origin-left md:after:scale-x-0 md:after:transition-transform md:after:duration-300 md:hover:after:scale-x-100 md:hover:tracking-wider transition-all will-change-transform text-foreground md:after:bg-foreground";
+  "inline-block translate-y-1 text-lg text-center leading-none md:after:block md:after:h-px md:after:origin-left md:after:scale-x-0 md:after:transition-transform md:after:duration-300 md:hover:after:scale-x-100 md:hover:tracking-wider transition-all will-change-transform text-foreground md:after:bg-foreground";
 
 const DiscordBotPage = () => {
   return (
@@ -208,7 +208,7 @@ const DiscordBotPage = () => {
             </div>
             <div className="grid grid-cols-2 gap-6">
               {/* Core Technologies */}
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-5 md:p-8">
+              <div className="bg-linear-to-br from-blue-50 to-indigo-100 rounded-2xl p-5 md:p-8">
                 <h3 className="text-xl font-semibold text-slate-800 mb-6 flex items-center">
                   <Code className="w-5 h-5 mr-2 text-blue-600" />
                   Core
@@ -222,7 +222,7 @@ const DiscordBotPage = () => {
               </div>
 
               {/* Music System */}
-              <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-5 md:p-8">
+              <div className="bg-linear-to-br from-green-50 to-emerald-100 rounded-2xl p-5 md:p-8">
                 <h3 className="text-xl font-semibold text-slate-800 mb-6 flex items-center">
                   <Music className="w-5 h-5 mr-2 text-green-600" />
                   Music
@@ -236,7 +236,7 @@ const DiscordBotPage = () => {
               </div>
 
               {/* Web Scraping */}
-              <div className="bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-5 md:p-8">
+              <div className="bg-linear-to-br from-purple-50 to-violet-100 rounded-2xl p-5 md:p-8">
                 <h3 className="text-xl font-semibold text-slate-800 mb-6 flex items-center">
                   <ShoppingCart className="w-5 h-5 mr-2 text-purple-600" />
                   Scraping
@@ -250,7 +250,7 @@ const DiscordBotPage = () => {
               </div>
 
               {/* Development */}
-              <div className="bg-gradient-to-br from-orange-50 to-amber-100 rounded-2xl p-5 md:p-8">
+              <div className="bg-linear-to-br from-orange-50 to-amber-100 rounded-2xl p-5 md:p-8">
                 <h3 className="text-xl font-semibold text-slate-800 mb-6 flex items-center">
                   <Settings className="w-5 h-5 mr-2 text-orange-600" />
                   Tools
@@ -269,7 +269,7 @@ const DiscordBotPage = () => {
       {/* Features Section */}
       <section
         id="features"
-        className="py-20 px-5 md:px-10 xl:px-20 bg-gradient-to-b from-white to-[#D4EAF6]"
+        className="py-20 px-5 md:px-10 xl:px-20 bg-linear-to-b from-white to-[#D4EAF6]"
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -403,7 +403,7 @@ const DiscordBotPage = () => {
       {/* Commands Section */}
       <section
         id="commands"
-        className="py-20 px-5 md:px-10 xl:px-20 bg-gradient-to-b from-[#D4EAF6] to-white"
+        className="py-20 px-5 md:px-10 xl:px-20 bg-linear-to-b from-[#D4EAF6] to-white"
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -559,7 +559,7 @@ const DiscordBotPage = () => {
       {/* Project Highlights */}
       <section
         id="project-highlights"
-        className="py-20 px-5 md:px-10 xl:px-20 bg-gradient-to-b from-white to-[#D4EAF6]"
+        className="py-20 px-5 md:px-10 xl:px-20 bg-linear-to-b from-white to-[#D4EAF6]"
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -575,7 +575,7 @@ const DiscordBotPage = () => {
             <div>
               <div className="space-y-8">
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center shrink-0 mt-1">
                     <span className="text-blue-600 font-semibold text-sm">
                       1
                     </span>
@@ -593,7 +593,7 @@ const DiscordBotPage = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center shrink-0 mt-1">
                     <span className="text-green-600 font-semibold text-sm">
                       2
                     </span>
@@ -610,7 +610,7 @@ const DiscordBotPage = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center shrink-0 mt-1">
                     <span className="text-purple-600 font-semibold text-sm">
                       3
                     </span>
@@ -627,7 +627,7 @@ const DiscordBotPage = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center shrink-0 mt-1">
                     <span className="text-orange-600 font-semibold text-sm">
                       4
                     </span>

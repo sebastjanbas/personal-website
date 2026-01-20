@@ -6,7 +6,7 @@ import Link from "next/link";
 export const Footer = () => {
   return (
     <footer className="h-fit w-screen px-5 sm:px-10 xl:px-20 xl:pb-20">
-      <div className="flex justify-center items-center w-full h-[1px]">
+      <div className="flex justify-center items-center w-full h-px">
         <div className="w-full h-full bg-foreground"></div>
       </div>
 
@@ -28,7 +28,7 @@ export const Footer = () => {
                   href={link.href}
                   className="text-slate-500 
        duration-200 ease-out 
-      md:after:block md:after:h-[1px] md:after:origin-left md:after:scale-x-0 md:after:bg-slate-500 
+      md:after:block md:after:h-px md:after:origin-left md:after:scale-x-0 md:after:bg-slate-500 
       md:after:transition-transform md:after:duration-500 md:after:ease-out md:hover:after:scale-x-100"
                   style={{
                     transform: "translate3d(0,0,0)", // Forces GPU acceleration

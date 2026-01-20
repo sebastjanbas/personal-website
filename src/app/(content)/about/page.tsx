@@ -38,21 +38,21 @@ export const metadata: Metadata = {
 const AboutPage = () => {
   return (
     <>
-      <section className="w-screen h-screen bg-gradient-to-b from-white to-[#F1F0EA] p-5 md:p-10 xl:p-20 flex justify-center items-center">
+      <section className="w-screen h-screen bg-linear-to-b from-white to-[#F1F0EA] p-5 md:p-10 xl:p-20 flex justify-center items-center">
         <div className="relative flex flex-col w-full max-w-5xl h-full justify-center items-center">
           <p className="font-bebasNeue text-2xl md:text-4xl text-justify text-gray-500">
             my name is{" "}
-            <strong className="bg-clip-text bg-gradient-to-r from-[#0171e3] to-[#46b1ff] text-transparent">
+            <strong className="bg-clip-text bg-linear-to-r from-[#0171e3] to-[#46b1ff] text-transparent">
               sebastjan bas{" "}
             </strong>
             i am <DisplayAge /> years old software engineer based in{" "}
-            <strong className="bg-clip-text bg-gradient-to-r from-[#0171e3] to-[#46b1ff] text-transparent">
+            <strong className="bg-clip-text bg-linear-to-r from-[#0171e3] to-[#46b1ff] text-transparent">
               slovenia
             </strong>
             , currently studying in us. I love creating fun and creative
             applications that improve the way people interact with the world.{" "}
             <br className="block md:hidden" />
-            <strong className="bg-clip-text bg-gradient-to-r from-[#0171e3] to-[#46b1ff] text-transparent">
+            <strong className="bg-clip-text bg-linear-to-r from-[#0171e3] to-[#46b1ff] text-transparent">
               let&apos;s work together!{" "}
             </strong>
           </p>
@@ -70,7 +70,7 @@ const AboutPage = () => {
             <div className="bg-white w-full h-full p-5 py-10 rounded-2xl row-span-1 lg:col-span-4">
               <h3 className="inline-flex text-xl font-mantropeFont">
                 <span className="-scale-x-100 rotate-[-10deg] mr-3">
-                  <PiMegaphoneLight className="size-7 stroke-[5]" />
+                  <PiMegaphoneLight className="size-7 stroke-5" />
                 </span>
                 Spoken Languages
               </h3>
@@ -79,7 +79,7 @@ const AboutPage = () => {
               </h4>
               <LanguageCards />
             </div>
-            <div className="relative h-full w-full overflow-hidden rounded-2xl border-slate-500/30 border-[1px] row-span-1 lg:col-span-4">
+            <div className="relative h-full w-full overflow-hidden rounded-2xl border-slate-500/30 border row-span-1 lg:col-span-4">
               <Image
                 src={"/ljubljana-map.jpg"}
                 fill
@@ -97,7 +97,7 @@ const AboutPage = () => {
                 <div>
                   <h3 className="inline-flex text-xl font-mantropeFont">
                     <span className="mr-3">
-                      <FaPersonRunning className="size-7 stroke-[5]" />
+                      <FaPersonRunning className="size-7 stroke-5" />
                     </span>
                     Sport Achievements
                   </h3>
@@ -116,7 +116,7 @@ const AboutPage = () => {
                           <FaLink className="size-6 text-neutral-500" />
                         </a>
                       </TooltipTrigger>
-                      <TooltipContent className="bg-gray-50 border-slate-500/30 border-[1px] rounded-lg">
+                      <TooltipContent className="bg-gray-50 border-slate-500/30 border rounded-lg">
                         <p className="font-mantropeFont text-foreground">
                           World Athletics | Sebastjan Bas
                         </p>
@@ -132,7 +132,7 @@ const AboutPage = () => {
                   </h2>
                   <h1 className="text-6xl font-bebasNeue">1:52.03</h1>
                 </div>
-                <div className="flex flex-col justify-center items-center bg-[#FCE3DE] w-full h-full rounded-3xl transition-transform hover:-translate-y-3 hover:rotate-[3deg] duration-500 ease-out">
+                <div className="flex flex-col justify-center items-center bg-[#FCE3DE] w-full h-full rounded-3xl transition-transform hover:-translate-y-3 hover:rotate-3 duration-500 ease-out">
                   <h2 className="text-lg font-mantropeFont font-normal italic">
                     400m PB
                   </h2>
@@ -164,7 +164,7 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-      <section className="bg-gradient-to-b from-[#F1F0EA] to-white w-screen h-screen flex justify-center items-star items-start pt-60  p-10">
+      <section className="bg-linear-to-b from-[#F1F0EA] to-white w-screen h-screen flex justify-center items-star items-start pt-60  p-10">
         <div className="w-full max-w-5xl flex flex-col justify-start items-start">
           <div className="flex flex-col justify-start items-start pb-5">
             <h3 className="text-xl uppercase">Profesional</h3>

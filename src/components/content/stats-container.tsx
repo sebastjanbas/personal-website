@@ -24,7 +24,7 @@ const StatsContainer = ({
           className={`max-w-[200px] w-full h-full ${textDirection}`}
         >
           <p className="text-md lg:text-lg text-slate-600">{stat.name}</p>
-          <span className={`text-5xl md:text-7xl font-semibold bg-clip-text bg-gradient-to-r text-transparent ${gradient}`}>
+          <span className={`text-5xl md:text-7xl font-semibold bg-clip-text bg-linear-to-r text-transparent ${gradient}`}>
             {stat.value}
           </span>
           <p className="text-md lg:text-lg text-slate-600">{stat.desc}</p>

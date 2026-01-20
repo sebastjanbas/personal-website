@@ -9,7 +9,7 @@ const NotFoundPage = () => {
           404
         </h3>
         <h1
-          className="bg-clip-text bg-gradient-to-b from-black via-slate-500 to-white
+          className="bg-clip-text bg-linear-to-b from-black via-slate-500 to-white
               font-robotoFont font-semibold text-transparent text-center
               text-5xl sm:text-6xl lg:text-7xl"
         >
@@ -21,7 +21,7 @@ const NotFoundPage = () => {
         <Link href={"/"} className="mt-5">
           <span
             className="text-slate-600 font-semibold text-sm lg:text-md text-center leading-none -translate-y-40 sm:translate-y-2 
-  md:after:block md:after:h-[1px] md:after:origin-left md:after:scale-x-0 md:after:bg-slate-600 
+  md:after:block md:after:h-px md:after:origin-left md:after:scale-x-0 md:after:bg-slate-600 
   md:after:transition-transform md:after:duration-500 
   md:hover:after:scale-x-100 md:hover:tracking-wider transition-all will-change-transform"
           >

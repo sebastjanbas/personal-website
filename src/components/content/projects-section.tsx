@@ -202,13 +202,13 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         <Link href={project.href} className="project-name text-nowrap">
           <h1 className="text-4xl md:text-6xl font-medium tracking-tighter translate-y-1 text-center leading-none inline-flex items-center gap-2 md:gap-5">
             {project.name}{" "}
-            <ArrowRight className="hidden md:block w-10 h-10 rotate-45 p-2 border-[1px] border-foreground rounded-full" />
+            <ArrowRight className="hidden md:block w-10 h-10 rotate-45 p-2 border border-foreground rounded-full" />
           </h1>
         </Link>
         <h2 className="text-2xl font-medium italic">{project.year}</h2>
         <div className="flex flex-row items-start justify-center w-full py-10">
           {project.image !== "#" ? (
-            <div className="relative w-full h-auto aspect-video max-w-3xl rounded-[2rem] lg:rounded-[3rem] overflow-hidden">
+            <div className="relative w-full h-auto aspect-video max-w-3xl rounded-4xl lg:rounded-[3rem] overflow-hidden">
               <Image
                 src={project.image}
                 alt={project.name}
@@ -217,7 +217,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               />
             </div>
           ) : (
-            <div className="w-full h-auto aspect-video max-w-3xl bg-slate-100 rounded-[2rem] lg:rounded-[3rem] flex items-center justify-center border border-slate-200">
+            <div className="w-full h-auto aspect-video max-w-3xl bg-slate-100 rounded-4xl lg:rounded-[3rem] flex items-center justify-center border border-slate-200">
               <p className="text-slate-400 font-bebasNeue tracking-widest text-lg">
                 COMING SOON
               </p>

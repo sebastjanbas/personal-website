@@ -124,7 +124,7 @@ const LogoBackground = () => {
           <div className="flex justify-center items-center absolute h-fit w-fit py-2 px-[7px] bg-white shadow-lg rounded-xl scale-[125%] translate-x-8 left-0 translate-y-96">
             <ElectronLogo color />
           </div>
-          <div className="flex justify-center items-center absolute h-fit w-fit scale-[200%] p-3 py-4 aspect-square bg-white shadow-lg rounded-2xl -translate-y-3 -translate-x-0 right-0">
+          <div className="flex justify-center items-center absolute h-fit w-fit scale-[200%] p-3 py-4 aspect-square bg-white shadow-lg rounded-2xl -translate-y-3 translate-x-0 right-0">
             <DockerLogo color />
           </div>
         </div>

@@ -17,13 +17,13 @@ import { VideoPlaceholder } from "./_components/video-player";
 import ProjectLogo from "./_components/project-logo";
 
 const hoverStyle =
-  "inline-block translate-y-1 text-lg text-center leading-none md:after:block md:after:h-[1px] md:after:origin-left md:after:scale-x-0 md:after:transition-transform md:after:duration-300 md:hover:after:scale-x-100 md:hover:tracking-wider transition-all will-change-transform text-foreground md:after:bg-foreground";
+  "inline-block translate-y-1 text-lg text-center leading-none md:after:block md:after:h-px md:after:origin-left md:after:scale-x-0 md:after:transition-transform md:after:duration-300 md:hover:after:scale-x-100 md:hover:tracking-wider transition-all will-change-transform text-foreground md:after:bg-foreground";
 
 const SloPage = () => {
   return (
     <div className="min-h-screen w-full">
       {/* Hero Section */}
-      <section className="relative isolate overflow-hidden px-6 py-24 sm:py-28 lg:overflow-visible lg:px-0 flex justify-center items-center bg-gradient-to-b from-[#F1F0EA] to-white">
+      <section className="relative isolate overflow-hidden px-6 py-24 sm:py-28 lg:overflow-visible lg:px-0 flex justify-center items-center bg-linear-to-b from-[#F1F0EA] to-white">
         <div className="mx-auto grid gap-x-8 grid-cols-1 lg:grid-cols-2 items-start gap-y-10 max-w-6xl w-full">
           <div className="col-span-1 lg:col-span-2 col-start-1 row-start-1 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-x-8 lg:px-6">
             <div className="w-full lg:w-[650px]">
@@ -209,7 +209,7 @@ const SloPage = () => {
             </div>
             <div className="grid grid-cols-2 gap-6">
               {/* Frontend */}
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-5 md:p-8">
+              <div className="bg-linear-to-br from-blue-50 to-indigo-100 rounded-2xl p-5 md:p-8">
                 <h3 className="text-xl font-semibold text-slate-800 mb-6 flex items-center">
                   <Zap className="w-5 h-5 mr-2 text-blue-600" />
                   Frontend
@@ -225,7 +225,7 @@ const SloPage = () => {
               </div>
 
               {/* Backend */}
-              <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-5 md:p-8">
+              <div className="bg-linear-to-br from-green-50 to-emerald-100 rounded-2xl p-5 md:p-8">
                 <h3 className="text-xl font-semibold text-slate-800 mb-6 flex items-center">
                   <Shield className="w-5 h-5 mr-2 text-green-600" />
                   Backend
@@ -240,7 +240,7 @@ const SloPage = () => {
               </div>
 
               {/* Payment & Communication */}
-              <div className="bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-5 md:p-8">
+              <div className="bg-linear-to-br from-purple-50 to-violet-100 rounded-2xl p-5 md:p-8">
                 <h3 className="text-xl font-semibold text-slate-800 mb-6 flex items-center">
                   <CreditCard className="w-5 h-5 mr-2 text-purple-600" />
                   Services
@@ -254,7 +254,7 @@ const SloPage = () => {
               </div>
 
               {/* Development */}
-              <div className="bg-gradient-to-br from-orange-50 to-amber-100 rounded-2xl p-5 md:p-8">
+              <div className="bg-linear-to-br from-orange-50 to-amber-100 rounded-2xl p-5 md:p-8">
                 <h3 className="text-xl font-semibold text-slate-800 mb-6 flex items-center">
                   <Settings className="w-5 h-5 mr-2 text-orange-600" />
                   Development
@@ -274,7 +274,7 @@ const SloPage = () => {
       {/* Features Section */}
       <section
         id="features"
-        className="py-20 px-5 md:px-10 xl:px-20 bg-gradient-to-b from-white to-[#D4EAF6]"
+        className="py-20 px-5 md:px-10 xl:px-20 bg-linear-to-b from-white to-[#D4EAF6]"
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -403,7 +403,7 @@ const SloPage = () => {
       {/* Features in Action - Video Demos */}
       <section
         id="features-action"
-        className="py-20 px-5 md:px-10 xl:px-20 bg-gradient-to-b from-[#D4EAF6] to-white"
+        className="py-20 px-5 md:px-10 xl:px-20 bg-linear-to-b from-[#D4EAF6] to-white"
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -459,7 +459,7 @@ const SloPage = () => {
       {/* Project Highlights */}
       <section
         id="project-highlights"
-        className="py-20 px-5 md:px-10 xl:px-20 bg-gradient-to-b from-white to-[#D4EAF6]"
+        className="py-20 px-5 md:px-10 xl:px-20 bg-linear-to-b from-white to-[#D4EAF6]"
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -475,7 +475,7 @@ const SloPage = () => {
             <div>
               <div className="space-y-8">
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center shrink-0 mt-1">
                     <span className="text-blue-600 font-semibold text-sm">
                       1
                     </span>
@@ -493,7 +493,7 @@ const SloPage = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center shrink-0 mt-1">
                     <span className="text-green-600 font-semibold text-sm">
                       2
                     </span>
@@ -510,7 +510,7 @@ const SloPage = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center shrink-0 mt-1">
                     <span className="text-purple-600 font-semibold text-sm">
                       3
                     </span>
@@ -527,7 +527,7 @@ const SloPage = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center shrink-0 mt-1">
                     <span className="text-orange-600 font-semibold text-sm">
                       4
                     </span>

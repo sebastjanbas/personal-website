@@ -3,9 +3,9 @@ import LogoBackground from "../ui/logo-background";
 
 const TechStackSection = () => {
   return (
-    <section className="relative overflow-hidden h-fit w-screen bg-gradient-to-b from-[#D4EAF6] to-white mb-[15px] p-10 flex flex-col md:flex-row justify-center items-center">
+    <section className="relative overflow-hidden h-fit w-screen bg-linear-to-b from-[#D4EAF6] to-white mb-[15px] p-10 flex flex-col md:flex-row justify-center items-center">
       <div className="my-20 w-full max-w-5xl flex flex-col justify-center items-center">
-        <h1 className="bg-clip-text font-mantropeFont bg-gradient-to-r w-fit from-[#042943] to-[#8ED3EA] text-5xl md:text-6xl lg:text-7xl text-center text-transparent pb-2 font-thin tracking-tighter">
+        <h1 className="bg-clip-text font-mantropeFont bg-linear-to-r w-fit from-[#042943] to-[#8ED3EA] text-5xl md:text-6xl lg:text-7xl text-center text-transparent pb-2 font-thin tracking-tighter">
           Tech stack
         </h1>
         <h2 className="text-lg font-mantropeFont font-normal text-center pb-4">

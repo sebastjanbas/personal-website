@@ -43,7 +43,7 @@ export default function BackgroundUpdater() {
 
   return null;
   // return (
-  //   <div className="fixed z-[100] bottom-4 right-4 bg-gray-900 text-white p-2 rounded-lg shadow-lg">
+  //   <div className="fixed z-100 bottom-4 right-4 bg-gray-900 text-white p-2 rounded-lg shadow-lg">
   //     ScrollY: {scrollPosition}px
   //   </div>
   // );

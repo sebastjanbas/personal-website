@@ -22,7 +22,7 @@ const NavigationDialog = ({
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0.5, y: "-100%" }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="bg-white fixed overflow-hidden inset-0 z-[90] h-screen max-h-screen w-screen"
+              className="bg-white fixed overflow-hidden inset-0 z-90 h-screen max-h-screen w-screen"
             >
               <div className="relative max-h-screen w-full z-10 flex justify-center items-center overflow-y-auto pt-20 pb-32 px-4">
                 {/* Motion Variants for Staggering */}
@@ -57,7 +57,7 @@ const NavigationDialog = ({
                       <Link
                         href={link.href}
                         onClick={() => setMobileMenuOpen(link.stayOpen)}
-                        className="bg-clip-text bg-gradient-to-b from-black via-slate-500 to-white  tracking-tight leading-[70px] md:leading-[100px] lg:leading-[180px]
+                        className="bg-clip-text bg-linear-to-b from-black via-slate-500 to-white  tracking-tight leading-[70px] md:leading-[100px] lg:leading-[180px]
                         relative text-7xl sm:text-8xl lg:text-[180px] text-transparent 
                       duration-200 ease-out md:hover:text-gray-400
                       after:block md:after:h-[2px] lg:after:h-[3px] md:after:origin-left md:after:scale-x-0 md:after:bg-gray-400 
