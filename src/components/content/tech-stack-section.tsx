@@ -11,7 +11,7 @@ const TechStackSection = () => {
         <h2 className="text-lg font-mantropeFont font-normal text-center pb-4">
           The tools I use to build, design, and deploy software.
         </h2>
-        <div className="my-0 md:my-16 w-full h-full md:h-[500px] flex justify-center items-center">
+        <div className="my-0 md:my-16 w-full h-full md:h-125 flex justify-center items-center">
           <LogoBackground />
         </div>
       </div>

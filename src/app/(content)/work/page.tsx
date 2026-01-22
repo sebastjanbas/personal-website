@@ -43,7 +43,7 @@ const WorkPage = () => {
       <section className="relative isolate overflow-hidden px-6 py-24 sm:py-28 lg:overflow-visible lg:px-0 flex justify-center items-center bg-linear-to-b from-white to-[#D4EAF6]">
         <div className="mx-auto grid gap-x-8 grid-cols-1 lg:grid-cols-2 items-start gap-y-10 max-w-6xl w-full">
           <div className="col-span-1 lg:col-span-2 col-start-1 row-start-1 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-x-8 lg:px-6">
-            <div className="w-full lg:w-[650px]">
+            <div className="w-full lg:w-162.5">
               <div className="w-full">
                 <p className="text-lg font-normal font-bebasNeue tracking-wider text-[#0978E7]">
                   Professional Journey
@@ -62,7 +62,7 @@ const WorkPage = () => {
 
           {/* Stats Cards */}
           <div className="col-span-1 lg:col-span-2 col-start-1 row-start-2 mx-auto grid w-full max-w-7xl grid-cols-1 lg:grid-cols-2 gap-x-8">
-            <div className="w-full lg:w-[650px]">
+            <div className="w-full lg:w-162.5">
               <div className="grid grid-cols-2 gap-6">
                 <div className="p-1 lg:p-6">
                   <h3 className="text-sm font-semibold text-foreground uppercase tracking-wide mb-2">
@@ -106,7 +106,7 @@ const WorkPage = () => {
               <div className="w-full h-px bg-foreground opacity-10 my-5" />
 
               {/* Navigation Links */}
-              <div className="w-full lg:w-[650px]">
+              <div className="w-full lg:w-162.5">
                 <div className="grid grid-cols-2 gap-5 lg:gap-6 mb-16 w-full">
                   <div className="p-1 lg:px-6">
                     <a

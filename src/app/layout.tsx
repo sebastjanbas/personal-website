@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import type { Metadata } from "next";
 import {
   Bebas_Neue,
@@ -13,29 +12,34 @@ import { Analytics } from "@vercel/analytics/react";
 import BackgroundUpdater from "@/components/ui/bacground-updater";
 import { Toaster } from "sonner";
 
-const bebasNeue = Bebas_Neue({
-  weight: "400",
+const bebasNeueFont = Bebas_Neue({
+  weight: ["400"],
   subsets: ["latin"],
+  variable: "--next-font-bebasNeue"
 });
 const robotoFont = Roboto({
   weight: ["100", "300", "400", "500", "700", "900"],
   subsets: ["latin", "latin-ext"],
   style: ["normal", "italic"],
+  variable: "--next-font-roboto"
 });
 
 const sigmarFont = Sigmar({
   weight: "400",
   subsets: ["latin"],
+  variable: "--next-font-sigmar"
 });
 
-const manrope = Manrope({
+const manropeFont = Manrope({
   weight: ["200", "300", "400", "500", "600", "700", "800"],
   subsets: ["latin"],
+  variable: "--next-font-manrope"
 });
 
-const dmDisplay = DM_Serif_Display({
+const dmDisplayFont = DM_Serif_Display({
   weight: "400",
   subsets: ["latin"],
+  variable: "--next-font-dmDisplay"
 });
 
 // const bigShoulders = Big_Shoulders_Display({
@@ -92,12 +96,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${manropeFont.variable} ${bebasNeueFont.variable} ${robotoFont.variable} ${sigmarFont.variable} ${dmDisplayFont.variable}`}>
       <head>
+        <title></title>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </head>
-      <body className="overflow-x-hidden font-mantropeFont">
+      <body className="overflow-x-hidden font-manrope">
         <BackgroundUpdater />
         <Toaster position="top-center" richColors />
         {children}

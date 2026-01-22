@@ -1,10 +1,12 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import { useMotionValueEvent, useScroll } from "motion/react";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 export default function BackgroundUpdater() {
+
+  const SHOW_SCROLL_POSITION = false;
+  const CHANGE_BACKGROUND_COLOR = false;
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const pathname = usePathname();
@@ -32,8 +34,10 @@ export default function BackgroundUpdater() {
     // fontColor = "#FCC97D";
 
     // uncomment to enable background change
-    // document.documentElement.style.setProperty("--background", color);
-    // document.documentElement.style.setProperty("--foreground", fontColor);
+    if (CHANGE_BACKGROUND_COLOR) {
+      document.documentElement.style.setProperty("--background", color);
+      document.documentElement.style.setProperty("--foreground", fontColor);
+    }
   };
 
   useMotionValueEvent(scrollY, "change", (y) => {
@@ -41,10 +45,13 @@ export default function BackgroundUpdater() {
     updateBackground(y);
   });
 
+  if (SHOW_SCROLL_POSITION) {
+    return (
+        <div className="fixed z-100 bottom-4 right-4 bg-gray-900 text-white p-2 rounded-lg shadow-lg">
+          ScrollY: {scrollPosition}px
+        </div>
+    );
+  }
+
   return null;
-  // return (
-  //   <div className="fixed z-100 bottom-4 right-4 bg-gray-900 text-white p-2 rounded-lg shadow-lg">
-  //     ScrollY: {scrollPosition}px
-  //   </div>
-  // );
 }

@@ -12,11 +12,10 @@ import { DjangoLogo } from "../Logos/django-logo";
 import { DockerLogo } from "../Logos/docker-logo";
 import { NextJsLogo } from "../Logos/nextjs-logo";
 import { ElectronLogo } from "../Logos/electron-logo";
-import { motion, useInView } from "motion/react";
+import { motion } from "motion/react";
 
 const LogoBackground = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref);
 
   const [initialScale, setInitialScale] = useState(0.7);
   const [finalScale, setFinalScale] = useState(1);
