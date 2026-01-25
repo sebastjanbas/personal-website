@@ -1,17 +1,17 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import Git from "../Logos/git";
-import { ReactLogo } from "../Logos/react-logo";
-import { Figma } from "../Logos/figma";
-import { TailwindLogo } from "../Logos/tailwind-logo";
-import { TypescriptLogo } from "../Logos/tyoescript-logo";
-import { SupabaseLogo } from "../Logos/supabase-logo";
-import { PostGreSql } from "../Logos/postgresql-logo";
-import { DjangoLogo } from "../Logos/django-logo";
-import { DockerLogo } from "../Logos/docker-logo";
-import { NextJsLogo } from "../Logos/nextjs-logo";
-import { ElectronLogo } from "../Logos/electron-logo";
+import Git from "@/components/logos/git";
+import { ReactLogo } from "@/components/logos/react-logo";
+import { Figma } from "@/components/logos/figma";
+import { TailwindLogo } from "@/components/logos/tailwind-logo";
+import { TypescriptLogo } from "@/components/logos/tyoescript-logo";
+import { SupabaseLogo } from "@/components/logos/supabase-logo";
+import { PostGreSql } from "@/components/logos/postgresql-logo";
+import { DjangoLogo } from "@/components/logos/django-logo";
+import { DockerLogo } from "@/components/logos/docker-logo";
+import { NextJsLogo } from "@/components/logos/nextjs-logo";
+import { ElectronLogo } from "@/components/logos/electron-logo";
 import { motion } from "motion/react";
 
 const LogoBackground = () => {

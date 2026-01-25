@@ -1,8 +1,8 @@
 import React from "react";
-import Github from "../Logos/social-media/github";
-import XLogo from "../Logos/social-media/x";
-import Instagram from "../Logos/social-media/instagram";
-import LinkedIn from "../Logos/social-media/linked-in";
+import Github from "@/components/logos/social-media/github";
+import XLogo from "@/components/logos/social-media/x";
+import Instagram from "@/components/logos/social-media/instagram";
+import LinkedIn from "@/components/logos/social-media/linked-in";
 
 type SocialMediaProps = {
   size?: string;

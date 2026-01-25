@@ -1,7 +1,7 @@
-import Github from "@/components/Logos/social-media/github";
-import Instagram from "@/components/Logos/social-media/instagram";
-import LinkedIn from "@/components/Logos/social-media/linked-in";
-import XLogo from "@/components/Logos/social-media/x";
+import Github from "@/components/logos/social-media/github";
+import Instagram from "@/components/logos/social-media/instagram";
+import LinkedIn from "@/components/logos/social-media/linked-in";
+import XLogo from "@/components/logos/social-media/x";
 
 export type LogoProps = {
   color: boolean;

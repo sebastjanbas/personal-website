@@ -3,10 +3,10 @@ import React, { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
-import Github from "@/components/Logos/social-media/github";
-import LinkedIn from "@/components/Logos/social-media/linked-in";
-import Instagram from "@/components/Logos/social-media/instagram";
-import XLogo from "@/components/Logos/social-media/x";
+import Github from "@/components/logos/social-media/github";
+import LinkedIn from "@/components/logos/social-media/linked-in";
+import Instagram from "@/components/logos/social-media/instagram";
+import XLogo from "@/components/logos/social-media/x";
 
 gsap.registerPlugin(useGSAP);
 
