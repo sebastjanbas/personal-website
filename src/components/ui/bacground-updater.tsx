@@ -6,15 +6,15 @@ import { useState } from "react";
 export default function BackgroundUpdater() {
 
   const SHOW_SCROLL_POSITION = false;
-  const CHANGE_BACKGROUND_COLOR = false;
+  const CHANGE_BACKGROUND_COLOR = true;
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const pathname = usePathname();
 
   const { scrollY } = useScroll();
   const updateBackground = (y: number) => {
-    let color = "#ffffff"; // Default background color
-    let fontColor = "#1D1D1F";
+    let color = "#E0E0E0"; // Default background color
+    let fontColor = "#121111";
     const vh = window.innerHeight;
 
     if (pathname === "/about" && y > 300) {
@@ -22,16 +22,10 @@ export default function BackgroundUpdater() {
       fontColor = "#1D1D1F";
       // fontColor = "#62748E";
     }
-    if (y >= 6 * vh) {
-      color = "#2f2f2f";
-      fontColor = "#ffff";
+    if (y >= (vh - 25)) {
+      color = "#121111";
+      fontColor = "#E0E0E0";
     }
-    // color = "#098984";
-    // fontColor = "#FF9C86"
-    // color = "#644695";
-    // fontColor = "#FFF7A1"
-    // color = "#1C6E8C";
-    // fontColor = "#FCC97D";
 
     // uncomment to enable background change
     if (CHANGE_BACKGROUND_COLOR) {

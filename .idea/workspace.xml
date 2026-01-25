@@ -4,63 +4,78 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62747c00-75a5-4d31-aa96-c9f32ae29102" name="Changes" comment="upgrade the tailwind to latest v4">
+    <list default="true" id="62747c00-75a5-4d31-aa96-c9f32ae29102" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(content)/work/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(content)/work/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(content)/about/_components/language-cards.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(content)/about/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(content)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(content)/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(content)/work/page.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/tech-stack-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/tech-stack-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/herro-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/herro-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/navbar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/bacground-updater.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/bacground-updater.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/logo-background.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/logo-background.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="37zO1nJ6W8k6xwDtzpyjbfwb2iP" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
-    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/sebastjanbas/Seba/Business/personal-website&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.Next.js: server-side.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.webpack&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/sebastjanbas/Seba/Business/personal-website/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "main",
+    "javascript.preferred.runtime.type.id": "node",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "last_opened_file_path": "/Users/sebastjanbas/Seba/Business/personal-website/public/fonts/Inter-display",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.Next.js: server-side.executor": "Run",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "settings.webpack",
+    "ts.external.directory.path": "/Users/sebastjanbas/Seba/Business/personal-website/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -69,6 +84,16 @@
         <entry key="com.intellij.reactbuddy.storybook" value="false" />
       </map>
     </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/fonts/Inter-display" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src/app/(content)" />
+      <recent name="$PROJECT_DIR$/src/app" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.Next.js: server-side">
     <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
@@ -106,7 +131,8 @@
       <workItem from="1767947269766" duration="13000" />
       <workItem from="1767947302533" duration="206000" />
       <workItem from="1768930397850" duration="1280000" />
-      <workItem from="1768932340859" duration="6880000" />
+      <workItem from="1768932340859" duration="11156000" />
+      <workItem from="1769148502409" duration="13436000" />
     </task>
     <task id="LOCAL-00001" summary="upgrade the next project to v16">
       <option name="closed" value="true" />
@@ -124,15 +150,44 @@
       <option name="project" value="LOCAL" />
       <updated>1768932525770</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update the fonts and fix some code warnings">
+      <option name="closed" value="true" />
+      <created>1769061680250</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1769061680250</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add a placeholder page for the /blog route">
+      <option name="closed" value="true" />
+      <created>1769061698139</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1769061698139</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="upgrade the next project to v16" />
     <MESSAGE value="upgrade the tailwind to latest v4" />
-    <option name="LAST_COMMIT_MESSAGE" value="upgrade the tailwind to latest v4" />
+    <MESSAGE value="update the fonts and fix some code warnings" />
+    <MESSAGE value="add a placeholder page for the /blog route" />
+    <option name="LAST_COMMIT_MESSAGE" value="add a placeholder page for the /blog route" />
   </component>
 </project>

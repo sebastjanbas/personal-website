@@ -1,209 +1,116 @@
 "use client";
 import React, { useRef } from "react";
-import { ImageBackground } from "../ui/image-background";
-import { socialMedia } from "@/lib/docs";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "../ui/tooltip";
-import DownloadCVButton from "../ui/download-cv-button";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { SplitText } from "gsap/SplitText";
+import Image from "next/image";
+import Github from "@/components/Logos/social-media/github";
+import LinkedIn from "@/components/Logos/social-media/linked-in";
+import Instagram from "@/components/Logos/social-media/instagram";
+import XLogo from "@/components/Logos/social-media/x";
 
 gsap.registerPlugin(useGSAP);
-gsap.registerPlugin(SplitText);
 
 const HeroSection = () => {
-  const name = useRef(null);
-  const subtitle1 = useRef(null);
-  const subtitle2 = useRef(null);
-  const downloadCVButton = useRef(null);
-  const imageBackground = useRef(null);
+    const h1DarkRef = useRef<HTMLHeadingElement>(null);
+    const h1WhiteRef = useRef<HTMLHeadingElement>(null);
+    const h2Ref = useRef<HTMLHeadingElement>(null);
 
-  useGSAP(() => {
-    const split = SplitText.create(name.current, {
-      type: "chars, words, lines",
-      mask: "chars",
-    });
-    split.chars.forEach((char) => {
-      char.classList.add(
-        "bg-clip-text",
-        "bg-linear-to-b",
-        "from-black",
-        "via-slate-500",
-        "to-white",
-        "text-transparent"
-      );
-    });
-    gsap.from(split.chars, {
-      y: 100,
-      opacity: 0,
-      scale: 0.8,
-      duration: 1,
-      autoAlpha: 0,
-      ease: "power2.inOut",
-      stagger: {
-        amount: 0.3,
-      },
-    });
+    useGSAP(() => {
+        // H1 animation: right to left (both layers in sync)
+        const h1Elements = [h1DarkRef.current, h1WhiteRef.current].filter(Boolean);
+        if (h1Elements.length > 0) {
+            gsap.to(h1Elements, {
+                xPercent: -50,
+                duration: 150,
+                ease: "none",
+                repeat: -1,
+            });
+        }
 
-    gsap.from(subtitle1.current, {
-      x: -100,
-      scale: 0.8,
-      opacity: 0,
-      duration: 1,
-      ease: "power2.inOut",
-    });
+        // H2 animation: left to right
+        if (h2Ref.current) {
+            gsap.fromTo(
+                h2Ref.current,
+                { xPercent: -50 },
+                {
+                    xPercent: 0,
+                    duration: 100,
+                    ease: "none",
+                    repeat: -1,
+                }
+            );
+        }
+    }, []);
 
-    gsap.from(subtitle2.current, {
-      x: 100,
-      scale: 0.8,
-      opacity: 0,
-      duration: 1,
-      ease: "power2.inOut",
-    });
+    const h1Text = "- Sebastjan Bas ";
+    const h2Text = "- Software Engineer ";
 
-    gsap.from(downloadCVButton.current, {
-      y: 100,
-      scale: 0.8,
-      opacity: 0,
-      duration: 1,
-      delay: 1,
-      ease: "power2.inOut",
-    });
-
-    // Mobile animation (y: -50, x: 0)
-    gsap.matchMedia().add("(max-width: 768px)", () => {
-      gsap.from(".social-media-link", {
-        y: -50,
-        scale: 0.8,
-        opacity: 0,
-        delay: 1,
-        ease: "power2.inOut",
-        stagger: {
-          amount: 0.5,
-        },
-      });
-    });
-
-    // Desktop animation (x: -100, y: 0)
-    gsap.matchMedia().add("(min-width: 769px)", () => {
-      gsap.from(".social-media-link", {
-        x: -100,
-        scale: 0.8,
-        opacity: 0,
-        delay: 1,
-        ease: "power2.inOut",
-        stagger: {
-          amount: 0.5,
-        },
-      });
-    });
-
-    gsap.from(imageBackground.current, {
-      y: 200,
-      opacity: 0,
-      duration: 1,
-      delay: 1.2,
-      ease: "power2.inOut",
-    });
-  });
-
-  return (
-    <>
-      <section className="flex flex-col bg-linear-to-b from-white to-[#D4EAF6] justify-center items-center h-[calc(100vh+120px)] w-screen 0.8 md:p-10 xl:p-20">
-        <div
-          ref={imageBackground}
-          className="absolute overflow-hidden bg-transparent z-20 w-screen max-h-[calc(100vh+120px)]"
-        >
-          <ImageBackground />
-        </div>
-        <div className="relative w-full mt-16 md:mt-0 h-fit z-10 flex justify-center items-start translate-y-10">
-          <div className="flex flex-col">
-            <h3
-              className="
-              inline-flex gap-2 justify-center items-center
-              font-bebasNeue text-center
-              text-2xl tracking-wider
-              sm:text-2xl sm:tracking-[7.5px]
-              lg:text-3xl
-              lg:tracking-[16.5px]
-              "
+    return (
+        <section className={"max-h-screen h-screen w-full relative overflow-hidden isolate"}>
+            {/* Dark h1 in the back */}
+            <div className={"absolute top-2/5 z-10 left-0 w-full overflow-visible text-white hover:text-[#1F1F1F]"}>
+                <h1
+                    ref={h1DarkRef}
+                    className={"text-[280px] tracking-tighter font-interDisplay font-medium transition-colors duration-700 ease-in-out whitespace-nowrap inline-block leading-[0.8]"}
+                >
+                    {Array(8).fill(h1Text).join("")}
+                </h1>
+            </div>
+            {/* Main image */}
+            <Image
+                src={"/personal-photo-gray.png"}
+                className={"absolute z-20 bottom-0 left-0 object-contain max-h-screen bg-transparent pointer-events-none"}
+                width={2964}
+                height={2954}
+                alt={"Sebastjan Bas"}
+            />
+            {/* Masked container: image copy + blended white text */}
+            <div
+                className={"absolute inset-0 z-30 overflow-hidden isolate pointer-events-none"}
+                style={{
+                    maskImage: "url('/personal-photo-gray.png')",
+                    maskSize: "contain",
+                    maskPosition: "bottom",
+                    maskRepeat: "no-repeat",
+                    WebkitMaskImage: "url('/personal-photo-gray.png')",
+                    WebkitMaskSize: "contain",
+                    WebkitMaskPosition: "bottom",
+                    WebkitMaskRepeat: "no-repeat",
+                }}
             >
-              <div
-                className="bg-clip-text bg-linear-to-b from-slate-600 to-gray-400 text-transparent"
-                ref={subtitle1}
-              >
-                Software Engineer
-              </div>
-              <span className="bg-clip-text bg-linear-to-b from-slate-600 to-gray-400 text-transparent">
-                |
-              </span>
-              <div
-                className="bg-clip-text bg-linear-to-b from-slate-600 to-gray-400 text-transparent"
-                ref={subtitle2}
-              >
-                Full-stack dev
-              </div>
-            </h3>
-            <h1
-              ref={name}
-              className="
-              font-bebasNeue font-black text-center
-              tracking-tight
-              text-7xl 
-              leading-none
-              sm:text-[145px]
-              lg:text-[230px]
-              "
-            >
-              Sebastjan Bas
-            </h1>
-          </div>
-        </div>
-        <div className="relative w-full h-full z-30 flex justify-center items-start translate-y-10">
-          <div className="relative max-w-2xl lg:max-w-5xl flex flex-col sm:flex-row w-full  h-fit justify-center sm:justify-between items-center gap-y-0 sm:items-start px-10">
-            <div className="flex flex-row md:flex-col gap-5">
-              {socialMedia.map((item) => (
-                <div key={item.id} className="social-media-link">
-                  <div className="inline-flex justify-start items-center gap-5 transition-transform duration-200 hover:scale-110">
-                    <a href={item.href}>
-                      <TooltipProvider delayDuration={300}>
-                        <Tooltip>
-                          <TooltipTrigger>
-                            <item.Component
-                              size="size-7"
-                              fillColor="fill-slate-600"
-                            />
-                          </TooltipTrigger>
-                          <TooltipContent side="right" className="bg-slate-500">
-                            {item.name}
-                          </TooltipContent>
-                        </Tooltip>
-                      </TooltipProvider>
-                    </a>
-                  </div>
+                {/* Image copy inside for blending */}
+                <Image
+                    src={"/personal-photo-gray.png"}
+                    className={"absolute bottom-0 left-0 object-contain max-h-screen"}
+                    width={2964}
+                    height={2954}
+                    alt={""}
+                    aria-hidden="true"
+                />
+                {/* White text blends with the image copy above */}
+                <div className={"absolute top-2/5 left-0 w-full mix-blend-difference"}>
+                    <h1
+                        ref={h1WhiteRef}
+                        className={"text-[280px] tracking-tighter font-interDisplay font-medium text-pink-50 whitespace-nowrap inline-block leading-[0.8]"}
+                    >
+                        {Array(8).fill(h1Text).join("")}
+                    </h1>
                 </div>
-              ))}
             </div>
-            <div ref={downloadCVButton}>
-              <div
-                className="text-slate-600 font-semibold font-bebasNeue text-lg text-center leading-none -translate-y-44 sm:translate-y-2 
-              md:after:block md:after:h-px md:after:origin-left md:after:scale-x-0 md:after:bg-slate-600 
-              md:after:transition-transform md:after:duration-500 
-              md:hover:after:scale-x-100 md:hover:tracking-wider transition-all will-change-transform"
-              >
-                <DownloadCVButton />
-              </div>
+            {/*<h2*/}
+            {/*    ref={h2Ref}*/}
+            {/*    className={"z-20 tracking-tighter text-[164px] font-interDisplay font-semibold text-[#1F1F1F] whitespace-nowrap absolute bottom-3/12 left-0 leading-tight"}*/}
+            {/*>*/}
+            {/*    {Array(8).fill(h2Text).join("")}*/}
+            {/*</h2>*/}
+            <div className={"absolute flex flex-col items-center bottom-8 left-10 gap-7"}>
+                <Github size={"size-[24px]"} fillColor={"fill-[#383838]"} />
+                <LinkedIn size={"size-[24px]"} fillColor={"fill-[#383838]"} />
+                <Instagram size={"size-[24px]"} fillColor={"fill-[#383838]"} />
+                <XLogo size={"size-[24px]"} fillColor={"fill-[#383838]"} />
             </div>
-          </div>
-        </div>
-      </section>
-    </>
-  );
+        </section>
+    );
 };
 
 export default HeroSection;
