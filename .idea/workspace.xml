@@ -4,28 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62747c00-75a5-4d31-aa96-c9f32ae29102" name="Changes" comment="start the redesign, remove /about page, /work page, add custom font, update the globals.css and hero-section">
+    <list default="true" id="62747c00-75a5-4d31-aa96-c9f32ae29102" name="Changes" comment="refactor the logos, update the landing page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(content)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(content)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Logos/django-logo.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Logos/docker-logo.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Logos/electron-logo.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Logos/figma.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Logos/git.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Logos/illustrator.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Logos/nextjs-logo.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Logos/postgresql-logo.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Logos/react-logo.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Logos/social-media/github.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/social-media/github.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Logos/social-media/instagram.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/social-media/instagram.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Logos/social-media/linked-in.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/social-media/linked-in.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Logos/social-media/x.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/social-media/x.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Logos/supabase-logo.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Logos/tailwind-logo.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Logos/tyoescript-logo.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/herro-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/herro-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/logo-background.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/logo-background.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/social-media.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/social-media.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/herro-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(content)/_components/hero-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logos/aws-logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/aws-logo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logos/docker-logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/docker-logo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logos/grafana-logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/grafana-logo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logos/java-logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/java-logo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logos/next-logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/next-logo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logos/postgresql-logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/postgresql-logo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logos/postman-logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/postman-logo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logos/python-logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/python-logo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logos/react-logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/react-logo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logos/spring-logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/spring-logo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logos/tailwind-logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/tailwind-logo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logos/typescript-logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/typescript-logo.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/docs.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/docs.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,30 +59,30 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
-    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/sebastjanbas/Seba/Business/personal-website/public/fonts/Inter-display&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.Next.js: server-side.executor&quot;: &quot;Run&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.webpack&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/sebastjanbas/Seba/Business/personal-website/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "main",
+    "javascript.preferred.runtime.type.id": "node",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "last_opened_file_path": "/Users/sebastjanbas/Seba/Business/personal-website/public/fonts/Inter-display",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.Next.js: server-side.executor": "Run",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "ts.external.directory.path": "/Users/sebastjanbas/Seba/Business/personal-website/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -101,6 +97,7 @@
       <recent name="$PROJECT_DIR$/public/fonts/Inter-display" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/(content)/_components" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src/app/(content)" />
       <recent name="$PROJECT_DIR$/src/app" />
@@ -144,7 +141,7 @@
       <workItem from="1768930397850" duration="1280000" />
       <workItem from="1768932340859" duration="11156000" />
       <workItem from="1769148502409" duration="13744000" />
-      <workItem from="1769368681693" duration="3003000" />
+      <workItem from="1769368681693" duration="23473000" />
     </task>
     <task id="LOCAL-00001" summary="upgrade the next project to v16">
       <option name="closed" value="true" />
@@ -186,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769322062608</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="refactor the logos, update the landing page">
+      <option name="closed" value="true" />
+      <created>1769372105397</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1769372105397</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +214,7 @@
     <MESSAGE value="update the fonts and fix some code warnings" />
     <MESSAGE value="add a placeholder page for the /blog route" />
     <MESSAGE value="start the redesign, remove /about page, /work page, add custom font, update the globals.css and hero-section" />
-    <option name="LAST_COMMIT_MESSAGE" value="start the redesign, remove /about page, /work page, add custom font, update the globals.css and hero-section" />
+    <MESSAGE value="refactor the logos, update the landing page" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor the logos, update the landing page" />
   </component>
 </project>

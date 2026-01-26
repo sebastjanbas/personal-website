@@ -155,6 +155,7 @@
 
 /*  CUSTOM COLORS */
   --color-light-gray: var(--light-gray);
+  --color-dark-gray: var(--dark-gray);
 }
 
 /*
@@ -198,6 +199,7 @@
 
 /*  CUSTOM COLORS */
   --light-gray: #E0E0E0;
+  --dark-gray: #121111;
 }
 
 /*

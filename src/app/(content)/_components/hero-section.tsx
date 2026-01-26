@@ -13,7 +13,6 @@ gsap.registerPlugin(useGSAP);
 const HeroSection = () => {
     const h1DarkRef = useRef<HTMLHeadingElement>(null);
     const h1WhiteRef = useRef<HTMLHeadingElement>(null);
-    const h2Ref = useRef<HTMLHeadingElement>(null);
 
     useGSAP(() => {
         // H1 animation: right to left (both layers in sync)
@@ -26,24 +25,9 @@ const HeroSection = () => {
                 repeat: -1,
             });
         }
-
-        // H2 animation: left to right
-        if (h2Ref.current) {
-            gsap.fromTo(
-                h2Ref.current,
-                { xPercent: -50 },
-                {
-                    xPercent: 0,
-                    duration: 100,
-                    ease: "none",
-                    repeat: -1,
-                }
-            );
-        }
     }, []);
 
     const h1Text = "- Sebastjan Bas ";
-    const h2Text = "- Software Engineer ";
 
     return (
         <section className={"max-h-screen h-screen w-full relative overflow-hidden isolate"}>
@@ -97,12 +81,12 @@ const HeroSection = () => {
                     </h1>
                 </div>
             </div>
-            {/*<h2*/}
-            {/*    ref={h2Ref}*/}
-            {/*    className={"z-20 tracking-tighter text-[164px] font-interDisplay font-semibold text-[#1F1F1F] whitespace-nowrap absolute bottom-3/12 left-0 leading-tight"}*/}
-            {/*>*/}
-            {/*    {Array(8).fill(h2Text).join("")}*/}
-            {/*</h2>*/}
+            <h2
+                className={"z-30 tracking-tighter text-6xl font-interDisplay font-semibold text-[#1F1F1F] whitespace-nowrap absolute bottom-20 right-10 -indent-32 leading-none"}
+            >
+                {"//"} Software <br/> Engineer
+
+            </h2>
             <div className={"absolute flex flex-col items-center bottom-8 left-10 gap-7"}>
                 <Github size={"size-[24px]"} fillColor={"fill-[#383838]"} />
                 <LinkedIn size={"size-[24px]"} fillColor={"fill-[#383838]"} />
