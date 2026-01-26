@@ -57,10 +57,10 @@ const NavigationDialog = ({
                       <Link
                         href={link.href}
                         onClick={() => setMobileMenuOpen(link.stayOpen)}
-                        className="bg-clip-text bg-linear-to-b from-black via-slate-500 to-white  tracking-tight leading-[70px] md:leading-[100px] lg:leading-[180px]
+                        className="bg-clip-text bg-linear-to-b from-black via-slate-500 to-white  tracking-tight leading-17.5 md:leading-25 lg:leading-45
                         relative text-7xl sm:text-8xl lg:text-[180px] text-transparent 
                       duration-200 ease-out md:hover:text-gray-400
-                      after:block md:after:h-[2px] lg:after:h-[3px] md:after:origin-left md:after:scale-x-0 md:after:bg-gray-400 
+                      after:block md:after:h-0.5 lg:after:h-0.75 md:after:origin-left md:after:scale-x-0 md:after:bg-gray-400
                       md:after:transition-transform md:after:duration-500 md:after:ease-out md:hover:after:scale-x-100 after:-translate-y-3"
                         style={{
                           transform: "translate3d(0,0,0)", // Forces GPU acceleration

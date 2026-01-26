@@ -115,12 +115,6 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
-  --font-manrope: var(--next-font-manrope), sans-serif;
-  --font-bebasNeue: var(--next-font-bebasNeue), cursive;
-  --font-sigmar: var(--next-font-sigmar), sans-serif;
-  --font-roboto: var(--next-font-roboto), sans-serif;
-  --font-dmDisplay: var(--next-font-dmDisplay), sans-serif;
-  --font-interDisplay: var(--next-font-interDisplay), sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -251,4 +245,24 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Custom font utilities - uses Next.js font variables at runtime */
+@utility font-manrope {
+  font-family: var(--next-font-manrope), sans-serif;
+}
+@utility font-bebasNeue {
+  font-family: var(--next-font-bebasNeue), cursive;
+}
+@utility font-sigmar {
+  font-family: var(--next-font-sigmar), sans-serif;
+}
+@utility font-roboto {
+  font-family: var(--next-font-roboto), sans-serif;
+}
+@utility font-dmDisplay {
+  font-family: var(--next-font-dmDisplay), serif;
+}
+@utility font-interDisplay {
+  font-family: var(--next-font-interDisplay), sans-serif;
 }
