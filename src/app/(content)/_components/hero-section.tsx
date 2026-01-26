@@ -30,7 +30,7 @@ const HeroSection = () => {
     const h1Text = "- Sebastjan Bas ";
 
     return (
-        <section className={"max-h-screen h-screen w-full relative overflow-hidden isolate"}>
+        <section className={"max-h-screen h-screen w-full relative overflow-hidden isolate bg-light-gray"}>
             {/* Dark h1 in the back */}
             <div className={"absolute top-2/5 z-10 left-0 w-full overflow-visible text-white hover:text-[#1F1F1F]"}>
                 <h1

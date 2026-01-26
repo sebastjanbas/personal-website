@@ -98,7 +98,7 @@ export const sharedMetadata = [
     },
 ];
 
-export const socialMedia = [
+export const SOCIAL_MEDIA_LINKS = [
     {
         id: 1,
         name: "Github",

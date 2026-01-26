@@ -4,24 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62747c00-75a5-4d31-aa96-c9f32ae29102" name="Changes" comment="refactor the logos, update the landing page">
+    <list default="true" id="62747c00-75a5-4d31-aa96-c9f32ae29102" name="Changes" comment="add the project section with photos and project description">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(content)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(content)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(content)/_components/hero-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(content)/_components/hero-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(content)/_components/projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(content)/_components/projects.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/content/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/herro-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(content)/_components/hero-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/logos/aws-logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/aws-logo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/logos/docker-logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/docker-logo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/logos/grafana-logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/grafana-logo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/logos/java-logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/java-logo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/logos/next-logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/next-logo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/logos/postgresql-logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/postgresql-logo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/logos/postman-logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/postman-logo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/logos/python-logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/python-logo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/logos/react-logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/react-logo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/logos/spring-logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/spring-logo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/logos/tailwind-logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/tailwind-logo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/logos/typescript-logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/typescript-logo.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/docs.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/docs.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -141,7 +131,7 @@
       <workItem from="1768930397850" duration="1280000" />
       <workItem from="1768932340859" duration="11156000" />
       <workItem from="1769148502409" duration="13744000" />
-      <workItem from="1769368681693" duration="23473000" />
+      <workItem from="1769368681693" duration="28257000" />
     </task>
     <task id="LOCAL-00001" summary="upgrade the next project to v16">
       <option name="closed" value="true" />
@@ -191,7 +181,23 @@
       <option name="project" value="LOCAL" />
       <updated>1769372105397</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fix the typos in the logos">
+      <option name="closed" value="true" />
+      <created>1769400152753</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1769400152753</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add the project section with photos and project description">
+      <option name="closed" value="true" />
+      <created>1769400192834</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1769400192834</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +221,8 @@
     <MESSAGE value="add a placeholder page for the /blog route" />
     <MESSAGE value="start the redesign, remove /about page, /work page, add custom font, update the globals.css and hero-section" />
     <MESSAGE value="refactor the logos, update the landing page" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor the logos, update the landing page" />
+    <MESSAGE value="fix the typos in the logos" />
+    <MESSAGE value="add the project section with photos and project description" />
+    <option name="LAST_COMMIT_MESSAGE" value="add the project section with photos and project description" />
   </component>
 </project>

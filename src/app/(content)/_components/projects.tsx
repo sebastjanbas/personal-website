@@ -171,11 +171,11 @@ export const Projects = () => {
                                         </li>
                                     ))}</ul>
                                     <Link href={item.content.moreInfoLink} className="underline">Read more</Link>
-                                    <div className="flex flex-row justify-between bg-red-200 gap-2 w-full">
+                                    <div className="flex flex-row justify-between gap-2 w-full">
                                         {item.content.imageLinks.map((image, i) => (
                                             <div className="flex-1 min-w-0" key={i}>
                                                 <Image src={image.link}
-                                                       className="object-cover w-full h-full" width={850} height={462}
+                                                       className="object-cover rounded-md w-full h-full" width={850} height={462}
                                                        alt={image.alt}/>
                                             </div>
                                         ))}
