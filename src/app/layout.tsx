@@ -12,6 +12,7 @@ import { Analytics } from "@vercel/analytics/react";
 import BackgroundUpdater from "@/components/ui/bacground-updater";
 import { Toaster } from "sonner";
 import localFont from "next/font/local";
+import LenisProvider from "@/components/providers/lenis-provider";
 
 const bebasNeueFont = Bebas_Neue({
   weight: ["400"],
@@ -151,10 +152,12 @@ export default function RootLayout({
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </head>
       <body className="overflow-x-hidden font-interDisplay tracking-tight bg-dark-gray">
-        <BackgroundUpdater />
-        <Toaster position="top-center" richColors />
-        {children}
-        <Analytics />
+        <LenisProvider>
+          <BackgroundUpdater />
+          <Toaster position="top-center" richColors />
+          {children}
+          <Analytics />
+        </LenisProvider>
       </body>
     </html>
   );

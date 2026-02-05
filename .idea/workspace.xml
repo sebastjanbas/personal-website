@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62747c00-75a5-4d31-aa96-c9f32ae29102" name="Changes" comment="clean up the globals.css">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="62747c00-75a5-4d31-aa96-c9f32ae29102" name="Changes" comment="add a infinite carousel animation to tech stack logos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(content)/_components/hero-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(content)/_components/hero-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(content)/_components/intro-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(content)/_components/intro-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(content)/_components/projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(content)/_components/projects.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(content)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(content)/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(content)/_components/flowing-text.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(content)/_components/flowing-text.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +165,7 @@
       <workItem from="1768932340859" duration="11156000" />
       <workItem from="1769148502409" duration="13744000" />
       <workItem from="1769368681693" duration="31800000" />
-      <workItem from="1770267431220" duration="4911000" />
+      <workItem from="1770267431220" duration="7924000" />
     </task>
     <task id="LOCAL-00001" summary="upgrade the next project to v16">
       <option name="closed" value="true" />
@@ -257,7 +255,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769411549319</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add a infinite carousel animation to tech stack logos">
+      <option name="closed" value="true" />
+      <created>1770272862613</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1770272862613</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,6 +292,7 @@
     <MESSAGE value="update the footer, fix some bugs" />
     <MESSAGE value="fix build errors" />
     <MESSAGE value="clean up the globals.css" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean up the globals.css" />
+    <MESSAGE value="add a infinite carousel animation to tech stack logos" />
+    <option name="LAST_COMMIT_MESSAGE" value="add a infinite carousel animation to tech stack logos" />
   </component>
 </project>
