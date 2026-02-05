@@ -37,7 +37,7 @@ export const IntroSection = () => {
                 <FlowingText/>
             </div>
 
-            <div className="-rotate-6">
+            <div className="rotate-0 opacity-75">
                 <div className={styles.logos}>
                     <div className={styles['logos-slide']}>
                         {logos.map((logo, i) => (
