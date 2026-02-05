@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform, MotionValue } from "motion/react";
+import { motion, useScroll, useSpring, useTransform, MotionValue } from "motion/react";
 
 type CharData = {
   char: string;
@@ -102,6 +102,13 @@ export const FlowingText = () => {
     offset: ["start 0.9", "start 0.25"],
   });
 
+  // This ensures characters animate in on page reload rather than appearing instantly
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
   return (
     <h2
       ref={containerRef}
@@ -115,7 +122,7 @@ export const FlowingText = () => {
           char={c.char}
           color={c.color}
           index={c.index}
-          progress={scrollYProgress}
+          progress={smoothProgress}
         />
       ))}
     </h2>

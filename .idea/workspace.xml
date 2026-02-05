@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62747c00-75a5-4d31-aa96-c9f32ae29102" name="Changes" comment="add a infinite carousel animation to tech stack logos">
+    <list default="true" id="62747c00-75a5-4d31-aa96-c9f32ae29102" name="Changes" comment="add lenis library for smooth scrolling, update flowing-text.tsx">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(content)/_components/flowing-text.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(content)/_components/flowing-text.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +162,7 @@
       <workItem from="1768932340859" duration="11156000" />
       <workItem from="1769148502409" duration="13744000" />
       <workItem from="1769368681693" duration="31800000" />
-      <workItem from="1770267431220" duration="7924000" />
+      <workItem from="1770267431220" duration="8760000" />
     </task>
     <task id="LOCAL-00001" summary="upgrade the next project to v16">
       <option name="closed" value="true" />
@@ -263,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770272862613</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add lenis library for smooth scrolling, update flowing-text.tsx">
+      <option name="closed" value="true" />
+      <created>1770331091820</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1770331091820</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,6 +298,7 @@
     <MESSAGE value="fix build errors" />
     <MESSAGE value="clean up the globals.css" />
     <MESSAGE value="add a infinite carousel animation to tech stack logos" />
-    <option name="LAST_COMMIT_MESSAGE" value="add a infinite carousel animation to tech stack logos" />
+    <MESSAGE value="add lenis library for smooth scrolling, update flowing-text.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="add lenis library for smooth scrolling, update flowing-text.tsx" />
   </component>
 </project>
