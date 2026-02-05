@@ -1,7 +1,8 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { useLenis } from "lenis/react";
 import Image from "next/image";
 import Github from "@/components/logos/social-media/github";
 import LinkedIn from "@/components/logos/social-media/linked-in";
@@ -10,21 +11,64 @@ import XLogo from "@/components/logos/social-media/x";
 
 gsap.registerPlugin(useGSAP);
 
+const VELOCITY_MULTIPLIER = 100; // How much scroll affects speed
+const LERP_FACTOR = 0.1; // Smoothing
+const VELOCITY_SCALE = 0.01; // Normalizes scroll velocity
+
 const HeroSection = () => {
     const h1DarkRef = useRef<HTMLHeadingElement>(null);
     const h1WhiteRef = useRef<HTMLHeadingElement>(null);
+    const tweenRef = useRef<gsap.core.Tween | null>(null);
+    const scrollVelocityRef = useRef(0);
+    const currentTimeScaleRef = useRef(1);
 
     useGSAP(() => {
         // H1 animation: right to left (both layers in sync)
         const h1Elements = [h1DarkRef.current, h1WhiteRef.current].filter(Boolean);
         if (h1Elements.length > 0) {
-            gsap.to(h1Elements, {
+            // Set initial transform for GPU layer promotion
+            gsap.set(h1Elements, { force3D: true, willChange: "transform" });
+
+            tweenRef.current = gsap.to(h1Elements, {
                 xPercent: -50,
                 duration: 150,
                 ease: "none",
                 repeat: -1,
+                force3D: true,
             });
         }
+    }, []);
+
+    // Capture scroll velocity from Lenis
+    useLenis(({ velocity }) => {
+        scrollVelocityRef.current = velocity;
+    });
+
+    // Smooth timeScale updates via GSAP ticker
+    useEffect(() => {
+        const updateTimeScale = () => {
+            if (!tweenRef.current) return;
+
+            // Calculate target timeScale based on scroll velocity
+            const targetTimeScale = 1 + scrollVelocityRef.current * VELOCITY_SCALE * VELOCITY_MULTIPLIER;
+
+            // Lerp current timeScale towards target for smooth transition
+            currentTimeScaleRef.current += (targetTimeScale - currentTimeScaleRef.current) * LERP_FACTOR;
+
+            // Snap to exactly 1 when very close to avoid micro-jitter
+            if (Math.abs(currentTimeScaleRef.current - 1) < 0.001) {
+                currentTimeScaleRef.current = 1;
+            }
+
+            // Apply the timeScale
+            tweenRef.current.timeScale(currentTimeScaleRef.current);
+        };
+
+        gsap.ticker.add(updateTimeScale);
+
+        return () => {
+            gsap.ticker.remove(updateTimeScale);
+        };
     }, []);
 
     const h1Text = "- Sebastjan Bas ";
