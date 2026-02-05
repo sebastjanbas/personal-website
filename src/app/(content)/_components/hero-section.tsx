@@ -32,10 +32,10 @@ const HeroSection = () => {
     return (
         <section className={"max-h-screen h-screen w-full relative overflow-hidden isolate bg-light-gray"}>
             {/* Dark h1 in the back */}
-            <div className={"absolute top-2/5 z-10 left-0 w-full overflow-visible text-white hover:text-[#1F1F1F]"}>
+            <div className={"absolute top-1/3 md:top-2/5 z-10 left-0 w-full overflow-visible text-white hover:text-[#1F1F1F]"}>
                 <h1
                     ref={h1DarkRef}
-                    className={"text-[280px] tracking-tighter font-interDisplay font-medium transition-colors duration-700 ease-in-out whitespace-nowrap inline-block leading-[0.8]"}
+                    className={"text-[80px] sm:text-[140px] md:text-[200px] lg:text-[280px] tracking-tighter font-interDisplay font-medium transition-colors duration-700 ease-in-out whitespace-nowrap inline-block leading-[0.8]"}
                 >
                     {Array(8).fill(h1Text).join("")}
                 </h1>
@@ -72,26 +72,26 @@ const HeroSection = () => {
                     aria-hidden="true"
                 />
                 {/* White text blends with the image copy above */}
-                <div className={"absolute top-2/5 left-0 w-full mix-blend-difference"}>
+                <div className={"absolute top-1/3 md:top-2/5 left-0 w-full mix-blend-difference"}>
                     <h1
                         ref={h1WhiteRef}
-                        className={"text-[280px] tracking-tighter font-interDisplay font-medium text-pink-50 whitespace-nowrap inline-block leading-[0.8]"}
+                        className={"text-[80px] sm:text-[140px] md:text-[200px] lg:text-[280px] tracking-tighter font-interDisplay font-medium text-pink-50 whitespace-nowrap inline-block leading-[0.8]"}
                     >
                         {Array(8).fill(h1Text).join("")}
                     </h1>
                 </div>
             </div>
             <h2
-                className={"z-30 tracking-tighter text-6xl font-interDisplay font-semibold text-[#1F1F1F] whitespace-nowrap absolute bottom-20 right-10 -indent-32 leading-none"}
+                className={"z-30 tracking-tighter text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-interDisplay font-semibold text-[#1F1F1F] whitespace-nowrap absolute bottom-6 right-4 sm:bottom-12 sm:right-6 md:bottom-20 md:right-10 indent-0 md:-indent-32 leading-none"}
             >
                 {"//"} Software <br/> Engineer
 
             </h2>
-            <div className={"absolute flex flex-col items-center bottom-8 left-10 gap-7"}>
-                <Github size={"size-[24px]"} fillColor={"fill-[#383838]"} />
-                <LinkedIn size={"size-[24px]"} fillColor={"fill-[#383838]"} />
-                <Instagram size={"size-[24px]"} fillColor={"fill-[#383838]"} />
-                <XLogo size={"size-[24px]"} fillColor={"fill-[#383838]"} />
+            <div className={"absolute flex flex-row md:flex-col items-center bottom-4 left-4 sm:bottom-6 sm:left-6 md:bottom-8 md:left-10 gap-4 md:gap-7"}>
+                <Github size={"size-[20px] md:size-[24px]"} fillColor={"fill-[#383838]"} />
+                <LinkedIn size={"size-[20px] md:size-[24px]"} fillColor={"fill-[#383838]"} />
+                <Instagram size={"size-[20px] md:size-[24px]"} fillColor={"fill-[#383838]"} />
+                <XLogo size={"size-[20px] md:size-[24px]"} fillColor={"fill-[#383838]"} />
             </div>
         </section>
     );

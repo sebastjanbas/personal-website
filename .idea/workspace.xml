@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62747c00-75a5-4d31-aa96-c9f32ae29102" name="Changes" comment="update the footer, fix some bugs">
+    <list default="true" id="62747c00-75a5-4d31-aa96-c9f32ae29102" name="Changes" comment="clean up the globals.css">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/navigation-dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/navigation-dialog.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/projects-section.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/tech-stack-section.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/logo-background.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/docs.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/docs.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(content)/_components/hero-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(content)/_components/hero-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(content)/_components/intro-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(content)/_components/intro-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(content)/_components/projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(content)/_components/projects.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(content)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(content)/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +21,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="TypeScript JSX File" />
       </list>
     </option>
@@ -60,6 +61,7 @@
     "js.debugger.nextJs.config.created.client": "true",
     "js.debugger.nextJs.config.created.server": "true",
     "last_opened_file_path": "/Users/sebastjanbas/Seba/Business/personal-website/public/fonts/Inter-display",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -94,7 +96,7 @@
       <recent name="$PROJECT_DIR$/src/app" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="npm.Next.js: server-side">
     <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
       <method v="2" />
     </configuration>
@@ -164,7 +166,8 @@
       <workItem from="1768930397850" duration="1280000" />
       <workItem from="1768932340859" duration="11156000" />
       <workItem from="1769148502409" duration="13744000" />
-      <workItem from="1769368681693" duration="29449000" />
+      <workItem from="1769368681693" duration="31800000" />
+      <workItem from="1770267431220" duration="4911000" />
     </task>
     <task id="LOCAL-00001" summary="upgrade the next project to v16">
       <option name="closed" value="true" />
@@ -238,7 +241,23 @@
       <option name="project" value="LOCAL" />
       <updated>1769409668948</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fix build errors">
+      <option name="closed" value="true" />
+      <created>1769411439657</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1769411439657</updated>
+    </task>
+    <task id="LOCAL-00011" summary="clean up the globals.css">
+      <option name="closed" value="true" />
+      <created>1769411549319</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1769411549319</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,6 +284,8 @@
     <MESSAGE value="fix the typos in the logos" />
     <MESSAGE value="add the project section with photos and project description" />
     <MESSAGE value="update the footer, fix some bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="update the footer, fix some bugs" />
+    <MESSAGE value="fix build errors" />
+    <MESSAGE value="clean up the globals.css" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean up the globals.css" />
   </component>
 </project>

@@ -72,12 +72,19 @@ export const Projects = () => {
     };
 
     return (
-        <div className="w-full mt-20 px-5">
+        <div className="w-full mt-10 md:mt-20 px-4 md:px-5">
+            {/* Desktop header - hidden on mobile */}
             <div
-                className="grid grid-cols-[1fr_1fr_1fr_8rem] gap-4 border-b border-light-gray text-white/70! font-semibold">
+                className="hidden md:grid grid-cols-[1fr_1fr_1fr_8rem] gap-4 border-b border-light-gray text-white/70! font-semibold">
                 <p className="text-xs uppercase my-3">Project</p>
                 <p className="text-xs uppercase my-3">Category</p>
                 <p className="text-xs uppercase my-3">Highlight</p>
+                <p className="text-xs uppercase my-3 text-right">Year</p>
+            </div>
+            {/* Mobile header */}
+            <div
+                className="md:hidden grid grid-cols-[1fr_auto] gap-4 border-b border-light-gray text-white/70! font-semibold">
+                <p className="text-xs uppercase my-3">Project</p>
                 <p className="text-xs uppercase my-3 text-right">Year</p>
             </div>
             {PROJECT_DATA.map((item, index) => {
@@ -111,8 +118,8 @@ export const Projects = () => {
                                 }}
                             />
 
-                            {/* Content layer - Header */}
-                            <div className="relative grid grid-cols-[1fr_1fr_1fr_8rem] gap-4">
+                            {/* Content layer - Header (Desktop) */}
+                            <div className="relative hidden md:grid grid-cols-[1fr_1fr_1fr_8rem] gap-4">
                                 <p
                                     className="text-sm capitalize py-2.5 transition-all duration-300 ease-out"
                                     style={{
@@ -144,6 +151,27 @@ export const Projects = () => {
                                     {item.year}
                                 </p>
                             </div>
+                            {/* Content layer - Header (Mobile) */}
+                            <div className="relative md:hidden grid grid-cols-[1fr_auto] gap-4">
+                                <p
+                                    className="text-sm capitalize py-2.5 transition-all duration-300 ease-out"
+                                    style={{
+                                        color: isHovered ? "var(--dark-gray)" : "white",
+                                        transform: isHovered ? "translateX(10px)" : "translateX(0%)"
+                                    }}
+                                >
+                                    {item.name}
+                                </p>
+                                <p
+                                    className="text-sm text-right capitalize py-2.5 transition-all duration-300 ease-out"
+                                    style={{
+                                        color: isHovered ? "var(--dark-gray)" : "white",
+                                        transform: isHovered ? "translateX(-10px)" : "translateX(0%)"
+                                    }}
+                                >
+                                    {item.year}
+                                </p>
+                            </div>
                         </div>
 
                         {/* Accordion Content */}
@@ -158,24 +186,24 @@ export const Projects = () => {
                             }}
                         >
                             <div className="overflow-hidden">
-                                <div className="py-4 text-white flex flex-col gap-4">
-                                    <h1 className="text-[32px] mt-8 mb-2.5">{item.content.description}</h1>
+                                <div className="py-4 text-white flex flex-col gap-3 md:gap-4">
+                                    <h1 className="text-xl sm:text-2xl md:text-[32px] mt-4 md:mt-8 mb-1 md:mb-2.5">{item.content.description}</h1>
                                     <Button variant="secondary" className="rounded-full w-fit" size="sm" asChild>
                                         <Link href={item.content.link} target="_blank" rel="noopener noreferrer">
                                             See Website
                                         </Link>
                                     </Button>
-                                    <ul className="flex flex-row gap-4">{item.content.technologies.map((technology, i) => (
+                                    <ul className="flex flex-row flex-wrap gap-2 md:gap-4 text-sm md:text-base">{item.content.technologies.map((technology, i) => (
                                         <li key={i}>
                                             {technology}
                                         </li>
                                     ))}</ul>
-                                    <Link href={item.content.moreInfoLink} className="underline">Read more</Link>
-                                    <div className="flex flex-row justify-between gap-2 w-full">
+                                    <Link href={item.content.moreInfoLink} className="underline text-sm md:text-base">Read more</Link>
+                                    <div className="flex flex-col sm:flex-row justify-between gap-2 w-full">
                                         {item.content.imageLinks.map((image, i) => (
                                             <div className="flex-1 min-w-0" key={i}>
                                                 <Image src={image.link}
-                                                       className="object-cover rounded-md w-full h-full" width={850} height={462}
+                                                       className="object-cover rounded-md w-full h-auto sm:h-full" width={850} height={462}
                                                        alt={image.alt}/>
                                             </div>
                                         ))}
