@@ -13,6 +13,12 @@ export default function BackgroundUpdater() {
 
   const { scrollY } = useScroll();
   const updateBackground = (y: number) => {
+    if (pathname.startsWith("/blog")) {
+      document.documentElement.style.setProperty("--background", "#121111");
+      document.documentElement.style.setProperty("--foreground", "#E0E0E0");
+      return;
+    }
+
     let color = "#E0E0E0"; // Default background color
     let fontColor = "#121111";
     const vh = window.innerHeight;

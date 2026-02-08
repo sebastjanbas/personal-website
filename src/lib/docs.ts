@@ -76,9 +76,9 @@ export const PROJECT_DATA = [
 ]
 
 export const navigation = [
-    { name: "Work", href: "/work", stayOpen: false },
-    { name: "contact", href: "mailto:sebastjan.bas@gmail.com", stayOpen: true },
-    { name: "About", href: "/about", stayOpen: false },
+    { name: "Project", href: "/projects" },
+    { name: "Blog", href: "/blog"},
+    { name: "Contact", href: "mailto:sebastjan.bas@gmail.com"},
 ];
 
 export const sharedMetadata = [

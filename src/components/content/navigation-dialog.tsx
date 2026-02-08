@@ -56,7 +56,7 @@ const NavigationDialog = ({
                     >
                       <Link
                         href={link.href}
-                        onClick={() => setMobileMenuOpen(link.stayOpen)}
+                        onClick={() => setMobileMenuOpen(true)}
                         className="bg-clip-text bg-linear-to-b from-black via-slate-500 to-white  tracking-tight leading-17.5 md:leading-25 lg:leading-45
                         relative text-7xl sm:text-8xl lg:text-[180px] text-transparent 
                       duration-200 ease-out md:hover:text-gray-400
