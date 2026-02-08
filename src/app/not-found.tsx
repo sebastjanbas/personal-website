@@ -1,35 +1,31 @@
 import Link from "next/link";
-import React from "react";
+import Navbar from "@/components/content/navbar";
 
 const NotFoundPage = () => {
   return (
-    <section className="flex justify-center items-center w-screen h-fit mt-44 md:mt-32 overflow-hidden p-5 md:p-10 xl:p-20">
-      <div className="flex flex-col justify-center items-center text-center">
-        <h3 className="text-sm md:text-md xl:text-xl text-slate-600 font-black">
-          404
-        </h3>
-        <h1
-          className="bg-clip-text bg-linear-to-b from-black via-slate-500 to-white
-              font-robotoFont font-semibold text-transparent text-center
-              text-5xl sm:text-6xl lg:text-7xl"
-        >
-          Page not found
-        </h1>
-        <p className="text-slate-700 mt-5 text-md lg:text-xl">
-          Sorry, we could not find the page you are looking for.
-        </p>
-        <Link href={"/"} className="mt-5">
-          <span
-            className="text-slate-600 font-semibold text-sm lg:text-md text-center leading-none -translate-y-40 sm:translate-y-2 
-  md:after:block md:after:h-px md:after:origin-left md:after:scale-x-0 md:after:bg-slate-600 
-  md:after:transition-transform md:after:duration-500 
-  md:hover:after:scale-x-100 md:hover:tracking-wider transition-all will-change-transform"
-          >
-            &larr; Back to home
-          </span>
-        </Link>
-      </div>
-    </section>
+    <>
+      <Navbar />
+      <section className="flex justify-center items-center w-full h-screen bg-light-gray overflow-hidden px-4 md:px-10 xl:px-20">
+        <div className="flex flex-col justify-center items-center text-center">
+          <h1 className="text-[120px] sm:text-[180px] md:text-[240px] lg:text-[300px] tracking-tighter font-interDisplay font-semibold text-[#1F1F1F] leading-[0.85] select-none">
+            404
+          </h1>
+          <p className="text-[#383838] font-interDisplay font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl tracking-tight mt-4 md:mt-6">
+            This page could not be found.
+          </p>
+          <Link href="/" className="mt-8 md:mt-10">
+            <span
+              className="text-[#383838] font-interDisplay font-medium text-sm lg:text-base tracking-tight
+                md:after:block md:after:h-px md:after:origin-left md:after:scale-x-0 md:after:bg-[#383838]
+                md:after:transition-transform md:after:duration-500
+                md:hover:after:scale-x-100 transition-all"
+            >
+              &larr; Back to home
+            </span>
+          </Link>
+        </div>
+      </section>
+    </>
   );
 };
 
