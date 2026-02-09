@@ -23,14 +23,15 @@ export default function BackgroundUpdater() {
     let fontColor = "#121111";
     const vh = window.innerHeight;
 
-    if (pathname === "/about" && y > 300) {
-      color = "#F1F0EA";
-      fontColor = "#1D1D1F";
-      // fontColor = "#62748E";
-    }
     if (y >= (vh - 25)) {
       color = "#121111";
       fontColor = "#E0E0E0";
+    }
+
+    if (y >= (2*vh + 125)){
+      color = "#E0E0E0";
+      fontColor = "#121111";
+
     }
 
     // uncomment to enable background change

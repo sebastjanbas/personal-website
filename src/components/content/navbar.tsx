@@ -3,6 +3,8 @@ import Link from "next/link";
 import {useState} from "react";
 import {easeInOut, motion, useMotionValueEvent, useScroll,} from "motion/react";
 
+const HIDE_NAVBAR = false;
+
 const Navbar = () => {
     // TODO: update the mobile version and add the mobile menu for navigation
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -12,6 +14,7 @@ const Navbar = () => {
     const [navHidden, setNavHidden] = useState<boolean>(false);
 
     useMotionValueEvent(scrollY, "change", (latest) => {
+        if (!HIDE_NAVBAR) return;
         const previous = scrollY.getPrevious() || 0;
         if (previous < latest && latest > 200) {
             setNavHidden(true);
@@ -24,8 +27,8 @@ const Navbar = () => {
         <>
             <motion.header
                 variants={{
-                    visible: {y: 0},
-                    hidden: {y: "-100%"},
+                    visible: {y: HIDE_NAVBAR ? 1 : 0},
+                    hidden: {y: HIDE_NAVBAR ? "0%" : "-100%"},
                 }}
                 animate={navHidden ? "hidden" : "visible"}
                 transition={{duration: 0.35, ease: easeInOut}}
