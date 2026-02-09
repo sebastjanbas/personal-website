@@ -74,10 +74,10 @@ const HeroSection = () => {
     return (
         <section className={"max-h-screen h-screen w-full relative overflow-hidden isolate bg-light-gray"}>
             {/* Dark h1 in the back */}
-            <div className={"absolute top-1/3 md:top-2/5 z-10 left-0 w-full overflow-visible text-white hover:text-[#1F1F1F]"}>
+            <div className={"absolute top-1/2 -translate-y-1/2 md:top-2/5 md:translate-y-0 z-10 left-0 w-full overflow-visible text-white hover:text-[#1F1F1F]"}>
                 <h1
                     ref={h1DarkRef}
-                    className={"text-[80px] sm:text-[140px] md:text-[200px] lg:text-[280px] tracking-tighter font-interDisplay font-medium transition-colors duration-700 ease-in-out whitespace-nowrap inline-block leading-[0.8]"}
+                    className={"text-[140px] md:text-[200px] lg:text-[280px] tracking-tighter font-interDisplay font-medium transition-colors duration-700 ease-in-out whitespace-nowrap inline-block leading-[0.8]"}
                 >
                     {Array(8).fill(h1Text).join("")}
                 </h1>
@@ -85,7 +85,7 @@ const HeroSection = () => {
             {/* Main image */}
             <Image
                 src={"/personal-photo-gray.png"}
-                className={"absolute z-20 bottom-0 left-0 object-contain max-h-screen bg-transparent pointer-events-none"}
+                className={"absolute z-20 bottom-0 left-0 w-full object-cover md:object-contain object-bottom h-full max-h-screen bg-transparent pointer-events-none"}
                 width={2964}
                 height={2954}
                 alt={"Sebastjan Bas"}
@@ -95,11 +95,11 @@ const HeroSection = () => {
                 className={"absolute inset-0 z-30 overflow-hidden isolate pointer-events-none"}
                 style={{
                     maskImage: "url('/personal-photo-gray.png')",
-                    maskSize: "contain",
+                    maskSize: "var(--hero-mask-size)",
                     maskPosition: "bottom",
                     maskRepeat: "no-repeat",
                     WebkitMaskImage: "url('/personal-photo-gray.png')",
-                    WebkitMaskSize: "contain",
+                    WebkitMaskSize: "var(--hero-mask-size)",
                     WebkitMaskPosition: "bottom",
                     WebkitMaskRepeat: "no-repeat",
                 }}
@@ -107,17 +107,17 @@ const HeroSection = () => {
                 {/* Image copy inside for blending */}
                 <Image
                     src={"/personal-photo-gray.png"}
-                    className={"absolute bottom-0 left-0 object-contain max-h-screen"}
+                    className={"absolute bottom-0 left-0 w-full object-cover md:object-contain object-bottom h-full max-h-screen"}
                     width={2964}
                     height={2954}
                     alt={""}
                     aria-hidden="true"
                 />
                 {/* White text blends with the image copy above */}
-                <div className={"absolute top-1/3 md:top-2/5 left-0 w-full mix-blend-difference"}>
+                <div className={"absolute top-1/2 -translate-y-1/2 md:top-2/5 md:translate-y-0 left-0 w-full mix-blend-difference"}>
                     <h1
                         ref={h1WhiteRef}
-                        className={"text-[80px] sm:text-[140px] md:text-[200px] lg:text-[280px] tracking-tighter font-interDisplay font-medium text-pink-50 whitespace-nowrap inline-block leading-[0.8]"}
+                        className={"text-[140px] md:text-[200px] lg:text-[280px] tracking-tighter font-interDisplay font-medium text-pink-50 whitespace-nowrap inline-block leading-[0.8]"}
                     >
                         {Array(8).fill(h1Text).join("")}
                     </h1>

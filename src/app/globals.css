@@ -160,3 +160,13 @@
 @utility font-interDisplay {
   font-family: var(--next-font-interDisplay), sans-serif;
 }
+
+:root {
+  --hero-mask-size: cover;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --hero-mask-size: contain;
+  }
+}

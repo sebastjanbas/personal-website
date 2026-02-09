@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62747c00-75a5-4d31-aa96-c9f32ae29102" name="Changes" comment="update navigation">
+    <list default="true" id="62747c00-75a5-4d31-aa96-c9f32ae29102" name="Changes" comment="update the hero and footer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(content)/_components/hero-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(content)/_components/hero-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(content)/_components/intro-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(content)/_components/logo-carousel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(content)/_components/logos-slide.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(content)/_components/logos-slide.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(content)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(content)/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(content)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(content)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/logos/typescript-logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/typescript-logo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +166,7 @@
       <workItem from="1769148502409" duration="13744000" />
       <workItem from="1769368681693" duration="31800000" />
       <workItem from="1770267431220" duration="11879000" />
-      <workItem from="1770577784027" duration="10225000" />
+      <workItem from="1770577784027" duration="13348000" />
     </task>
     <task id="LOCAL-00001" summary="upgrade the next project to v16">
       <option name="closed" value="true" />
@@ -333,7 +328,23 @@
       <option name="project" value="LOCAL" />
       <updated>1770584568276</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="update the logo carousel and make it responsive">
+      <option name="closed" value="true" />
+      <created>1770605489631</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1770605489631</updated>
+    </task>
+    <task id="LOCAL-00022" summary="update the hero and footer">
+      <option name="closed" value="true" />
+      <created>1770605505131</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1770605505131</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,6 +382,8 @@
     <MESSAGE value="update the not-found page" />
     <MESSAGE value="add blog route and placeholder article" />
     <MESSAGE value="update navigation" />
-    <option name="LAST_COMMIT_MESSAGE" value="update navigation" />
+    <MESSAGE value="update the logo carousel and make it responsive" />
+    <MESSAGE value="update the hero and footer" />
+    <option name="LAST_COMMIT_MESSAGE" value="update the hero and footer" />
   </component>
 </project>
