@@ -2,18 +2,22 @@
 import React, { useRef, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
 import { useLenis } from "lenis/react";
 import Image from "next/image";
 import {SOCIAL_MEDIA_LINKS} from "@/lib/docs";
 import Link from "next/link";
 
-gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const VELOCITY_MULTIPLIER = 100; // How much scroll affects speed
 const LERP_FACTOR = 0.1; // Smoothing
 const VELOCITY_SCALE = 0.01; // Normalizes scroll velocity
 
 const HeroSection = () => {
+    const sectionRef = useRef<HTMLElement>(null);
+    const imageRef = useRef<HTMLImageElement>(null);
+    const maskRef = useRef<HTMLDivElement>(null);
     const h1DarkRef = useRef<HTMLHeadingElement>(null);
     const h1WhiteRef = useRef<HTMLHeadingElement>(null);
     const tweenRef = useRef<gsap.core.Tween | null>(null);
@@ -33,6 +37,21 @@ const HeroSection = () => {
                 ease: "none",
                 repeat: -1,
                 force3D: true,
+            });
+        }
+
+        // Parallax: image and mask scroll slower than the section
+        const parallaxElements = [imageRef.current, maskRef.current].filter(Boolean);
+        if (parallaxElements.length > 0) {
+            gsap.to(parallaxElements, {
+                yPercent: 15,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: sectionRef.current,
+                    start: "top top",
+                    end: "bottom top",
+                    scrub: true,
+                },
             });
         }
     }, []);
@@ -72,7 +91,7 @@ const HeroSection = () => {
     const h1Text = "- Sebastjan Bas ";
 
     return (
-        <section className={"max-h-screen h-screen w-full relative overflow-hidden isolate bg-light-gray"}>
+        <section ref={sectionRef} className={"max-h-screen h-screen w-full relative overflow-hidden isolate bg-light-gray"}>
             {/* Dark h1 in the back */}
             <div className={"absolute top-1/2 -translate-y-1/2 md:top-2/5 md:translate-y-0 z-10 left-0 w-full overflow-visible text-white hover:text-[#1F1F1F]"}>
                 <h1
@@ -84,6 +103,7 @@ const HeroSection = () => {
             </div>
             {/* Main image */}
             <Image
+                ref={imageRef}
                 src={"/personal-photo-gray.png"}
                 className={"absolute z-20 bottom-0 left-0 w-full object-cover md:object-contain object-bottom h-full max-h-screen bg-transparent pointer-events-none"}
                 width={2964}
@@ -92,6 +112,7 @@ const HeroSection = () => {
             />
             {/* Masked container: image copy + blended white text */}
             <div
+                ref={maskRef}
                 className={"absolute inset-0 z-30 overflow-hidden isolate pointer-events-none"}
                 style={{
                     maskImage: "url('/personal-photo-gray.png')",
@@ -124,7 +145,7 @@ const HeroSection = () => {
                 </div>
             </div>
             <h2
-                className={"z-30 tracking-tighter text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-interDisplay font-semibold text-[#1F1F1F] whitespace-nowrap absolute bottom-6 right-4 sm:bottom-12 sm:right-6 md:bottom-20 md:right-10 indent-0 md:-indent-32 leading-none"}
+                className={"z-30 mix-blend-difference tracking-tighter text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-interDisplay font-semibold text-pink-50 whitespace-nowrap absolute bottom-6 right-4 sm:bottom-12 sm:right-6 md:bottom-20 md:right-10 indent-0 md:-indent-32 leading-none"}
             >
                 {"//"} Software <br/> Engineer
 
