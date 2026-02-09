@@ -1,7 +1,7 @@
 
-export const TypescriptLogo = () => {
+export const TypescriptLogo = ({size} :{size: {height: string, width: string}}) => {
     return (
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width={size.width} height={size.height} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="typescript" clipPath="url(#clip0_31_384)">
                 <path id="Vector"
                       d="M6 1H42C44.7614 1 47 3.23858 47 6V42C47 44.7614 44.7614 47 42 47H6C3.23858 47 1 44.7614 1 42V6C1 3.23858 3.23858 1 6 1Z"

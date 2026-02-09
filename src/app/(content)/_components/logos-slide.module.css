@@ -10,7 +10,7 @@
 
 .logos {
     overflow: hidden;
-    padding: 60px 0;
+    padding: 16px 0;
     white-space: nowrap;
     position: relative;
 }
@@ -33,9 +33,9 @@
     right: 0;
 }
 
-.logos:hover .logos-slide {
-    animation-play-state: paused;
-}
+/*.logos:hover .logos-slide {*/
+/*    animation-play-state: paused;*/
+/*}*/
 
 .logos-slide {
     display: inline-block;

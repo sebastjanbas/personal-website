@@ -1,6 +1,6 @@
-export const ReactLogo = () => {
+export const ReactLogo = ({size}: {size: {height: string, width: string}}) => {
     return (
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width={size.width} height={size.height} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="reactjs">
                 <path id="Vector"
                       d="M23.9048 28.224C26.2335 28.224 28.087 26.352 28.087 24C28.087 21.648 26.2335 19.776 23.9048 19.776C21.5761 19.776 19.7227 21.648 19.7227 24C19.7227 26.352 21.5761 28.224 23.9048 28.224Z"

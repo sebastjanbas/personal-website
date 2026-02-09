@@ -1,6 +1,6 @@
-export const NextLogo = () => {
+export const NextLogo = ({size}: {size: {height: string, width: string}}) => {
     return (
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width={size.width} height={size.height} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="nextjs2" clipPath="url(#clip0_32_419)">
                 <path id="Vector"
                       d="M24 1C36.6957 1 47 11.3043 47 24C47 36.6957 36.6957 47 24 47C11.3043 47 1 36.6957 1 24C1 11.3043 11.3043 1 24 1Z"
