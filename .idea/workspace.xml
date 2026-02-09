@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62747c00-75a5-4d31-aa96-c9f32ae29102" name="Changes" comment="update the not-found page">
+    <list default="true" id="62747c00-75a5-4d31-aa96-c9f32ae29102" name="Changes" comment="update navigation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(content)/blog/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(blog)/blog/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/navigation-dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/navigation-dialog.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/bacground-updater.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/bacground-updater.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/docs.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/docs.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(content)/_components/hero-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(content)/_components/hero-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(content)/_components/intro-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(content)/_components/logo-carousel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(content)/_components/logos-slide.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(content)/_components/logos-slide.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(content)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(content)/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(content)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(content)/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logos/typescript-logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/typescript-logo.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +171,7 @@
       <workItem from="1769148502409" duration="13744000" />
       <workItem from="1769368681693" duration="31800000" />
       <workItem from="1770267431220" duration="11879000" />
-      <workItem from="1770577784027" duration="5583000" />
+      <workItem from="1770577784027" duration="10225000" />
     </task>
     <task id="LOCAL-00001" summary="upgrade the next project to v16">
       <option name="closed" value="true" />
@@ -314,7 +317,23 @@
       <option name="project" value="LOCAL" />
       <updated>1770578951798</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="add blog route and placeholder article">
+      <option name="closed" value="true" />
+      <created>1770584557326</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1770584557326</updated>
+    </task>
+    <task id="LOCAL-00020" summary="update navigation">
+      <option name="closed" value="true" />
+      <created>1770584568276</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1770584568276</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -350,6 +369,8 @@
     <MESSAGE value="add a scrolling effect on the hero section h1" />
     <MESSAGE value="update packages" />
     <MESSAGE value="update the not-found page" />
-    <option name="LAST_COMMIT_MESSAGE" value="update the not-found page" />
+    <MESSAGE value="add blog route and placeholder article" />
+    <MESSAGE value="update navigation" />
+    <option name="LAST_COMMIT_MESSAGE" value="update navigation" />
   </component>
 </project>

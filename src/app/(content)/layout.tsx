@@ -10,9 +10,9 @@ const ContentLayout = ({ children }: ContentLayoutProps) => {
   return (
     <>
       <Navbar />
-      <main className="flex flex-col justify-center items-center">
-        {children}
-      </main>
+        <main className="relative z-10 bg-dark-gray flex flex-col justify-center items-center">
+          {children}
+        </main>
       <Footer />
     </>
   );

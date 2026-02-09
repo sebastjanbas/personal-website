@@ -4,10 +4,8 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useLenis } from "lenis/react";
 import Image from "next/image";
-import Github from "@/components/logos/social-media/github";
-import LinkedIn from "@/components/logos/social-media/linked-in";
-import Instagram from "@/components/logos/social-media/instagram";
-import XLogo from "@/components/logos/social-media/x";
+import {SOCIAL_MEDIA_LINKS} from "@/lib/docs";
+import Link from "next/link";
 
 gsap.registerPlugin(useGSAP);
 
@@ -132,10 +130,11 @@ const HeroSection = () => {
 
             </h2>
             <div className={"absolute flex flex-row md:flex-col items-center bottom-4 left-4 sm:bottom-6 sm:left-6 md:bottom-8 md:left-10 gap-4 md:gap-7"}>
-                <Github size={"size-[20px] md:size-[24px]"} fillColor={"fill-[#383838]"} />
-                <LinkedIn size={"size-[20px] md:size-[24px]"} fillColor={"fill-[#383838]"} />
-                <Instagram size={"size-[20px] md:size-[24px]"} fillColor={"fill-[#383838]"} />
-                <XLogo size={"size-[20px] md:size-[24px]"} fillColor={"fill-[#383838]"} />
+                {SOCIAL_MEDIA_LINKS.map((link, i) => (
+                    <Link key={i} href={link.href} target="_blank" rel="noopener noreferrer">
+                        <link.Component size={"size-[20px] md:size-[24px]"} fillColor={"fill-[#383838]"} />
+                    </Link>
+                ))}
             </div>
         </section>
     );
