@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62747c00-75a5-4d31-aa96-c9f32ae29102" name="Changes" comment="make the hero-section responsive">
+    <list default="true" id="62747c00-75a5-4d31-aa96-c9f32ae29102" name="Changes" comment="update the navbar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(content)/_components/hero-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(content)/_components/hero-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/bacground-updater.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/bacground-updater.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(blog)/blog/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(blog)/blog/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/blog-data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/blog-data.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +144,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.29346.242" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.31033.133" />
       </set>
     </attachedChunks>
   </component>
@@ -167,7 +166,8 @@
       <workItem from="1769148502409" duration="13744000" />
       <workItem from="1769368681693" duration="31800000" />
       <workItem from="1770267431220" duration="11879000" />
-      <workItem from="1770577784027" duration="15262000" />
+      <workItem from="1770577784027" duration="19869000" />
+      <workItem from="1773213933411" duration="838000" />
     </task>
     <task id="LOCAL-00001" summary="upgrade the next project to v16">
       <option name="closed" value="true" />
@@ -353,7 +353,23 @@
       <option name="project" value="LOCAL" />
       <updated>1770610440271</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="update the hero-section">
+      <option name="closed" value="true" />
+      <created>1770616745858</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1770616745858</updated>
+    </task>
+    <task id="LOCAL-00025" summary="update the navbar">
+      <option name="closed" value="true" />
+      <created>1770616756677</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1770616756677</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,6 +410,8 @@
     <MESSAGE value="update the logo carousel and make it responsive" />
     <MESSAGE value="update the hero and footer" />
     <MESSAGE value="make the hero-section responsive" />
-    <option name="LAST_COMMIT_MESSAGE" value="make the hero-section responsive" />
+    <MESSAGE value="update the hero-section" />
+    <MESSAGE value="update the navbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="update the navbar" />
   </component>
 </project>
