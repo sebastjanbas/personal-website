@@ -18,6 +18,7 @@ const HeroSection = () => {
     const sectionRef = useRef<HTMLElement>(null);
     const imageRef = useRef<HTMLImageElement>(null);
     const maskRef = useRef<HTMLDivElement>(null);
+    const h1DarkWrapperRef = useRef<HTMLDivElement>(null);
     const h1DarkRef = useRef<HTMLHeadingElement>(null);
     const h1WhiteRef = useRef<HTMLHeadingElement>(null);
     const tweenRef = useRef<gsap.core.Tween | null>(null);
@@ -41,7 +42,7 @@ const HeroSection = () => {
         }
 
         // Parallax: image and mask scroll slower than the section
-        const parallaxElements = [imageRef.current, maskRef.current].filter(Boolean);
+        const parallaxElements = [imageRef.current, maskRef.current, h1DarkWrapperRef.current].filter(Boolean);
         if (parallaxElements.length > 0) {
             gsap.to(parallaxElements, {
                 yPercent: 15,
@@ -93,13 +94,15 @@ const HeroSection = () => {
     return (
         <section ref={sectionRef} className={"max-h-screen h-screen w-full relative overflow-hidden isolate bg-light-gray"}>
             {/* Dark h1 in the back */}
-            <div className={"absolute top-1/2 -translate-y-1/2 md:top-2/5 md:translate-y-0 z-10 left-0 w-full overflow-visible text-white hover:text-[#1F1F1F]"}>
-                <h1
-                    ref={h1DarkRef}
-                    className={"text-[140px] md:text-[200px] lg:text-[280px] tracking-tighter font-interDisplay font-medium transition-colors duration-700 ease-in-out whitespace-nowrap inline-block leading-[0.8]"}
-                >
-                    {Array(8).fill(h1Text).join("")}
-                </h1>
+            <div ref={h1DarkWrapperRef} className={"absolute inset-0 z-10 pointer-events-none"}>
+                <div className={"absolute top-1/2 -translate-y-1/2 md:top-2/5 md:translate-y-0 left-0 w-full overflow-visible text-white hover:text-[#1F1F1F] pointer-events-auto"}>
+                    <h1
+                        ref={h1DarkRef}
+                        className={"text-[140px] md:text-[200px] lg:text-[280px] tracking-tighter font-interDisplay font-medium transition-colors duration-700 ease-in-out whitespace-nowrap inline-block leading-[0.8]"}
+                    >
+                        {Array(8).fill(h1Text).join("")}
+                    </h1>
+                </div>
             </div>
             {/* Main image */}
             <Image

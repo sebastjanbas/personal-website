@@ -72,6 +72,29 @@ export const PROJECT_DATA = [
             },
             ]
         }
+    },
+    {
+        name: "OpenCare - A Centralized Medical Record Platform with AI-Assisted Health Advice",
+        category: "full-stack, microservices",
+        highlight: "microservices, file management, llm chat integration",
+        year: "Jan 2026 - May 2026",
+        content: {
+            description: "This project is a browser-based collaborative code editor featuring real-time multi-user editing with Operational Transformation, an integrated terminal emulator with sandboxing, and a file structure system built on Monaco Editor.",
+            link: "https://github.com/Real-Time-Code",
+            technologies: ["Node.js", "Vite", "Socket.io", "Expres.js", "xterm"],
+            moreInfoLink: "#",
+            imageLinks: [{
+                link: "/images/projects/realtime-app/1.png",
+                alt: "Coming Soon",
+            }, {
+                link: "/images/projects/realtime-app/1.png",
+                alt: "Coming Soon",
+            }, {
+                link: "/images/projects/realtime-app/1.png",
+                alt: "Coming Soon",
+            },
+            ]
+        }
     }
 ]
 
