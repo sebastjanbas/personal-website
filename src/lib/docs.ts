@@ -74,24 +74,24 @@ export const PROJECT_DATA = [
         }
     },
     {
-        name: "OpenCare - A Centralized Medical Record Platform with AI-Assisted Health Advice",
+        name: "OpenCare — A single access point for medical records, powered by an LLM",
         category: "full-stack, microservices",
         highlight: "microservices, file management, llm chat integration",
         year: "Jan 2026 - May 2026",
         content: {
-            description: "This project is a browser-based collaborative code editor featuring real-time multi-user editing with Operational Transformation, an integrated terminal emulator with sandboxing, and a file structure system built on Monaco Editor.",
-            link: "https://github.com/Real-Time-Code",
-            technologies: ["Node.js", "Vite", "Socket.io", "Expres.js", "xterm"],
+            description: "OpenCare is a personal health record platform that lets patients query their own medical data through natural language, implementing the PerHL (Personal Health Library) research architecture. It pairs a structured PostgreSQL record store with an AI conversational interface that grounds every answer in the patient's actual health profile, while an automated redaction pipeline keeps sensitive information protected.",
+            link: "https://github.com/orgs/opencloudcare/",
+            technologies: ["Node.js", "Vite/React", "Postgresql (pgvector)", "Google Gemini", "Python"],
             moreInfoLink: "#",
             imageLinks: [{
-                link: "/images/projects/realtime-app/1.png",
-                alt: "Coming Soon",
+                link: "/images/projects/opencare/1.png",
+                alt: "Dashboard with Chat window open",
             }, {
-                link: "/images/projects/realtime-app/1.png",
-                alt: "Coming Soon",
+                link: "/images/projects/opencare/2.png",
+                alt: "PDF viewer with redacted personal information",
             }, {
-                link: "/images/projects/realtime-app/1.png",
-                alt: "Coming Soon",
+                link: "/images/projects/opencare/3.png",
+                alt: "Database schema graph with table desctiption",
             },
             ]
         }
