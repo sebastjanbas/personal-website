@@ -14,7 +14,7 @@ const SEGMENTS: { text: string; color: string }[] = [
   { text: "I'm a software engineer based in ", color: "#E0E0E0" },
   { text: "Slovenia,", color: "#F05039" },
   {
-    text: " currently studying in US. I love software and want to make a better tomorrow.",
+    text: " currently studying in US. I love building software that's fast, beautiful, and actually useful.",
     color: "#E0E0E0",
   },
 ];

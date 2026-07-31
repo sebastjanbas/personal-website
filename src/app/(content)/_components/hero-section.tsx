@@ -141,7 +141,7 @@ const HeroSection = () => {
                 <div className={"absolute top-1/2 -translate-y-1/2 md:top-2/5 md:translate-y-0 left-0 w-full mix-blend-difference"}>
                     <h1
                         ref={h1WhiteRef}
-                        className={"text-[140px] md:text-[200px] lg:text-[280px] tracking-tighter font-interDisplay font-medium text-pink-50 whitespace-nowrap inline-block leading-[0.8]"}
+                        className={"text-[140px] md:text-[200px] lg:text-[280px] tracking-tighter font-interDisplay font-medium text-indigo-50 whitespace-nowrap inline-block leading-[0.8]"}
                     >
                         {Array(8).fill(h1Text).join("")}
                     </h1>
